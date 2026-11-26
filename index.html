@@ -172,8 +172,8 @@ section > div:not([aria-hidden]), section > ol, footer > *{position:relative;z-i
 }
 </style>
 
-<script>if(/debug/.test(location.search)){window.addEventListener("load",function(){setTimeout(function(){var out=[];var vs=document.querySelectorAll("video");var n=vs.length,done=0;function fin(){var d=document.createElement("pre");d.style.cssText="position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#fff;color:#000;font:12px monospace;padding:8px;max-height:60vh;overflow:auto;white-space:pre-wrap";d.textContent="videos="+n+String.fromCharCode(10)+out.join(String.fromCharCode(10));document.body.appendChild(d);}vs.forEach(function(v,i){var r=v.getBoundingClientRect();var line=i+" "+(v.currentSrc||v.getAttribute("src")||"").split("/").pop().split("?")[0]+" rs="+v.readyState+" paused="+v.paused+" muted="+v.muted+" auto="+v.autoplay+" err="+(v.error?v.error.code:"-")+" vis="+Math.round(r.width)+"x"+Math.round(r.height)+"@"+Math.round(r.top);v.muted=true;var p=v.play();if(p&&p.then){p.then(function(){out.push(line+" play=OK");if(++done==n)fin();},function(e){out.push(line+" play="+e.name);if(++done==n)fin();});}else{out.push(line);if(++done==n)fin();}});if(!n)fin();},5000);});}</script>
-<script>(function(){function go(){document.querySelectorAll("video[autoplay]").forEach(function(v){if(v.paused){v.muted=true;var p=v.play();if(p&&p.catch)p.catch(function(){});}});}["pointerdown","touchstart","scroll","keydown","mousemove"].forEach(function(e){window.addEventListener(e,go,{passive:true});});setInterval(go,3000);})();</script>
+<style>*{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}.herobg{animation:none!important}[class*=shade] img,[class*=shade]{will-change:transform}</style>
+<script>(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){if(v.paused&&v.autoplay){v.muted=true;var p=v.play();if(p&&p.catch)p.catch(function(){});}}else if(!v.closest("[role=dialog]")){v.pause();}});},{threshold:0.05});function scan(){document.querySelectorAll("video").forEach(function(v){if(!v.__io){v.__io=1;io.observe(v);}});}function kick(){document.querySelectorAll("video[autoplay]").forEach(function(v){var r=v.getBoundingClientRect();if(v.paused&&r.bottom>0&&r.top<innerHeight){v.muted=v.closest("[role=dialog]")?v.muted:true;var p=v.play();if(p&&p.catch)p.catch(function(){});}});}new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});window.addEventListener("load",scan);scan();["pointerdown","touchstart","keydown"].forEach(function(e){window.addEventListener(e,kick,{passive:true});});})();</script>
 </head>
 <body>
 <div id="app"></div>
@@ -257,7 +257,7 @@ I live my life</a>
 </section>
 
 <!-- ============ EXPÉRIENCES ============ -->
-<section id="experiences" style="padding: 90px 0 130px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .26; right: 0; top: 60px"><div class="gust" style="transform-origin: 100% 25%; animation-duration: 11s; animation-delay: 0s"><img src="media/sh_palm_r.webp?v=11261813" alt="" class="flutter" style="width: 600px; max-width: 60vw; height: auto; display: block; transform-origin: 100% 25%"></div></div><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .2; left: 0; top: 1400px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12s; animation-delay: -3s"><img src="media/sh_palm_l.webp?v=11261813" alt="" class="flutter" style="width: 520px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
+<section id="experiences" style="padding: 90px 0 130px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .26; right: 0; top: 60px"><div class="gust" style="transform-origin: 100% 25%; animation-duration: 11s; animation-delay: 0s"><img loading="lazy" decoding="async" src="media/sh_palm_r.webp?v=11261821" alt="" class="flutter" style="width: 600px; max-width: 60vw; height: auto; display: block; transform-origin: 100% 25%"></div></div><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .2; left: 0; top: 1400px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12s; animation-delay: -3s"><img loading="lazy" decoding="async" src="media/sh_palm_l.webp?v=11261821" alt="" class="flutter" style="width: 520px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 40px">
 <div class="reveal" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
 <div style="display: flex; flex-direction: column; gap: 16px; max-width: 680px">
@@ -323,7 +323,7 @@ I live my life</a>
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 28px">
 <sc-for list="{{vlogs}}" as="v" hint-placeholder-count="3">
 <button class="card reveal" onClick="{{v.open}}" aria-label="Écouter le vlog {{v.name}}" style="cursor: pointer; position: relative; border: 0; padding: 0; border-radius: 26px; overflow: hidden; aspect-ratio: 9 / 16; background: #0A1F19; color: #FAFCF8; text-align: left">
-<img src="{{v.poster}}" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<img loading="lazy" decoding="async" src="{{v.poster}}" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
 <video src="{{v.src}}" poster="{{v.poster}}" ref="{{v.ref}}" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none"></video>
 <span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,28,22,0) 45%, rgba(6,28,22,.85) 100%)"></span>
 <span style="position: absolute; top: 14px; left: 14px; display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; background: #7FE0D4; color: #0E2A22; padding: 7px 11px; border-radius: 999px"><svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11 a7 7 0 0 0 14 0 M12 18 V21"></path></svg>Voix off · {{v.dur}}</span>
@@ -339,7 +339,7 @@ I live my life</a>
 </section>
 
 <!-- ============ QUI SUIS-JE ============ -->
-<section id="moi" style="padding: 130px 0 110px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .22; left: 0; top: 40px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12.5s; animation-delay: -4s"><img src="media/sh_palm_l.webp?v=11261813" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
+<section id="moi" style="padding: 130px 0 110px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .22; left: 0; top: 40px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12.5s; animation-delay: -4s"><img loading="lazy" decoding="async" src="media/sh_palm_l.webp?v=11261821" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 72px">
 <div class="reveal" style="flex: 1 1 380px; min-width: 0; display: flex; justify-content: center">
 <div style="position: relative; width: min(420px, 100%); aspect-ratio: 1 / 1">
@@ -348,7 +348,7 @@ I live my life</a>
 <text style="font-family: 'Manrope', sans-serif; font-size: 10px; font-weight: 700; fill: #08716E"><textPath href="#ring" textLength="548" lengthAdjust="spacing">I LIVE MY LIFE · VOYAGE · DÉCOUVERTE · TRANSPARENCE · AVENTURE · AUTHENTICITÉ · </textPath></text>
 </svg>
 <div style="position: absolute; inset: 9%; border-radius: 50%; background: #CFE3D8; overflow: hidden">
-<img src="{{portrait}}" alt="Alicia Bedu" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; display: block">
+<img loading="lazy" decoding="async" src="{{portrait}}" alt="Alicia Bedu" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; display: block">
 </div>
 <span class="float" style="position: absolute; right: -4%; bottom: 10%; background: #FAFCF8; padding: 12px 16px; border-radius: 18px; box-shadow: 0 18px 40px -20px rgba(14,42,34,.5); display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600">
 <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#08716E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"></rect><path d="M8 7 L9.5 4 H14.5 L16 7"></path><circle cx="12" cy="13.5" r="3.5"></circle></svg>
@@ -385,7 +385,7 @@ Ce que j'ai déjà vécu (clique pour voir)</p>
 
 <!-- ============ MODÈLE PHOTO ============ -->
 <section id="modele" aria-label="Modèle photo" style="padding: 130px 0; background: #F3F8F4; position: relative; overflow: hidden">
-<div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .26; left: 0; top: 40px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12s; animation-delay: 0s"><img src="media/sh_palm_l.webp?v=11261813" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
+<div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .26; left: 0; top: 40px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12s; animation-delay: 0s"><img loading="lazy" decoding="async" src="media/sh_palm_l.webp?v=11261821" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
 <div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 44px">
 <div class="reveal" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 28px">
 <div style="display: flex; flex-direction: column; gap: 16px; max-width: 700px">
@@ -457,7 +457,7 @@ Ce que j'ai déjà vécu (clique pour voir)</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 28px">
 <a href="https://www.instagram.com/aliibdu/" target="_blank" rel="noopener" class="card reveal" style="text-decoration: none; color: #0E2A22; background: #FAFCF8; border-radius: 28px; padding: 24px; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 24px 50px -30px rgba(14,42,34,.45)">
 <span style="display: flex; align-items: center; gap: 14px">
-<img src="{{portrait}}" alt="" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: 50% 40%; border: 3px solid #7FE0D4">
+<img loading="lazy" decoding="async" src="{{portrait}}" alt="" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: 50% 40%; border: 3px solid #7FE0D4">
 <span style="display: flex; flex-direction: column; gap: 2px; flex: 1">
 <span style="font-size: 18px; font-weight: 800">@aliibdu</span>
 <span style="font-size: 14px; color: #4E625A">Instagram · +600 abonnés · <strong style="color: #08716E">+114k vues</strong> sur mes 12 derniers posts</span>
@@ -471,7 +471,7 @@ Ce que j'ai déjà vécu (clique pour voir)</p>
 </a>
 <a href="https://www.tiktok.com/@ali.bdu" target="_blank" rel="noopener" class="card reveal" style="text-decoration: none; color: #FAFCF8; background: #0E2A22; border-radius: 28px; padding: 24px; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 24px 50px -30px rgba(14,42,34,.6)">
 <span style="display: flex; align-items: center; gap: 14px">
-<img src="{{portrait}}" alt="" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: 50% 40%; border: 3px solid #7FE0D4">
+<img loading="lazy" decoding="async" src="{{portrait}}" alt="" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: 50% 40%; border: 3px solid #7FE0D4">
 <span style="display: flex; flex-direction: column; gap: 2px; flex: 1">
 <span style="font-size: 18px; font-weight: 800">@ali.bdu</span>
 <span style="font-size: 14px; color: #C7DCD3">TikTok · +5 000 abonnés · +175k j'aime · <strong style="color: #7FE0D4">+88k vues</strong> sur mes 12 dernières vidéos</span>
@@ -488,7 +488,7 @@ Ce que j'ai déjà vécu (clique pour voir)</p>
 </section>
 
 <!-- ============ CE QUE J'APPORTE ============ -->
-<section id="services" style="padding: 120px 0; background: #DCEEE6; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .22; right: 0; top: 40px"><div class="gust" style="transform-origin: 100% 25%; animation-duration: 10s; animation-delay: -1s"><img src="media/sh_palm_r.webp?v=11261813" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 100% 25%"></div></div>
+<section id="services" style="padding: 120px 0; background: #DCEEE6; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .22; right: 0; top: 40px"><div class="gust" style="transform-origin: 100% 25%; animation-duration: 10s; animation-delay: -1s"><img loading="lazy" decoding="async" src="media/sh_palm_r.webp?v=11261821" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 100% 25%"></div></div>
 
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 48px; position: relative">
 <div class="reveal" style="display: flex; flex-direction: column; gap: 16px; max-width: 720px">
@@ -544,7 +544,7 @@ Ce que j'ai déjà vécu (clique pour voir)</p>
 <!-- ============ ALI TRAVEL (sous l'eau) ============ -->
 <section id="alitravel" style="padding: 150px 0; background: linear-gradient(180deg, #0B6E80 0%, #06485E 45%, #032838 100%); color: #FAFCF8; position: relative; overflow: hidden">
 
-<img src="media/sunset_ali.webp?v=11261813" alt="" aria-hidden="true" class="sunsetbg" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 52%"><div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,18,40,.78) 0%, rgba(8,18,40,.5) 45%, rgba(8,18,40,.08) 75%), linear-gradient(180deg, rgba(8,18,40,.45), transparent 25%)"></div>
+<img loading="lazy" decoding="async" src="media/sunset_ali.webp?v=11261821" alt="" aria-hidden="true" class="sunsetbg" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 52%"><div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,18,40,.78) 0%, rgba(8,18,40,.5) 45%, rgba(8,18,40,.08) 75%), linear-gradient(180deg, rgba(8,18,40,.45), transparent 25%)"></div>
 <div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 64px">
 <div class="reveal" style="flex: 1 1 460px; min-width: 0; max-width: 760px; display: flex; flex-direction: column; gap: 20px">
 <p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #7FE0D4">Ali Travel · mon bonus</p>
@@ -558,7 +558,7 @@ Ce que j'ai déjà vécu (clique pour voir)</p>
 </section>
 
 <!-- ============ PROCESS ============ -->
-<section aria-label="Comment on travaille ensemble" style="padding: 130px 0 110px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .2; left: 0; top: 20px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 11.5s; animation-delay: -6s"><img src="media/sh_palm_l.webp?v=11261813" alt="" class="flutter" style="width: 360px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
+<section aria-label="Comment on travaille ensemble" style="padding: 130px 0 110px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .2; left: 0; top: 20px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 11.5s; animation-delay: -6s"><img loading="lazy" decoding="async" src="media/sh_palm_l.webp?v=11261821" alt="" class="flutter" style="width: 360px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 56px">
 <div class="reveal" style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center">
 <p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E">Comment on travaille ensemble</p>
@@ -697,11 +697,11 @@ Ce que j'ai déjà vécu (clique pour voir)</p>
 <div style="flex: 1 1 380px; min-width: 0; background: #1E1916; display: flex; flex-direction: column">
 <div style="position: relative; height: min(70vh, 640px); min-height: 360px">
 <sc-if value="{{media.isVideo}}" hint-placeholder-val="{{false}}">
-<img src="{{media.poster}}" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain">
+<img loading="lazy" decoding="async" src="{{media.poster}}" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain">
 <video key="{{media.src}}" ref="{{setModalVideo}}" src="{{media.src}}" poster="{{media.poster}}" controls="{{true}}" autoPlay="{{true}}" muted="{{mvMuted}}" loop="{{true}}" playsInline="{{true}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #1E1916"></video>
 </sc-if>
 <sc-if value="{{media.isImg}}" hint-placeholder-val="{{true}}">
-<img key="{{media.src}}" class="fadeimg" src="{{media.src}}" alt="{{cur.name}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain">
+<img loading="lazy" decoding="async" key="{{media.src}}" class="fadeimg" src="{{media.src}}" alt="{{cur.name}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain">
 </sc-if>
 <button onClick="{{prev}}" aria-label="Média précédent" style="position: absolute; left: 12px; top: 50%; margin-top: -24px; width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(251,247,240,.9); color: #0E2A22; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5 L8 12 L15 19"></path></svg></button>
 <button onClick="{{next}}" aria-label="Média suivant" style="position: absolute; right: 12px; top: 50%; margin-top: -24px; width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(251,247,240,.9); color: #0E2A22; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5 L16 12 L9 19"></path></svg></button>
@@ -1045,13 +1045,13 @@ var PLACES = [
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/selina-0.jpg?v=11261813",
-"media/selina-1.jpg?v=11261813",
-"media/selina-3.jpg?v=11261813",
-"media/selina-4.jpg?v=11261813",
-"media/selina-5.jpg?v=11261813",
-"media/selina-6.jpg?v=11261813",
-"media/selina-8.jpg?v=11261813"
+"media/selina-0.jpg?v=11261821",
+"media/selina-1.jpg?v=11261821",
+"media/selina-3.jpg?v=11261821",
+"media/selina-4.jpg?v=11261821",
+"media/selina-5.jpg?v=11261821",
+"media/selina-6.jpg?v=11261821",
+"media/selina-8.jpg?v=11261821"
 ],
 "imgMe": [
 true,
@@ -1064,8 +1064,8 @@ false
 ],
 "vid": [
 {
-"src": "media/selina-0-m.mp4?v=11261813",
-"poster": "media/selina-0-1.jpg?v=11261813",
+"src": "media/selina-0-m.mp4?v=11261821",
+"poster": "media/selina-0-1.jpg?v=11261821",
 "me": true,
 "sound": false
 }
@@ -1081,14 +1081,14 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/kanha-0.jpg?v=11261813",
-"media/kanha-1.jpg?v=11261813",
-"media/kanha-2.jpg?v=11261813",
-"media/kanha-3.jpg?v=11261813",
-"media/kanha-4.jpg?v=11261813",
-"media/kanha-5.jpg?v=11261813",
-"media/kanha-6.jpg?v=11261813",
-"media/kb0.jpg?v=11261813"
+"media/kanha-0.jpg?v=11261821",
+"media/kanha-1.jpg?v=11261821",
+"media/kanha-2.jpg?v=11261821",
+"media/kanha-3.jpg?v=11261821",
+"media/kanha-4.jpg?v=11261821",
+"media/kanha-5.jpg?v=11261821",
+"media/kanha-6.jpg?v=11261821",
+"media/kb0.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -1102,50 +1102,50 @@ false
 ],
 "vid": [
 {
-"src": "media/kanha-2-m.mp4?v=11261813",
-"poster": "media/kanha-2-1.jpg?v=11261813",
+"src": "media/kanha-2-m.mp4?v=11261821",
+"poster": "media/kanha-2-1.jpg?v=11261821",
 "me": false,
 "sound": false
 },
 {
-"src": "media/kanha-1-m.mp4?v=11261813",
-"poster": "media/kanha-1-1.jpg?v=11261813",
+"src": "media/kanha-1-m.mp4?v=11261821",
+"poster": "media/kanha-1-1.jpg?v=11261821",
 "me": false,
 "sound": false
 },
 {
-"src": "media/kanha-0-m.mp4?v=11261813",
-"poster": "media/kanha-0-1.jpg?v=11261813",
+"src": "media/kanha-0-m.mp4?v=11261821",
+"poster": "media/kanha-0-1.jpg?v=11261821",
 "me": false,
 "sound": false
 },
 {
-"src": "media/w20.mp4?v=11261813",
-"poster": "media/w20.jpg?v=11261813",
+"src": "media/w20.mp4?v=11261821",
+"poster": "media/w20.jpg?v=11261821",
 "me": true,
 "sound": false
 },
 {
-"src": "media/w26.mp4?v=11261813",
-"poster": "media/w26.jpg?v=11261813",
+"src": "media/w26.mp4?v=11261821",
+"poster": "media/w26.jpg?v=11261821",
 "me": true,
 "sound": false
 },
 {
-"src": "media/w30.mp4?v=11261813",
-"poster": "media/w30.jpg?v=11261813",
+"src": "media/w30.mp4?v=11261821",
+"poster": "media/w30.jpg?v=11261821",
 "me": true,
 "sound": false
 },
 {
-"src": "media/w29.mp4?v=11261813",
-"poster": "media/w29.jpg?v=11261813",
+"src": "media/w29.mp4?v=11261821",
+"poster": "media/w29.jpg?v=11261821",
 "me": true,
 "sound": false
 },
 {
-"src": "media/w21.mp4?v=11261813",
-"poster": "media/w21.jpg?v=11261813",
+"src": "media/w21.mp4?v=11261821",
+"poster": "media/w21.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1161,12 +1161,12 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/lexus-0.jpg?v=11261813",
-"media/lexus-1.jpg?v=11261813",
-"media/lexus-2.jpg?v=11261813",
-"media/lexus-3.jpg?v=11261813",
-"media/lexus-4.jpg?v=11261813",
-"media/lx0.jpg?v=11261813"
+"media/lexus-0.jpg?v=11261821",
+"media/lexus-1.jpg?v=11261821",
+"media/lexus-2.jpg?v=11261821",
+"media/lexus-3.jpg?v=11261821",
+"media/lexus-4.jpg?v=11261821",
+"media/lx0.jpg?v=11261821"
 ],
 "imgMe": [
 true,
@@ -1178,14 +1178,14 @@ false
 ],
 "vid": [
 {
-"src": "media/lexus-cut-m.mp4?v=11261813",
-"poster": "media/lexus-0-1.jpg?v=11261813",
+"src": "media/lexus-cut-m.mp4?v=11261821",
+"poster": "media/lexus-0-1.jpg?v=11261821",
 "me": false,
 "sound": false
 },
 {
-"src": "media/lxv.mp4?v=11261813",
-"poster": "media/lxv.jpg?v=11261813",
+"src": "media/lxv.mp4?v=11261821",
+"poster": "media/lxv.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1201,11 +1201,11 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/minimes-0.jpg?v=11261813",
-"media/minimes-1.jpg?v=11261813",
-"media/minimes-2.jpg?v=11261813",
-"media/minimes-3.jpg?v=11261813",
-"media/minimes-4.jpg?v=11261813"
+"media/minimes-0.jpg?v=11261821",
+"media/minimes-1.jpg?v=11261821",
+"media/minimes-2.jpg?v=11261821",
+"media/minimes-3.jpg?v=11261821",
+"media/minimes-4.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -1216,14 +1216,14 @@ false
 ],
 "vid": [
 {
-"src": "media/minimes-0.mp4?v=11261813",
-"poster": "media/minimes-0-1.jpg?v=11261813",
+"src": "media/minimes-0.mp4?v=11261821",
+"poster": "media/minimes-0-1.jpg?v=11261821",
 "me": false,
 "sound": true
 },
 {
-"src": "media/minimes-1-m.mp4?v=11261813",
-"poster": "media/minimes-1-1.jpg?v=11261813",
+"src": "media/minimes-1-m.mp4?v=11261821",
+"poster": "media/minimes-1-1.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1239,14 +1239,14 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/scape-0.jpg?v=11261813",
-"media/scape-1.jpg?v=11261813",
-"media/scape-2.jpg?v=11261813",
-"media/scape-3.jpg?v=11261813",
-"media/scape-4.jpg?v=11261813",
-"media/scape-5.jpg?v=11261813",
-"media/scape-6.jpg?v=11261813",
-"media/sv0.jpg?v=11261813"
+"media/scape-0.jpg?v=11261821",
+"media/scape-1.jpg?v=11261821",
+"media/scape-2.jpg?v=11261821",
+"media/scape-3.jpg?v=11261821",
+"media/scape-4.jpg?v=11261821",
+"media/scape-5.jpg?v=11261821",
+"media/scape-6.jpg?v=11261821",
+"media/sv0.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -1260,20 +1260,20 @@ true
 ],
 "vid": [
 {
-"src": "media/scape-0-m.mp4?v=11261813",
-"poster": "media/scape-0-1.jpg?v=11261813",
+"src": "media/scape-0-m.mp4?v=11261821",
+"poster": "media/scape-0-1.jpg?v=11261821",
 "me": false,
 "sound": false
 },
 {
-"src": "media/scape-1-m.mp4?v=11261813",
-"poster": "media/scape-1-1.jpg?v=11261813",
+"src": "media/scape-1-m.mp4?v=11261821",
+"poster": "media/scape-1-1.jpg?v=11261821",
 "me": false,
 "sound": false
 },
 {
-"src": "media/w14.mp4?v=11261813",
-"poster": "media/w14.jpg?v=11261813",
+"src": "media/w14.mp4?v=11261821",
+"poster": "media/w14.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1289,11 +1289,11 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/cretya-0.jpg?v=11261813",
-"media/cretya-1.jpg?v=11261813",
-"media/cretya-2.jpg?v=11261813",
-"media/cretya-3.jpg?v=11261813",
-"media/cretya-4.jpg?v=11261813"
+"media/cretya-0.jpg?v=11261821",
+"media/cretya-1.jpg?v=11261821",
+"media/cretya-2.jpg?v=11261821",
+"media/cretya-3.jpg?v=11261821",
+"media/cretya-4.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -1314,9 +1314,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/cavaliers-0.jpg?v=11261813",
-"media/cavaliers-1.jpg?v=11261813",
-"media/cavaliers-2.jpg?v=11261813"
+"media/cavaliers-0.jpg?v=11261821",
+"media/cavaliers-1.jpg?v=11261821",
+"media/cavaliers-2.jpg?v=11261821"
 ],
 "imgMe": [
 true,
@@ -1335,10 +1335,10 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/okuta-0.jpg?v=11261813",
-"media/okuta-1.jpg?v=11261813",
-"media/okuta-2.jpg?v=11261813",
-"media/okuta-3.jpg?v=11261813"
+"media/okuta-0.jpg?v=11261821",
+"media/okuta-1.jpg?v=11261821",
+"media/okuta-2.jpg?v=11261821",
+"media/okuta-3.jpg?v=11261821"
 ],
 "imgMe": [
 true,
@@ -1358,10 +1358,10 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/seaesta-0.jpg?v=11261813",
-"media/seaesta-1.jpg?v=11261813",
-"media/seaesta-2.jpg?v=11261813",
-"media/seaesta-3.jpg?v=11261813"
+"media/seaesta-0.jpg?v=11261821",
+"media/seaesta-1.jpg?v=11261821",
+"media/seaesta-2.jpg?v=11261821",
+"media/seaesta-3.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -1381,12 +1381,12 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/bleumathis-0.jpg?v=11261813",
-"media/bleumathis-1.jpg?v=11261813",
-"media/bleumathis-2.jpg?v=11261813",
-"media/bleumathis-3.jpg?v=11261813",
-"media/bleumathis-4.jpg?v=11261813",
-"media/bm0.jpg?v=11261813"
+"media/bleumathis-0.jpg?v=11261821",
+"media/bleumathis-1.jpg?v=11261821",
+"media/bleumathis-2.jpg?v=11261821",
+"media/bleumathis-3.jpg?v=11261821",
+"media/bleumathis-4.jpg?v=11261821",
+"media/bm0.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -1398,8 +1398,8 @@ false
 ],
 "vid": [
 {
-"src": "media/bleumathis-0-m.mp4?v=11261813",
-"poster": "media/bleumathis-0-1.jpg?v=11261813",
+"src": "media/bleumathis-0-m.mp4?v=11261821",
+"poster": "media/bleumathis-0-1.jpg?v=11261821",
 "me": true,
 "sound": false
 }
@@ -1415,10 +1415,10 @@ false
 "vlog": "Vlog en voix off",
 "vlogDur": "54 s",
 "img": [
-"media/begude-0.jpg?v=11261813",
-"media/begude-1.jpg?v=11261813",
-"media/begude-2.jpg?v=11261813",
-"media/bg0.jpg?v=11261813"
+"media/begude-0.jpg?v=11261821",
+"media/begude-1.jpg?v=11261821",
+"media/begude-2.jpg?v=11261821",
+"media/bg0.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -1428,14 +1428,14 @@ false
 ],
 "vid": [
 {
-"src": "media/begude-entier.mp4?v=11261813",
-"poster": "media/begude-full.jpg?v=11261813",
+"src": "media/begude-entier.mp4?v=11261821",
+"poster": "media/begude-full.jpg?v=11261821",
 "me": true,
 "sound": true
 },
 {
-"src": "media/bgv.mp4?v=11261813",
-"poster": "media/bgv.jpg?v=11261813",
+"src": "media/bgv.mp4?v=11261821",
+"poster": "media/bgv.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1451,13 +1451,13 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/atlas-0.jpg?v=11261813",
-"media/atlas-1.jpg?v=11261813",
-"media/atlas-2.jpg?v=11261813",
-"media/atlas-3.jpg?v=11261813",
-"media/atlas-4.jpg?v=11261813",
-"media/atlas-5.jpg?v=11261813",
-"media/at1.jpg?v=11261813"
+"media/atlas-0.jpg?v=11261821",
+"media/atlas-1.jpg?v=11261821",
+"media/atlas-2.jpg?v=11261821",
+"media/atlas-3.jpg?v=11261821",
+"media/atlas-4.jpg?v=11261821",
+"media/atlas-5.jpg?v=11261821",
+"media/at1.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -1470,8 +1470,8 @@ false
 ],
 "vid": [
 {
-"src": "media/atlas-1-m.mp4?v=11261813",
-"poster": "media/atlas-1-1.jpg?v=11261813",
+"src": "media/atlas-1-m.mp4?v=11261821",
+"poster": "media/atlas-1-1.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1487,9 +1487,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/aquabella-0.jpg?v=11261813",
-"media/aquabella-1.jpg?v=11261813",
-"media/aquabella-2.jpg?v=11261813"
+"media/aquabella-0.jpg?v=11261821",
+"media/aquabella-1.jpg?v=11261821",
+"media/aquabella-2.jpg?v=11261821"
 ],
 "imgMe": [
 true,
@@ -1508,9 +1508,9 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/majorelle-0.jpg?v=11261813",
-"media/majorelle-1.jpg?v=11261813",
-"media/majorelle-2.jpg?v=11261813"
+"media/majorelle-0.jpg?v=11261821",
+"media/majorelle-1.jpg?v=11261821",
+"media/majorelle-2.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -1529,9 +1529,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/ouzoud-0.jpg?v=11261813",
-"media/ouzoud-1.jpg?v=11261813",
-"media/ouzoud-2.jpg?v=11261813"
+"media/ouzoud-0.jpg?v=11261821",
+"media/ouzoud-1.jpg?v=11261821",
+"media/ouzoud-2.jpg?v=11261821"
 ],
 "imgMe": [
 true,
@@ -1540,14 +1540,14 @@ true
 ],
 "vid": [
 {
-"src": "media/ouzoud-0-m.mp4?v=11261813",
-"poster": "media/ouzoud-0-1.jpg?v=11261813",
+"src": "media/ouzoud-0-m.mp4?v=11261821",
+"poster": "media/ouzoud-0-1.jpg?v=11261821",
 "me": false,
 "sound": false
 },
 {
-"src": "media/ouzoud-1-m.mp4?v=11261813",
-"poster": "media/ouzoud-1-1.jpg?v=11261813",
+"src": "media/ouzoud-1-m.mp4?v=11261821",
+"poster": "media/ouzoud-1-1.jpg?v=11261821",
 "me": true,
 "sound": false
 }
@@ -1563,8 +1563,8 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/riad-1.jpg?v=11261813",
-"media/riad-2.jpg?v=11261813"
+"media/riad-1.jpg?v=11261821",
+"media/riad-2.jpg?v=11261821"
 ],
 "imgMe": [
 true,
@@ -1582,9 +1582,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/dromadaire-0.jpg?v=11261813",
-"media/dromadaire-1.jpg?v=11261813",
-"media/selina-2.jpg?v=11261813"
+"media/dromadaire-0.jpg?v=11261821",
+"media/dromadaire-1.jpg?v=11261821",
+"media/selina-2.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -1593,8 +1593,8 @@ false
 ],
 "vid": [
 {
-"src": "media/dromadaire-0-m.mp4?v=11261813",
-"poster": "media/dromadaire-0-1.jpg?v=11261813",
+"src": "media/dromadaire-0-m.mp4?v=11261821",
+"poster": "media/dromadaire-0-1.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1610,21 +1610,21 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/wlm-0.jpg?v=11261813"
+"media/wlm-0.jpg?v=11261821"
 ],
 "imgMe": [
 true
 ],
 "vid": [
 {
-"src": "media/wlm-0-m.mp4?v=11261813",
-"poster": "media/wlm-0-1.jpg?v=11261813",
+"src": "media/wlm-0-m.mp4?v=11261821",
+"poster": "media/wlm-0-1.jpg?v=11261821",
 "me": true,
 "sound": false
 },
 {
-"src": "media/wlm-1-m.mp4?v=11261813",
-"poster": "media/wlm-1.jpg?v=11261813",
+"src": "media/wlm-1-m.mp4?v=11261821",
+"poster": "media/wlm-1.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1640,9 +1640,9 @@ true
 "vlog": "Vlog en voix off",
 "vlogDur": "54 s",
 "img": [
-"media/aizu-0.jpg?v=11261813",
-"media/aizu-1.jpg?v=11261813",
-"media/aizu-2.jpg?v=11261813"
+"media/aizu-0.jpg?v=11261821",
+"media/aizu-1.jpg?v=11261821",
+"media/aizu-2.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -1651,8 +1651,8 @@ true
 ],
 "vid": [
 {
-"src": "media/aizu-vlog.mp4?v=11261813",
-"poster": "media/aizu-vlog.jpg?v=11261813",
+"src": "media/aizu-vlog.mp4?v=11261821",
+"poster": "media/aizu-vlog.jpg?v=11261821",
 "me": true,
 "sound": true
 }
@@ -1668,7 +1668,7 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/clean-0.jpg?v=11261813"
+"media/clean-0.jpg?v=11261821"
 ],
 "imgMe": [
 false
@@ -1685,15 +1685,15 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/hana-0.jpg?v=11261813"
+"media/hana-0.jpg?v=11261821"
 ],
 "imgMe": [
 true
 ],
 "vid": [
 {
-"src": "media/hana-0-m.mp4?v=11261813",
-"poster": "media/hana-0-1.jpg?v=11261813",
+"src": "media/hana-0-m.mp4?v=11261821",
+"poster": "media/hana-0-1.jpg?v=11261821",
 "me": true,
 "sound": false
 }
@@ -1712,8 +1712,8 @@ true
 "imgMe": [],
 "vid": [
 {
-"src": "media/w25.mp4?v=11261813",
-"poster": "media/w25.jpg?v=11261813",
+"src": "media/w25.mp4?v=11261821",
+"poster": "media/w25.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1732,8 +1732,8 @@ true
 "imgMe": [],
 "vid": [
 {
-"src": "media/w23.mp4?v=11261813",
-"poster": "media/w23.jpg?v=11261813",
+"src": "media/w23.mp4?v=11261821",
+"poster": "media/w23.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1749,15 +1749,15 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/te0.jpg?v=11261813"
+"media/te0.jpg?v=11261821"
 ],
 "imgMe": [
 false
 ],
 "vid": [
 {
-"src": "media/w22c.mp4?v=11261813",
-"poster": "media/w22.jpg?v=11261813",
+"src": "media/w22c.mp4?v=11261821",
+"poster": "media/w22.jpg?v=11261821",
 "me": true,
 "sound": false
 }
@@ -1776,8 +1776,8 @@ false
 "imgMe": [],
 "vid": [
 {
-"src": "media/w32.mp4?v=11261813",
-"poster": "media/w32.jpg?v=11261813",
+"src": "media/w32.mp4?v=11261821",
+"poster": "media/w32.jpg?v=11261821",
 "me": true,
 "sound": false
 }
@@ -1796,8 +1796,8 @@ false
 "imgMe": [],
 "vid": [
 {
-"src": "media/w15.mp4?v=11261813",
-"poster": "media/w15.jpg?v=11261813",
+"src": "media/w15.mp4?v=11261821",
+"poster": "media/w15.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1816,8 +1816,8 @@ false
 "imgMe": [],
 "vid": [
 {
-"src": "media/w18.mp4?v=11261813",
-"poster": "media/w18.jpg?v=11261813",
+"src": "media/w18.mp4?v=11261821",
+"poster": "media/w18.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1833,7 +1833,7 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/vieuxmoulin.jpg?v=11261813"
+"media/vieuxmoulin.jpg?v=11261821"
 ],
 "imgMe": [
 false
@@ -1850,8 +1850,8 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/so0.jpg?v=11261813",
-"media/so1.jpg?v=11261813"
+"media/so0.jpg?v=11261821",
+"media/so1.jpg?v=11261821"
 ],
 "imgMe": [
 true,
@@ -1859,8 +1859,8 @@ false
 ],
 "vid": [
 {
-"src": "media/so.mp4?v=11261813",
-"poster": "media/so.jpg?v=11261813",
+"src": "media/so.mp4?v=11261821",
+"poster": "media/so.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1876,13 +1876,13 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/ol4.jpg?v=11261813",
-"media/ol3.jpg?v=11261813",
-"media/ol8.jpg?v=11261813",
-"media/ol9.jpg?v=11261813",
-"media/ol0.jpg?v=11261813",
-"media/ol1.jpg?v=11261813",
-"media/ol5.jpg?v=11261813"
+"media/ol4.jpg?v=11261821",
+"media/ol3.jpg?v=11261821",
+"media/ol8.jpg?v=11261821",
+"media/ol9.jpg?v=11261821",
+"media/ol0.jpg?v=11261821",
+"media/ol1.jpg?v=11261821",
+"media/ol5.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -1905,8 +1905,8 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/fr0.jpg?v=11261813",
-"media/fr1.jpg?v=11261813"
+"media/fr0.jpg?v=11261821",
+"media/fr1.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -1914,8 +1914,8 @@ false
 ],
 "vid": [
 {
-"src": "media/fr.mp4?v=11261813",
-"poster": "media/fr.jpg?v=11261813",
+"src": "media/fr.mp4?v=11261821",
+"poster": "media/fr.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1931,18 +1931,18 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/rs0.jpg?v=11261813",
-"media/rs1.jpg?v=11261813",
-"media/rs2.jpg?v=11261813",
-"media/rs3.jpg?v=11261813",
-"media/rs4.jpg?v=11261813",
-"media/rd0.jpg?v=11261813",
-"media/rd1.jpg?v=11261813",
-"media/rd2.jpg?v=11261813",
-"media/rd3.jpg?v=11261813",
-"media/rd4.jpg?v=11261813",
-"media/rd5.jpg?v=11261813",
-"media/rd6.jpg?v=11261813"
+"media/rs0.jpg?v=11261821",
+"media/rs1.jpg?v=11261821",
+"media/rs2.jpg?v=11261821",
+"media/rs3.jpg?v=11261821",
+"media/rs4.jpg?v=11261821",
+"media/rd0.jpg?v=11261821",
+"media/rd1.jpg?v=11261821",
+"media/rd2.jpg?v=11261821",
+"media/rd3.jpg?v=11261821",
+"media/rd4.jpg?v=11261821",
+"media/rd5.jpg?v=11261821",
+"media/rd6.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -1960,8 +1960,8 @@ false
 ],
 "vid": [
 {
-"src": "media/rdv.mp4?v=11261813",
-"poster": "media/rdv.jpg?v=11261813",
+"src": "media/rdv.mp4?v=11261821",
+"poster": "media/rdv.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -1977,15 +1977,15 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/mk0.jpg?v=11261813"
+"media/mk0.jpg?v=11261821"
 ],
 "imgMe": [
 false
 ],
 "vid": [
 {
-"src": "media/mk.mp4?v=11261813",
-"poster": "media/mk.jpg?v=11261813",
+"src": "media/mk.mp4?v=11261821",
+"poster": "media/mk.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -2001,9 +2001,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/tc2.jpg?v=11261813",
-"media/tc1.jpg?v=11261813",
-"media/tc0.jpg?v=11261813"
+"media/tc2.jpg?v=11261821",
+"media/tc1.jpg?v=11261821",
+"media/tc0.jpg?v=11261821"
 ],
 "imgMe": [
 true,
@@ -2022,8 +2022,8 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/nb0.jpg?v=11261813",
-"media/nb1.jpg?v=11261813"
+"media/nb0.jpg?v=11261821",
+"media/nb1.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -2041,11 +2041,11 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/ez0.jpg?v=11261813",
-"media/ez1.jpg?v=11261813",
-"media/ez2.jpg?v=11261813",
-"media/ez3.jpg?v=11261813",
-"media/ez4.jpg?v=11261813"
+"media/ez0.jpg?v=11261821",
+"media/ez1.jpg?v=11261821",
+"media/ez2.jpg?v=11261821",
+"media/ez3.jpg?v=11261821",
+"media/ez4.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -2066,9 +2066,9 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/ch0.jpg?v=11261813",
-"media/ch1.jpg?v=11261813",
-"media/ch2.jpg?v=11261813"
+"media/ch0.jpg?v=11261821",
+"media/ch1.jpg?v=11261821",
+"media/ch2.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -2077,8 +2077,8 @@ false
 ],
 "vid": [
 {
-"src": "media/chv.mp4?v=11261813",
-"poster": "media/chv.jpg?v=11261813",
+"src": "media/chv.mp4?v=11261821",
+"poster": "media/chv.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -2094,14 +2094,14 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/kc0.jpg?v=11261813",
-"media/kc1.jpg?v=11261813",
-"media/kc2.jpg?v=11261813",
-"media/kc3.jpg?v=11261813",
-"media/kc4.jpg?v=11261813",
-"media/kc5.jpg?v=11261813",
-"media/kc6.jpg?v=11261813",
-"media/kc7.jpg?v=11261813"
+"media/kc0.jpg?v=11261821",
+"media/kc1.jpg?v=11261821",
+"media/kc2.jpg?v=11261821",
+"media/kc3.jpg?v=11261821",
+"media/kc4.jpg?v=11261821",
+"media/kc5.jpg?v=11261821",
+"media/kc6.jpg?v=11261821",
+"media/kc7.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -2115,14 +2115,14 @@ false
 ],
 "vid": [
 {
-"src": "media/w16.mp4?v=11261813",
-"poster": "media/w16.jpg?v=11261813",
+"src": "media/w16.mp4?v=11261821",
+"poster": "media/w16.jpg?v=11261821",
 "me": false,
 "sound": false
 },
 {
-"src": "media/w17.mp4?v=11261813",
-"poster": "media/w17.jpg?v=11261813",
+"src": "media/w17.mp4?v=11261821",
+"poster": "media/w17.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -2138,8 +2138,8 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/ds0.jpg?v=11261813",
-"media/ds1.jpg?v=11261813"
+"media/ds0.jpg?v=11261821",
+"media/ds1.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -2147,8 +2147,8 @@ false
 ],
 "vid": [
 {
-"src": "media/dsv.mp4?v=11261813",
-"poster": "media/dsv.jpg?v=11261813",
+"src": "media/dsv.mp4?v=11261821",
+"poster": "media/dsv.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -2164,12 +2164,12 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/vr0.jpg?v=11261813",
-"media/vr1.jpg?v=11261813",
-"media/vr2.jpg?v=11261813",
-"media/vr3.jpg?v=11261813",
-"media/vr5.jpg?v=11261813",
-"media/vr6.jpg?v=11261813"
+"media/vr0.jpg?v=11261821",
+"media/vr1.jpg?v=11261821",
+"media/vr2.jpg?v=11261821",
+"media/vr3.jpg?v=11261821",
+"media/vr5.jpg?v=11261821",
+"media/vr6.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -2181,8 +2181,8 @@ true
 ],
 "vid": [
 {
-"src": "media/vr2.mp4?v=11261813",
-"poster": "media/vr2-1.jpg?v=11261813",
+"src": "media/vr2.mp4?v=11261821",
+"poster": "media/vr2-1.jpg?v=11261821",
 "me": false,
 "sound": false
 }
@@ -2198,9 +2198,9 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/lm0.jpg?v=11261813",
-"media/lm1.jpg?v=11261813",
-"media/lm2.jpg?v=11261813"
+"media/lm0.jpg?v=11261821",
+"media/lm1.jpg?v=11261821",
+"media/lm2.jpg?v=11261821"
 ],
 "imgMe": [
 true,
@@ -2219,7 +2219,7 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/gm0.jpg?v=11261813"
+"media/gm0.jpg?v=11261821"
 ],
 "imgMe": [
 false
@@ -2236,8 +2236,8 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/ol2.jpg?v=11261813",
-"media/ol7.jpg?v=11261813"
+"media/ol2.jpg?v=11261821",
+"media/ol7.jpg?v=11261821"
 ],
 "imgMe": [
 false,
@@ -2255,7 +2255,7 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/mb1.jpg?v=11261813"
+"media/mb1.jpg?v=11261821"
 ],
 "imgMe": [
 false
@@ -2272,7 +2272,7 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/gm1.jpg?v=11261813"
+"media/gm1.jpg?v=11261821"
 ],
 "imgMe": [
 false
@@ -2289,7 +2289,7 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/riad-0.jpg?v=11261813"
+"media/riad-0.jpg?v=11261821"
 ],
 "imgMe": [
 false
@@ -2307,14 +2307,14 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m37.jpg?v=11261813",
-"media/m36.jpg?v=11261813",
-"media/m38.jpg?v=11261813",
-"media/m20.jpg?v=11261813",
-"media/m22.jpg?v=11261813",
-"media/m21.jpg?v=11261813",
-"media/m23.jpg?v=11261813",
-"media/m24.jpg?v=11261813"
+"media/m37.jpg?v=11261821",
+"media/m36.jpg?v=11261821",
+"media/m38.jpg?v=11261821",
+"media/m20.jpg?v=11261821",
+"media/m22.jpg?v=11261821",
+"media/m21.jpg?v=11261821",
+"media/m23.jpg?v=11261821",
+"media/m24.jpg?v=11261821"
 ],
 "vid": []
 },
@@ -2329,10 +2329,10 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m35.jpg?v=11261813",
-"media/m32.jpg?v=11261813",
-"media/m33.jpg?v=11261813",
-"media/m34.jpg?v=11261813"
+"media/m35.jpg?v=11261821",
+"media/m32.jpg?v=11261821",
+"media/m33.jpg?v=11261821",
+"media/m34.jpg?v=11261821"
 ],
 "vid": []
 },
@@ -2347,9 +2347,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m25.jpg?v=11261813",
-"media/m26.jpg?v=11261813",
-"media/m27.jpg?v=11261813"
+"media/m25.jpg?v=11261821",
+"media/m26.jpg?v=11261821",
+"media/m27.jpg?v=11261821"
 ],
 "vid": []
 },
@@ -2364,14 +2364,14 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m40.jpg?v=11261813",
-"media/m41.jpg?v=11261813",
-"media/m42.jpg?v=11261813",
-"media/m43.jpg?v=11261813",
-"media/m44.jpg?v=11261813",
-"media/m45.jpg?v=11261813",
-"media/m46.jpg?v=11261813",
-"media/m47.jpg?v=11261813"
+"media/m40.jpg?v=11261821",
+"media/m41.jpg?v=11261821",
+"media/m42.jpg?v=11261821",
+"media/m43.jpg?v=11261821",
+"media/m44.jpg?v=11261821",
+"media/m45.jpg?v=11261821",
+"media/m46.jpg?v=11261821",
+"media/m47.jpg?v=11261821"
 ],
 "vid": []
 },
@@ -2386,10 +2386,10 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m31.jpg?v=11261813",
-"media/m30.jpg?v=11261813",
-"media/m29.jpg?v=11261813",
-"media/m28.jpg?v=11261813"
+"media/m31.jpg?v=11261821",
+"media/m30.jpg?v=11261821",
+"media/m29.jpg?v=11261821",
+"media/m28.jpg?v=11261821"
 ],
 "vid": []
 },
@@ -2404,9 +2404,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m00.jpg?v=11261813",
-"media/m01.jpg?v=11261813",
-"media/m02.jpg?v=11261813"
+"media/m00.jpg?v=11261821",
+"media/m01.jpg?v=11261821",
+"media/m02.jpg?v=11261821"
 ],
 "vid": []
 },
@@ -2421,15 +2421,15 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m07.jpg?v=11261813",
-"media/m05.jpg?v=11261813",
-"media/m04.jpg?v=11261813",
-"media/m06.jpg?v=11261813",
-"media/m09.jpg?v=11261813",
-"media/m08.jpg?v=11261813",
-"media/m10.jpg?v=11261813",
-"media/m11.jpg?v=11261813",
-"media/m12.jpg?v=11261813"
+"media/m07.jpg?v=11261821",
+"media/m05.jpg?v=11261821",
+"media/m04.jpg?v=11261821",
+"media/m06.jpg?v=11261821",
+"media/m09.jpg?v=11261821",
+"media/m08.jpg?v=11261821",
+"media/m10.jpg?v=11261821",
+"media/m11.jpg?v=11261821",
+"media/m12.jpg?v=11261821"
 ],
 "vid": []
 },
@@ -2444,9 +2444,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m14.jpg?v=11261813",
-"media/m17.jpg?v=11261813",
-"media/m13.jpg?v=11261813"
+"media/m14.jpg?v=11261821",
+"media/m17.jpg?v=11261821",
+"media/m13.jpg?v=11261821"
 ],
 "vid": []
 },
@@ -2463,33 +2463,33 @@ false
 "img": [],
 "vid": [
 {
-"src": "media/w04.mp4?v=11261813",
-"poster": "media/w04.jpg?v=11261813",
+"src": "media/w04.mp4?v=11261821",
+"poster": "media/w04.jpg?v=11261821",
 "sound": false
 },
 {
-"src": "media/w05.mp4?v=11261813",
-"poster": "media/w05.jpg?v=11261813",
+"src": "media/w05.mp4?v=11261821",
+"poster": "media/w05.jpg?v=11261821",
 "sound": false
 },
 {
-"src": "media/w08.mp4?v=11261813",
-"poster": "media/w08.jpg?v=11261813",
+"src": "media/w08.mp4?v=11261821",
+"poster": "media/w08.jpg?v=11261821",
 "sound": false
 },
 {
-"src": "media/w10.mp4?v=11261813",
-"poster": "media/w10.jpg?v=11261813",
+"src": "media/w10.mp4?v=11261821",
+"poster": "media/w10.jpg?v=11261821",
 "sound": false
 },
 {
-"src": "media/w12.mp4?v=11261813",
-"poster": "media/w12.jpg?v=11261813",
+"src": "media/w12.mp4?v=11261821",
+"poster": "media/w12.jpg?v=11261821",
 "sound": false
 },
 {
-"src": "media/w33.mp4?v=11261813",
-"poster": "media/w33.jpg?v=11261813",
+"src": "media/w33.mp4?v=11261821",
+"poster": "media/w33.jpg?v=11261821",
 "sound": false
 }
 ]
@@ -2507,23 +2507,23 @@ false
 "img": [],
 "vid": [
 {
-"src": "media/w00.mp4?v=11261813",
-"poster": "media/w00.jpg?v=11261813",
+"src": "media/w00.mp4?v=11261821",
+"poster": "media/w00.jpg?v=11261821",
 "sound": false
 },
 {
-"src": "media/w01.mp4?v=11261813",
-"poster": "media/w01.jpg?v=11261813",
+"src": "media/w01.mp4?v=11261821",
+"poster": "media/w01.jpg?v=11261821",
 "sound": false
 },
 {
-"src": "media/w02.mp4?v=11261813",
-"poster": "media/w02.jpg?v=11261813",
+"src": "media/w02.mp4?v=11261821",
+"poster": "media/w02.jpg?v=11261821",
 "sound": false
 },
 {
-"src": "media/w06.mp4?v=11261813",
-"poster": "media/w06.jpg?v=11261813",
+"src": "media/w06.mp4?v=11261821",
+"poster": "media/w06.jpg?v=11261821",
 "sound": false
 }
 ]
@@ -2541,20 +2541,20 @@ false
 "img": [],
 "vid": [
 {
-"src": "media/w09.mp4?v=11261813",
-"poster": "media/w09.jpg?v=11261813",
+"src": "media/w09.mp4?v=11261821",
+"poster": "media/w09.jpg?v=11261821",
 "sound": false
 }
 ]
 }
 ];
 var GALLERY = [["selina", 0], ["kanha", 0], ["lexus", 2], ["minimes", 2], ["scape", 1], ["cretya", 2], ["cavaliers", 0], ["okuta", 0], ["seaesta", 1], ["bleumathis", 0], ["begude", 0], ["atlas", 1], ["aquabella", 1], ["majorelle", 0], ["ouzoud", 0], ["riad", 1], ["dromadaire", 0], ["wlm", 0], ["aizu", 1], ["clean", 0], ["hana", 0]];
-var HERO = [{"place": "scape", "vi": 0, "src": "media/scape-0-m.mp4?v=11261813", "poster": "media/scape-0-1.jpg?v=11261813"}, {"place": "minimes", "vi": 0, "src": "media/minimes-0.mp4?v=11261813", "poster": "media/minimes-0-1.jpg?v=11261813"}, {"place": "selina", "vi": 0, "src": "media/selina-0-m.mp4?v=11261813", "poster": "media/selina-0-1.jpg?v=11261813"}];
-var HEROBG = {"src": "media/kanha-0-m.mp4?v=11261813", "poster": "media/kanha-0-1.jpg?v=11261813"};
+var HERO = [{"place": "scape", "vi": 0, "src": "media/scape-0-m.mp4?v=11261821", "poster": "media/scape-0-1.jpg?v=11261821"}, {"place": "minimes", "vi": 0, "src": "media/minimes-0.mp4?v=11261821", "poster": "media/minimes-0-1.jpg?v=11261821"}, {"place": "selina", "vi": 0, "src": "media/selina-0-m.mp4?v=11261821", "poster": "media/selina-0-1.jpg?v=11261821"}];
+var HEROBG = {"src": "media/kanha-0-m.mp4?v=11261821", "poster": "media/kanha-0-1.jpg?v=11261821"};
 var COUNTRIES = ['France', 'Maroc', 'Indonésie', 'Malaisie', 'Singapour', 'Sénégal', 'Croatie', 'Grèce', 'Italie', 'Portugal', 'Espagne', 'Angleterre', 'Albanie'];
-var SOCIAL_IMGS = ["media/selina-1.jpg?v=11261813", "media/kanha-1.jpg?v=11261813", "media/lexus-1.jpg?v=11261813", "media/scape-1.jpg?v=11261813", "media/cretya-1.jpg?v=11261813", "media/minimes-1.jpg?v=11261813", "media/okuta-0.jpg?v=11261813", "media/cavaliers-0.jpg?v=11261813", "media/majorelle-0.jpg?v=11261813", "media/atlas-0.jpg?v=11261813", "media/seaesta-0.jpg?v=11261813", "media/bleumathis-0.jpg?v=11261813", "media/aquabella-0.jpg?v=11261813", "media/ouzoud-0.jpg?v=11261813", "media/riad-0.jpg?v=11261813"];
-var TK_TILES = [{"src": "media/tk_t00.jpg?v=11261813", "v": "18,6k"}, {"src": "media/tk_t01.jpg?v=11261813", "v": "5 042"}, {"src": "media/tk_t02.jpg?v=11261813", "v": "967"}, {"src": "media/tk_t03.jpg?v=11261813", "v": "3 060"}, {"src": "media/tk_t04.jpg?v=11261813", "v": "873"}, {"src": "media/tk_t05.jpg?v=11261813", "v": "792"}, {"src": "media/tk_t06.jpg?v=11261813", "v": "801"}, {"src": "media/tk_t07.jpg?v=11261813", "v": "936"}, {"src": "media/tk_t08.jpg?v=11261813", "v": "49,9k"}, {"src": "media/tk_t09.jpg?v=11261813", "v": "1 557"}, {"src": "media/tk_t10.jpg?v=11261813", "v": "4 696"}, {"src": "media/tk_t11.jpg?v=11261813", "v": "1 462"}];
-var IG_TILES = [{"src": "media/ig_t0.jpg?v=11261813", "v": "17,6k"}, {"src": "media/ig_t1.jpg?v=11261813", "v": "2 328"}, {"src": "media/ig_t2.jpg?v=11261813", "v": "11,4k"}, {"src": "media/ig_t3.jpg?v=11261813", "v": "2 911"}, {"src": "media/ig_t4.jpg?v=11261813", "v": "597"}, {"src": "media/ig_t5.jpg?v=11261813", "v": "15,9k"}, {"src": "media/ig_t6.jpg?v=11261813", "v": "14,3k"}, {"src": "media/ig_t7.jpg?v=11261813", "v": "1 333"}, {"src": "media/ig_t8.jpg?v=11261813", "v": "20,2k"}, {"src": "media/ig_t9.jpg?v=11261813", "v": "10,4k"}, {"src": "media/ig_t10.jpg?v=11261813", "v": "14,6k"}, {"src": "media/ig_t11.jpg?v=11261813", "v": "2 533"}];
+var SOCIAL_IMGS = ["media/selina-1.jpg?v=11261821", "media/kanha-1.jpg?v=11261821", "media/lexus-1.jpg?v=11261821", "media/scape-1.jpg?v=11261821", "media/cretya-1.jpg?v=11261821", "media/minimes-1.jpg?v=11261821", "media/okuta-0.jpg?v=11261821", "media/cavaliers-0.jpg?v=11261821", "media/majorelle-0.jpg?v=11261821", "media/atlas-0.jpg?v=11261821", "media/seaesta-0.jpg?v=11261821", "media/bleumathis-0.jpg?v=11261821", "media/aquabella-0.jpg?v=11261821", "media/ouzoud-0.jpg?v=11261821", "media/riad-0.jpg?v=11261821"];
+var TK_TILES = [{"src": "media/tk_t00.jpg?v=11261821", "v": "18,6k"}, {"src": "media/tk_t01.jpg?v=11261821", "v": "5 042"}, {"src": "media/tk_t02.jpg?v=11261821", "v": "967"}, {"src": "media/tk_t03.jpg?v=11261821", "v": "3 060"}, {"src": "media/tk_t04.jpg?v=11261821", "v": "873"}, {"src": "media/tk_t05.jpg?v=11261821", "v": "792"}, {"src": "media/tk_t06.jpg?v=11261821", "v": "801"}, {"src": "media/tk_t07.jpg?v=11261821", "v": "936"}, {"src": "media/tk_t08.jpg?v=11261821", "v": "49,9k"}, {"src": "media/tk_t09.jpg?v=11261821", "v": "1 557"}, {"src": "media/tk_t10.jpg?v=11261821", "v": "4 696"}, {"src": "media/tk_t11.jpg?v=11261821", "v": "1 462"}];
+var IG_TILES = [{"src": "media/ig_t0.jpg?v=11261821", "v": "17,6k"}, {"src": "media/ig_t1.jpg?v=11261821", "v": "2 328"}, {"src": "media/ig_t2.jpg?v=11261821", "v": "11,4k"}, {"src": "media/ig_t3.jpg?v=11261821", "v": "2 911"}, {"src": "media/ig_t4.jpg?v=11261821", "v": "597"}, {"src": "media/ig_t5.jpg?v=11261821", "v": "15,9k"}, {"src": "media/ig_t6.jpg?v=11261821", "v": "14,3k"}, {"src": "media/ig_t7.jpg?v=11261821", "v": "1 333"}, {"src": "media/ig_t8.jpg?v=11261821", "v": "20,2k"}, {"src": "media/ig_t9.jpg?v=11261821", "v": "10,4k"}, {"src": "media/ig_t10.jpg?v=11261821", "v": "14,6k"}, {"src": "media/ig_t11.jpg?v=11261821", "v": "2 533"}];
 var EXPS = [
   ['Nuit dans le désert', 'selina'], ['Snorkeling avec les raies manta', 'kanha'], ['Balade à cheval', 'cavaliers'], ['Balade à dos de dromadaire', 'dromadaire'],
   ['Spa L\u2019Occitane', 'minimes'], ['Spa au château', 'begude'], ['Buggy dans la palmeraie', 'wlm'], ['Baignade aux cascades', 'ouzoud'], ['Croisière à Komodo', 'kanha'],
@@ -2563,7 +2563,7 @@ var EXPS = [
 ];
 var EXP_BG = ['#9FDCD5', '#CDE5C4', '#F2D9A6', '#B8E0C2', '#DCEEE6', '#F6C9B4'];
 var SECTIONS = [['top', 'Accueil'], ['experiences', 'Expériences'], ['vlogs', 'Vlogs voix off'], ['moi', 'Qui suis-je'], ['modele', 'Modèle photo'], ['reseaux', 'Mes réseaux'], ['services', 'Ce que j\u2019apporte'], ['alitravel', 'Ali Travel'], ['contact', 'Contact']];
-var PORTRAIT = "media/portrait.jpg?v=11261813";
+var PORTRAIT = "media/portrait.jpg?v=11261821";
 
 class Component extends DCLogic {
   constructor(props) {
