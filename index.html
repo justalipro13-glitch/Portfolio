@@ -189,12 +189,12 @@ section > div:not([aria-hidden]), section > ol, footer > *{position:relative;z-i
 <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true" class="spin slow"><circle cx="13" cy="13" r="5.5" fill="#E8A93A"></circle><g stroke="#E8A93A" stroke-width="2" stroke-linecap="round"><line x1="13" y1="1.5" x2="13" y2="4.5"></line><line x1="13" y1="21.5" x2="13" y2="24.5"></line><line x1="1.5" y1="13" x2="4.5" y2="13"></line><line x1="21.5" y1="13" x2="24.5" y2="13"></line><line x1="4.9" y1="4.9" x2="7" y2="7"></line><line x1="19" y1="19" x2="21.1" y2="21.1"></line><line x1="4.9" y1="21.1" x2="7" y2="19"></line><line x1="19" y1="7" x2="21.1" y2="4.9"></line></g></svg>
 I live my life</a>
 <nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 26px; font-size: 15px; font-weight: 500">
+<a class="ul" href="#moi">Qui suis-je</a>
 <a class="ul" href="#experiences">Expériences</a>
 <a class="ul" href="#vlogs">Vlogs voix off</a>
-<a class="ul" href="#moi">Qui suis-je</a>
-<a class="ul" href="#modele">Modèle photo</a>
 <a class="ul" href="#services">Ce que j'apporte</a>
 <a class="ul" href="#alitravel">Ali Travel</a>
+<a class="ul" href="#modele">Modèle photo</a>
 <div role="group" aria-label="Langue / Language" style="display: inline-flex; align-items: center; gap: 2px; padding: 3px; border-radius: 999px; border: 1px solid rgba(14,42,34,.22); font-size: 13px; font-weight: 700; letter-spacing: .04em"><button type="button" onClick="{{lang.setFr}}" aria-pressed="{{lang.frOn}}" aria-label="Français" style="cursor: pointer; border: 0; border-radius: 999px; padding: 6px 11px; font: inherit; background: {{lang.frBg}}; color: {{lang.frFg}}">FR</button><button type="button" onClick="{{lang.setEn}}" aria-pressed="{{lang.enOn}}" aria-label="English" style="cursor: pointer; border: 0; border-radius: 999px; padding: 6px 11px; font: inherit; background: {{lang.enBg}}; color: {{lang.enFg}}">EN</button></div>
 <a href="#contact" class="btn btn-dark" style="background: #08716E; color: #FAFCF8; padding: 11px 20px; border-radius: 999px; font-weight: 600">Collaborons</a>
 </nav>
@@ -256,90 +256,8 @@ I live my life</a>
 <div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 160px; z-index: 2; background: linear-gradient(180deg, rgba(238,246,241,0) 0%, rgba(238,246,241,.85) 70%, #EEF6F1 100%)"></div>
 </section>
 
-<!-- ============ EXPÉRIENCES ============ -->
-<section id="experiences" style="padding: 90px 0 130px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .26; right: 0; top: 60px"><div class="gust" style="transform-origin: 100% 25%; animation-duration: 11s; animation-delay: 0s"><img loading="lazy" decoding="async" src="media/sh_palm_r.webp?v=11261821" alt="" class="flutter" style="width: 600px; max-width: 60vw; height: auto; display: block; transform-origin: 100% 25%"></div></div><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .2; left: 0; top: 1400px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12s; animation-delay: -3s"><img loading="lazy" decoding="async" src="media/sh_palm_l.webp?v=11261821" alt="" class="flutter" style="width: 520px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 40px">
-<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 680px">
-<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E">Mes collaborations &amp; expériences</p>
-<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Des lieux que j'ai <em style="color: #08716E">vraiment</em> vécus.</h2>
-<div class="reveal" style="max-width: 780px; display: flex; flex-direction: column; gap: 8px; margin-top: 6px"><p class="serif" style="margin: 0; font-size: clamp(22px, 2.4vw, 28px); font-style: italic; color: #08716E">Le bien-être se vit, se ressent et se partage.</p><p style="margin: 0; font-size: 17px; line-height: 1.65; color: #2D3D37">Aujourd'hui, le besoin de déconnexion se fait ressentir : une véritable parenthèse de détente, une expérience sensorielle, un moment hors du temps. À travers un contenu authentique et immersif, je mets en lumière l'art de vivre, la sérénité et l'univers unique de chaque établissement, pour éveiller les sens, inspirer l'évasion et donner envie de vivre l'expérience à son tour.</p></div>
-</div>
-
-</div>
-
-<div class="reveal" role="tablist" aria-label="Catégories" style="display: flex; flex-wrap: wrap; gap: 10px">
-<sc-for list="{{tabs}}" as="t" hint-placeholder-count="7">
-<button class="tab" role="tab" aria-selected="{{t.sel}}" onClick="{{t.pick}}" style="cursor: pointer; display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; min-height: 46px; border-radius: 999px; border: 1.5px solid {{t.bd}}; background: {{t.bg}}; color: {{t.fg}}; font-size: 15px; font-weight: 600">{{t.label}}</button>
-</sc-for>
-</div>
-
-<div style="display: flex; flex-direction: column; gap: 72px">
-<sc-for list="{{groups}}" as="g" hint-placeholder-count="4">
-<div style="display: flex; flex-direction: column; gap: 26px">
-<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 14px; border-bottom: 1.5px solid rgba(14,42,34,.14)"><h3 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.05">{{g.label}}</h3></div>
-<sc-if value="{{g.hasIntro}}" hint-placeholder-val="{{false}}"><div class="reveal" style="max-width: 760px; display: flex; flex-direction: column; gap: 8px"><p class="serif" style="margin: 0; font-size: clamp(22px, 2.4vw, 28px); font-style: italic; color: #08716E">{{g.introT}}</p><p style="margin: 0; font-size: 17px; line-height: 1.65; color: #2D3D37">{{g.intro}}</p></div></sc-if>
-<sc-for list="{{g.blocks}}" as="bl" hint-placeholder-count="2"><div style="display: flex; flex-direction: column; gap: 14px"><p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #0E2A22"><sc-if value="{{bl.isPhotos}}" hint-placeholder-val="{{true}}"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#08716E" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="3"></rect><circle cx="9" cy="10" r="1.6"></circle><path d="M21 16 L15 11 L6 19"></path></svg></sc-if><sc-if value="{{bl.isVideos}}" hint-placeholder-val="{{false}}"><svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true"><path d="M5 3 L15 9 L5 15 Z" fill="#08716E"></path></svg></sc-if>{{bl.title}}</p><sc-if value="{{bl.isPhotos}}" hint-placeholder-val="{{true}}"><div class="pgrid"><sc-for list="{{bl.items}}" as="it" hint-placeholder-count="8"><button class="ptile" onClick="{{it.open}}" data-me="{{it.me}}" aria-label="Voir la photo en grand" style="cursor: pointer; border: 0; padding: 0; border-radius: 16px; overflow: hidden; aspect-ratio: 4 / 5; background: #CFE3D8; position: relative"><img src="{{it.src}}" alt="{{it.alt}}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></button></sc-for></div></sc-if><sc-if value="{{bl.isVideos}}" hint-placeholder-val="{{false}}"><div class="vgrid"><sc-for list="{{bl.items}}" as="r" hint-placeholder-count="6"><button class="reel" onClick="{{r.open}}" aria-label="Voir la vidéo" style="cursor: pointer; position: relative; border: 0; padding: 0; border-radius: 18px; overflow: hidden; aspect-ratio: 9 / 16; background: #0E2A22"><img src="{{r.poster}}" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><span aria-hidden="true" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 54px; height: 54px; border-radius: 50%; background: rgba(250,252,248,.88); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.25)"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0E2A22"><path d="M8 5v14l11-7z"/></svg></span></button></sc-for></div></sc-if></div></sc-for>
-</div>
-</sc-for>
-<div class="reveal" style="border: 2px dashed rgba(8,113,110,.4); border-radius: 24px; min-height: 220px; max-width: 520px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; padding: 28px; color: #4E625A">
-<span class="float" style="width: 64px; height: 64px; border-radius: 50%; background: #DCEEE6; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#08716E" stroke-width="2" stroke-linecap="round"><path d="M12 5 V19 M5 12 H19"></path></svg></span>
-<span class="serif" style="font-size: 22px; color: #0E2A22">Votre lieu ici ?</span>
-<span style="font-size: 15px; line-height: 1.5; max-width: 220px">La prochaine expérience à partager, c'est peut-être la vôtre.</span>
-<a href="#contact" style="font-weight: 700; font-size: 15px">Collaborons →</a>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ============ GALERIE ============ -->
-<section aria-label="Galerie" style="padding: 0 0 130px">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 36px">
-<div class="reveal" style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center">
-<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E">Galerie</p>
-<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Un aperçu de mon <em style="color: #08716E">univers</em></h2>
-</div>
-<div style="columns: 4 220px; column-gap: 16px">
-<sc-for list="{{gallery}}" as="g" hint-placeholder-count="12">
-<button class="tile reveal" onClick="{{g.open}}" aria-label="Agrandir : {{g.label}}" style="cursor: pointer; break-inside: avoid; display: block; position: relative; width: 100%; margin: 0 0 16px; border: 0; border-radius: 18px; padding: 0; overflow: hidden; background: #CFE3D8">
-<img src="{{g.src}}" alt="{{g.label}}" loading="lazy" style="width: 100%; height: auto; display: block">
-<span style="position: absolute; left: 10px; bottom: 10px; font-size: 12px; font-weight: 700; background: rgba(251,247,240,.9); color: #0E2A22; padding: 5px 10px; border-radius: 999px">{{g.label}}</span>
-</button>
-</sc-for>
-</div>
-</div>
-</section>
-
-<!-- ============ VLOGS VOIX OFF ============ -->
-<section id="vlogs" aria-label="Mes vlogs en voix off" style="padding: 120px 0; background: #0E2A22; color: #FAFCF8; position: relative; overflow: hidden">
-<div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 44px">
-<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 680px">
-<p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #7FE0D4"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11 a7 7 0 0 0 14 0 M12 18 V21"></path></svg>Mes vlogs en voix off</p>
-<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Je raconte l'expérience <em style="color: #7FE0D4">avec ma voix.</em></h2>
-<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #C7DCD3">Des vlogs d'environ une minute, de l'arrivée jusqu'aux petits détails, avec ma voix pour guider votre futur client comme si il y était. Un format que je propose aussi en plus des photos et des Reels.</p>
-</div>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 28px">
-<sc-for list="{{vlogs}}" as="v" hint-placeholder-count="3">
-<button class="card reveal" onClick="{{v.open}}" aria-label="Écouter le vlog {{v.name}}" style="cursor: pointer; position: relative; border: 0; padding: 0; border-radius: 26px; overflow: hidden; aspect-ratio: 9 / 16; background: #0A1F19; color: #FAFCF8; text-align: left">
-<img loading="lazy" decoding="async" src="{{v.poster}}" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
-<video src="{{v.src}}" poster="{{v.poster}}" ref="{{v.ref}}" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none"></video>
-<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,28,22,0) 45%, rgba(6,28,22,.85) 100%)"></span>
-<span style="position: absolute; top: 14px; left: 14px; display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; background: #7FE0D4; color: #0E2A22; padding: 7px 11px; border-radius: 999px"><svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11 a7 7 0 0 0 14 0 M12 18 V21"></path></svg>Voix off · {{v.dur}}</span>
-<span style="position: absolute; left: 20px; right: 20px; bottom: 20px; display: flex; flex-direction: column; gap: 6px">
-<span class="serif" style="font-size: 26px; line-height: 1.1">{{v.name}}</span>
-<span style="font-size: 14px; color: #C7DCD3">{{v.where}}</span>
-<span style="margin-top: 8px; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; background: rgba(250,252,248,.95); color: #0E2A22; padding: 10px 16px; border-radius: 999px; font-size: 14px; font-weight: 700"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9 H8 L13 5 V19 L8 15 H4 Z"></path><path d="M16 9 a4 4 0 0 1 0 6 M18.5 6.5 a7.5 7.5 0 0 1 0 11"></path></svg>Écouter le vlog</span>
-</span>
-</button>
-</sc-for>
-</div>
-</div>
-</section>
-
 <!-- ============ QUI SUIS-JE ============ -->
-<section id="moi" style="padding: 130px 0 110px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .22; left: 0; top: 40px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12.5s; animation-delay: -4s"><img loading="lazy" decoding="async" src="media/sh_palm_l.webp?v=11261821" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
+<section id="moi" style="padding: 130px 0 110px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .22; left: 0; top: 40px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12.5s; animation-delay: -4s"><img loading="lazy" decoding="async" src="media/sh_palm_l.webp?v=11261832" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 72px">
 <div class="reveal" style="flex: 1 1 380px; min-width: 0; display: flex; justify-content: center">
 <div style="position: relative; width: min(420px, 100%); aspect-ratio: 1 / 1">
@@ -383,32 +301,83 @@ Ce que j'ai déjà vécu (clique pour voir)</p>
 </div>
 </section>
 
-<!-- ============ MODÈLE PHOTO ============ -->
-<section id="modele" aria-label="Modèle photo" style="padding: 130px 0; background: #F3F8F4; position: relative; overflow: hidden">
-<div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .26; left: 0; top: 40px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12s; animation-delay: 0s"><img loading="lazy" decoding="async" src="media/sh_palm_l.webp?v=11261821" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
-<div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 44px">
-<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 28px">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 700px">
-<p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"></rect><path d="M8 7 L9.5 4 H14.5 L16 7"></path><circle cx="12" cy="13.5" r="3.5"></circle></svg>Modèle photo</p>
-<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Je pose aussi <em style="color: #08716E">pour vos marques.</em></h2>
-<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #2D3D37">Modèle photo freelance, je suis à l'aise devant l'objectif et je m'adapte à l'univers de chaque marque. Je peux être le visage de votre hôtel ou de votre restaurant dans mes contenus UGC, ou poser pour vos campagnes, vos lookbooks et vos photos produit.</p>
+<!-- ============ GALERIE ============ -->
+<section aria-label="Galerie" style="padding: 0 0 130px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 36px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E">Galerie</p>
+<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Un aperçu de mon <em style="color: #08716E">univers</em></h2>
 </div>
-<a href="https://www.instagram.com/justali.modele/" target="_blank" rel="noopener" class="btn" style="display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; min-height: 44px; border-radius: 999px; background: #08716E; color: #FAFCF8; text-decoration: none; font-weight: 700; font-size: 15px"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>Mon Instagram modèle · @justali.modele</a>
-
-</div>
-<div class="reveal" role="tablist" aria-label="Styles de shooting" style="display: flex; flex-wrap: wrap; gap: 10px">
-<sc-for list="{{mtabs}}" as="t" hint-placeholder-count="7">
-<button class="tab" role="tab" aria-selected="{{t.sel}}" onClick="{{t.pick}}" style="cursor: pointer; display: inline-flex; align-items: center; gap: 10px; padding: 11px 18px; min-height: 44px; border-radius: 999px; border: 1.5px solid {{t.bd}}; background: {{t.bg}}; color: {{t.fg}}; font-size: 15px; font-weight: 600">{{t.label}}</button>
+<div style="columns: 4 220px; column-gap: 16px">
+<sc-for list="{{gallery}}" as="g" hint-placeholder-count="12">
+<button class="tile reveal" onClick="{{g.open}}" aria-label="Agrandir : {{g.label}}" style="cursor: pointer; break-inside: avoid; display: block; position: relative; width: 100%; margin: 0 0 16px; border: 0; border-radius: 18px; padding: 0; overflow: hidden; background: #CFE3D8">
+<img src="{{g.src}}" alt="{{g.label}}" loading="lazy" style="width: 100%; height: auto; display: block">
+<span style="position: absolute; left: 10px; bottom: 10px; font-size: 12px; font-weight: 700; background: rgba(251,247,240,.9); color: #0E2A22; padding: 5px 10px; border-radius: 999px">{{g.label}}</span>
+</button>
 </sc-for>
 </div>
-<div style="display: flex; flex-direction: column; gap: 34px">
-<sc-for list="{{mGroups}}" as="mg" hint-placeholder-count="4">
-<div style="display: flex; flex-direction: column; gap: 12px">
-<p style="margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px"><span class="serif" style="font-size: 24px; color: #0E2A22">{{mg.label}}</span></p>
-<div class="pgrid mgrid">
-<sc-for list="{{mg.photos}}" as="it" hint-placeholder-count="6"><button class="ptile" onClick="{{it.open}}" aria-label="Voir la photo en grand" style="cursor: pointer; border: 0; padding: 0; border-radius: 16px; overflow: hidden; aspect-ratio: 4 / 5; background: #CFE3D8; position: relative"><img src="{{it.src}}" alt="{{it.alt}}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></button></sc-for>
+</div>
+</section>
+
+<!-- ============ EXPÉRIENCES ============ -->
+<section id="experiences" style="padding: 90px 0 130px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .26; right: 0; top: 60px"><div class="gust" style="transform-origin: 100% 25%; animation-duration: 11s; animation-delay: 0s"><img loading="lazy" decoding="async" src="media/sh_palm_r.webp?v=11261832" alt="" class="flutter" style="width: 600px; max-width: 60vw; height: auto; display: block; transform-origin: 100% 25%"></div></div><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .2; left: 0; top: 1400px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12s; animation-delay: -3s"><img loading="lazy" decoding="async" src="media/sh_palm_l.webp?v=11261832" alt="" class="flutter" style="width: 520px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 40px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 680px">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E">Mes collaborations &amp; expériences</p>
+<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Des lieux que j'ai <em style="color: #08716E">vraiment</em> vécus.</h2>
+<div class="reveal" style="max-width: 780px; display: flex; flex-direction: column; gap: 8px; margin-top: 6px"><p class="serif" style="margin: 0; font-size: clamp(22px, 2.4vw, 28px); font-style: italic; color: #08716E">Le bien-être se vit, se ressent et se partage.</p><p style="margin: 0; font-size: 17px; line-height: 1.65; color: #2D3D37">Aujourd'hui, le besoin de déconnexion se fait ressentir : une véritable parenthèse de détente, une expérience sensorielle, un moment hors du temps. À travers un contenu authentique et immersif, je mets en lumière l'art de vivre, la sérénité et l'univers unique de chaque établissement, pour éveiller les sens, inspirer l'évasion et donner envie de vivre l'expérience à son tour.</p></div>
+</div>
+
+</div>
+
+<div class="reveal" role="tablist" aria-label="Catégories" style="display: flex; flex-wrap: wrap; gap: 10px">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="7">
+<button class="tab" role="tab" aria-selected="{{t.sel}}" onClick="{{t.pick}}" style="cursor: pointer; display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; min-height: 46px; border-radius: 999px; border: 1.5px solid {{t.bd}}; background: {{t.bg}}; color: {{t.fg}}; font-size: 15px; font-weight: 600">{{t.label}}</button>
+</sc-for>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 72px">
+<sc-for list="{{groups}}" as="g" hint-placeholder-count="4">
+<div style="display: flex; flex-direction: column; gap: 26px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 14px; border-bottom: 1.5px solid rgba(14,42,34,.14)"><h3 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.05">{{g.label}}</h3></div>
+<sc-if value="{{g.hasIntro}}" hint-placeholder-val="{{false}}"><div class="reveal" style="max-width: 760px; display: flex; flex-direction: column; gap: 8px"><p class="serif" style="margin: 0; font-size: clamp(22px, 2.4vw, 28px); font-style: italic; color: #08716E">{{g.introT}}</p><p style="margin: 0; font-size: 17px; line-height: 1.65; color: #2D3D37">{{g.intro}}</p></div></sc-if>
+<sc-for list="{{g.blocks}}" as="bl" hint-placeholder-count="2"><div style="display: flex; flex-direction: column; gap: 14px"><p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #0E2A22"><sc-if value="{{bl.isPhotos}}" hint-placeholder-val="{{true}}"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#08716E" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="3"></rect><circle cx="9" cy="10" r="1.6"></circle><path d="M21 16 L15 11 L6 19"></path></svg></sc-if><sc-if value="{{bl.isVideos}}" hint-placeholder-val="{{false}}"><svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true"><path d="M5 3 L15 9 L5 15 Z" fill="#08716E"></path></svg></sc-if>{{bl.title}}</p><sc-if value="{{bl.isPhotos}}" hint-placeholder-val="{{true}}"><div class="pgrid"><sc-for list="{{bl.items}}" as="it" hint-placeholder-count="8"><button class="ptile" onClick="{{it.open}}" data-me="{{it.me}}" aria-label="Voir la photo en grand" style="cursor: pointer; border: 0; padding: 0; border-radius: 16px; overflow: hidden; aspect-ratio: 4 / 5; background: #CFE3D8; position: relative"><img src="{{it.src}}" alt="{{it.alt}}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></button></sc-for></div></sc-if><sc-if value="{{bl.isVideos}}" hint-placeholder-val="{{false}}"><div class="vgrid"><sc-for list="{{bl.items}}" as="r" hint-placeholder-count="6"><button class="reel" onClick="{{r.open}}" aria-label="Voir la vidéo" style="cursor: pointer; position: relative; border: 0; padding: 0; border-radius: 18px; overflow: hidden; aspect-ratio: 9 / 16; background: #0E2A22"><img src="{{r.poster}}" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><span aria-hidden="true" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 54px; height: 54px; border-radius: 50%; background: rgba(250,252,248,.88); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.25)"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0E2A22"><path d="M8 5v14l11-7z"/></svg></span></button></sc-for></div></sc-if></div></sc-for>
+</div>
+</sc-for>
+<div class="reveal" style="border: 2px dashed rgba(8,113,110,.4); border-radius: 24px; min-height: 220px; max-width: 520px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; padding: 28px; color: #4E625A">
+<span class="float" style="width: 64px; height: 64px; border-radius: 50%; background: #DCEEE6; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#08716E" stroke-width="2" stroke-linecap="round"><path d="M12 5 V19 M5 12 H19"></path></svg></span>
+<span class="serif" style="font-size: 22px; color: #0E2A22">Votre lieu ici ?</span>
+<span style="font-size: 15px; line-height: 1.5; max-width: 220px">La prochaine expérience à partager, c'est peut-être la vôtre.</span>
+<a href="#contact" style="font-weight: 700; font-size: 15px">Collaborons →</a>
 </div>
 </div>
+</div>
+</section>
+
+<!-- ============ VLOGS VOIX OFF ============ -->
+<section id="vlogs" aria-label="Mes vlogs en voix off" style="padding: 120px 0; background: #0E2A22; color: #FAFCF8; position: relative; overflow: hidden">
+<div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 44px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 680px">
+<p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #7FE0D4"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11 a7 7 0 0 0 14 0 M12 18 V21"></path></svg>Mes vlogs en voix off</p>
+<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Je raconte l'expérience <em style="color: #7FE0D4">avec ma voix.</em></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #C7DCD3">Des vlogs d'environ une minute, de l'arrivée jusqu'aux petits détails, avec ma voix pour guider votre futur client comme si il y était. Un format que je propose aussi en plus des photos et des Reels.</p>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 28px">
+<sc-for list="{{vlogs}}" as="v" hint-placeholder-count="3">
+<button class="card reveal" onClick="{{v.open}}" aria-label="Écouter le vlog {{v.name}}" style="cursor: pointer; position: relative; border: 0; padding: 0; border-radius: 26px; overflow: hidden; aspect-ratio: 9 / 16; background: #0A1F19; color: #FAFCF8; text-align: left">
+<img loading="lazy" decoding="async" src="{{v.poster}}" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<video src="{{v.src}}" poster="{{v.poster}}" ref="{{v.ref}}" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none"></video>
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,28,22,0) 45%, rgba(6,28,22,.85) 100%)"></span>
+<span style="position: absolute; top: 14px; left: 14px; display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; background: #7FE0D4; color: #0E2A22; padding: 7px 11px; border-radius: 999px"><svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11 a7 7 0 0 0 14 0 M12 18 V21"></path></svg>Voix off · {{v.dur}}</span>
+<span style="position: absolute; left: 20px; right: 20px; bottom: 20px; display: flex; flex-direction: column; gap: 6px">
+<span class="serif" style="font-size: 26px; line-height: 1.1">{{v.name}}</span>
+<span style="font-size: 14px; color: #C7DCD3">{{v.where}}</span>
+<span style="margin-top: 8px; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; background: rgba(250,252,248,.95); color: #0E2A22; padding: 10px 16px; border-radius: 999px; font-size: 14px; font-weight: 700"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9 H8 L13 5 V19 L8 15 H4 Z"></path><path d="M16 9 a4 4 0 0 1 0 6 M18.5 6.5 a7.5 7.5 0 0 1 0 11"></path></svg>Écouter le vlog</span>
+</span>
+</button>
 </sc-for>
 </div>
 </div>
@@ -488,7 +457,7 @@ Ce que j'ai déjà vécu (clique pour voir)</p>
 </section>
 
 <!-- ============ CE QUE J'APPORTE ============ -->
-<section id="services" style="padding: 120px 0; background: #DCEEE6; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .22; right: 0; top: 40px"><div class="gust" style="transform-origin: 100% 25%; animation-duration: 10s; animation-delay: -1s"><img loading="lazy" decoding="async" src="media/sh_palm_r.webp?v=11261821" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 100% 25%"></div></div>
+<section id="services" style="padding: 120px 0; background: #DCEEE6; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .22; right: 0; top: 40px"><div class="gust" style="transform-origin: 100% 25%; animation-duration: 10s; animation-delay: -1s"><img loading="lazy" decoding="async" src="media/sh_palm_r.webp?v=11261832" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 100% 25%"></div></div>
 
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 48px; position: relative">
 <div class="reveal" style="display: flex; flex-direction: column; gap: 16px; max-width: 720px">
@@ -541,24 +510,8 @@ Ce que j'ai déjà vécu (clique pour voir)</p>
 </div>
 </section>
 
-<!-- ============ ALI TRAVEL (sous l'eau) ============ -->
-<section id="alitravel" style="padding: 150px 0; background: linear-gradient(180deg, #0B6E80 0%, #06485E 45%, #032838 100%); color: #FAFCF8; position: relative; overflow: hidden">
-
-<img loading="lazy" decoding="async" src="media/sunset_ali.webp?v=11261821" alt="" aria-hidden="true" class="sunsetbg" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 52%"><div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,18,40,.78) 0%, rgba(8,18,40,.5) 45%, rgba(8,18,40,.08) 75%), linear-gradient(180deg, rgba(8,18,40,.45), transparent 25%)"></div>
-<div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 64px">
-<div class="reveal" style="flex: 1 1 460px; min-width: 0; max-width: 760px; display: flex; flex-direction: column; gap: 20px">
-<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #7FE0D4">Ali Travel · mon bonus</p>
-<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Votre lieu, recommandé à de <em style="color: #7FE0D4">futurs voyageurs.</em></h2>
-<p style="margin: 0; font-size: 18px; line-height: 1.7; color: #D3ECE8">J'adore découvrir de nouveaux endroits que je pourrai ensuite recommander à ma clientèle voyage via mon activité Ali Travel.</p>
-<p style="margin: 0; font-size: 18px; line-height: 1.7; color: #D3ECE8">J'organise des voyages sur mesure : sélection des destinations, hébergements, transports et activités, création d'itinéraires personnalisés et de carnets de voyage adaptés aux besoins et aux budgets de chaque client.</p>
-<p class="serif" style="margin: 6px 0 0; font-size: 24px; font-style: italic; line-height: 1.4">Collaborer avec moi, c'est du contenu… et une place dans les carnets de voyage de mes clients.</p>
-<a href="https://www.instagram.com/justali.voyages/" target="_blank" rel="noopener" class="btn btn-aqua" style="align-self: flex-start; margin-top: 8px; background: #7FE0D4; color: #0A2A22; padding: 16px 26px; border-radius: 999px; font-weight: 700; text-decoration: none">Voir @justali.voyages →</a>
-</div>
-</div>
-</section>
-
 <!-- ============ PROCESS ============ -->
-<section aria-label="Comment on travaille ensemble" style="padding: 130px 0 110px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .2; left: 0; top: 20px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 11.5s; animation-delay: -6s"><img loading="lazy" decoding="async" src="media/sh_palm_l.webp?v=11261821" alt="" class="flutter" style="width: 360px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
+<section aria-label="Comment on travaille ensemble" style="padding: 130px 0 110px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .2; left: 0; top: 20px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 11.5s; animation-delay: -6s"><img loading="lazy" decoding="async" src="media/sh_palm_l.webp?v=11261832" alt="" class="flutter" style="width: 360px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 56px">
 <div class="reveal" style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center">
 <p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E">Comment on travaille ensemble</p>
@@ -592,6 +545,53 @@ Ce que j'ai déjà vécu (clique pour voir)</p>
 </div>
 </section>
 
+<!-- ============ ALI TRAVEL (sous l'eau) ============ -->
+<section id="alitravel" style="padding: 150px 0; background: linear-gradient(180deg, #0B6E80 0%, #06485E 45%, #032838 100%); color: #FAFCF8; position: relative; overflow: hidden">
+
+<img loading="lazy" decoding="async" src="media/sunset_ali.webp?v=11261832" alt="" aria-hidden="true" class="sunsetbg" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 52%"><div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,18,40,.78) 0%, rgba(8,18,40,.5) 45%, rgba(8,18,40,.08) 75%), linear-gradient(180deg, rgba(8,18,40,.45), transparent 25%)"></div>
+<div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 64px">
+<div class="reveal" style="flex: 1 1 460px; min-width: 0; max-width: 760px; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #7FE0D4">Ali Travel · mon bonus</p>
+<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Votre lieu, recommandé à de <em style="color: #7FE0D4">futurs voyageurs.</em></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.7; color: #D3ECE8">J'adore découvrir de nouveaux endroits que je pourrai ensuite recommander à ma clientèle voyage via mon activité Ali Travel.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.7; color: #D3ECE8">J'organise des voyages sur mesure : sélection des destinations, hébergements, transports et activités, création d'itinéraires personnalisés et de carnets de voyage adaptés aux besoins et aux budgets de chaque client.</p>
+<p class="serif" style="margin: 6px 0 0; font-size: 24px; font-style: italic; line-height: 1.4">Collaborer avec moi, c'est du contenu… et une place dans les carnets de voyage de mes clients.</p>
+<a href="https://www.instagram.com/justali.voyages/" target="_blank" rel="noopener" class="btn btn-aqua" style="align-self: flex-start; margin-top: 8px; background: #7FE0D4; color: #0A2A22; padding: 16px 26px; border-radius: 999px; font-weight: 700; text-decoration: none">Voir @justali.voyages →</a>
+</div>
+</div>
+</section>
+
+<!-- ============ MODÈLE PHOTO ============ -->
+<section id="modele" aria-label="Modèle photo" style="padding: 130px 0; background: #F3F8F4; position: relative; overflow: hidden">
+<div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .26; left: 0; top: 40px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12s; animation-delay: 0s"><img loading="lazy" decoding="async" src="media/sh_palm_l.webp?v=11261832" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
+<div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 44px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 700px">
+<p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"></rect><path d="M8 7 L9.5 4 H14.5 L16 7"></path><circle cx="12" cy="13.5" r="3.5"></circle></svg>Modèle photo</p>
+<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Je pose aussi <em style="color: #08716E">pour vos marques.</em></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #2D3D37">Modèle photo freelance, je suis à l'aise devant l'objectif et je m'adapte à l'univers de chaque marque. Je peux être le visage de votre hôtel ou de votre restaurant dans mes contenus UGC, ou poser pour vos campagnes, vos lookbooks et vos photos produit.</p>
+</div>
+<a href="https://www.instagram.com/justali.modele/" target="_blank" rel="noopener" class="btn" style="display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; min-height: 44px; border-radius: 999px; background: #08716E; color: #FAFCF8; text-decoration: none; font-weight: 700; font-size: 15px"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>Mon Instagram modèle · @justali.modele</a>
+
+</div>
+<div class="reveal" role="tablist" aria-label="Styles de shooting" style="display: flex; flex-wrap: wrap; gap: 10px">
+<sc-for list="{{mtabs}}" as="t" hint-placeholder-count="7">
+<button class="tab" role="tab" aria-selected="{{t.sel}}" onClick="{{t.pick}}" style="cursor: pointer; display: inline-flex; align-items: center; gap: 10px; padding: 11px 18px; min-height: 44px; border-radius: 999px; border: 1.5px solid {{t.bd}}; background: {{t.bg}}; color: {{t.fg}}; font-size: 15px; font-weight: 600">{{t.label}}</button>
+</sc-for>
+</div>
+<div style="display: flex; flex-direction: column; gap: 34px">
+<sc-for list="{{mGroups}}" as="mg" hint-placeholder-count="4">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px"><span class="serif" style="font-size: 24px; color: #0E2A22">{{mg.label}}</span></p>
+<div class="pgrid mgrid">
+<sc-for list="{{mg.photos}}" as="it" hint-placeholder-count="6"><button class="ptile" onClick="{{it.open}}" aria-label="Voir la photo en grand" style="cursor: pointer; border: 0; padding: 0; border-radius: 16px; overflow: hidden; aspect-ratio: 4 / 5; background: #CFE3D8; position: relative"><img src="{{it.src}}" alt="{{it.alt}}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></button></sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
 <!-- ============ CONTACT ============ -->
 <section id="contact" style="padding: 0 0 70px">
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px">
@@ -616,6 +616,7 @@ Ce que j'ai déjà vécu (clique pour voir)</p>
 </div>
 </div>
 </section>
+
 
 <footer style="padding: 30px 24px 60px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center">
 <p class="serif" style="margin: 0; font-size: clamp(48px, 9vw, 130px); font-style: italic; line-height: 1; color: #0E2A22; letter-spacing: -.02em">I live my life</p>
@@ -1045,13 +1046,13 @@ var PLACES = [
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/selina-0.jpg?v=11261821",
-"media/selina-1.jpg?v=11261821",
-"media/selina-3.jpg?v=11261821",
-"media/selina-4.jpg?v=11261821",
-"media/selina-5.jpg?v=11261821",
-"media/selina-6.jpg?v=11261821",
-"media/selina-8.jpg?v=11261821"
+"media/selina-0.jpg?v=11261832",
+"media/selina-1.jpg?v=11261832",
+"media/selina-3.jpg?v=11261832",
+"media/selina-4.jpg?v=11261832",
+"media/selina-5.jpg?v=11261832",
+"media/selina-6.jpg?v=11261832",
+"media/selina-8.jpg?v=11261832"
 ],
 "imgMe": [
 true,
@@ -1064,8 +1065,8 @@ false
 ],
 "vid": [
 {
-"src": "media/selina-0-m.mp4?v=11261821",
-"poster": "media/selina-0-1.jpg?v=11261821",
+"src": "media/selina-0-m.mp4?v=11261832",
+"poster": "media/selina-0-1.jpg?v=11261832",
 "me": true,
 "sound": false
 }
@@ -1081,14 +1082,14 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/kanha-0.jpg?v=11261821",
-"media/kanha-1.jpg?v=11261821",
-"media/kanha-2.jpg?v=11261821",
-"media/kanha-3.jpg?v=11261821",
-"media/kanha-4.jpg?v=11261821",
-"media/kanha-5.jpg?v=11261821",
-"media/kanha-6.jpg?v=11261821",
-"media/kb0.jpg?v=11261821"
+"media/kanha-0.jpg?v=11261832",
+"media/kanha-1.jpg?v=11261832",
+"media/kanha-2.jpg?v=11261832",
+"media/kanha-3.jpg?v=11261832",
+"media/kanha-4.jpg?v=11261832",
+"media/kanha-5.jpg?v=11261832",
+"media/kanha-6.jpg?v=11261832",
+"media/kb0.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -1102,50 +1103,50 @@ false
 ],
 "vid": [
 {
-"src": "media/kanha-2-m.mp4?v=11261821",
-"poster": "media/kanha-2-1.jpg?v=11261821",
+"src": "media/kanha-2-m.mp4?v=11261832",
+"poster": "media/kanha-2-1.jpg?v=11261832",
 "me": false,
 "sound": false
 },
 {
-"src": "media/kanha-1-m.mp4?v=11261821",
-"poster": "media/kanha-1-1.jpg?v=11261821",
+"src": "media/kanha-1-m.mp4?v=11261832",
+"poster": "media/kanha-1-1.jpg?v=11261832",
 "me": false,
 "sound": false
 },
 {
-"src": "media/kanha-0-m.mp4?v=11261821",
-"poster": "media/kanha-0-1.jpg?v=11261821",
+"src": "media/kanha-0-m.mp4?v=11261832",
+"poster": "media/kanha-0-1.jpg?v=11261832",
 "me": false,
 "sound": false
 },
 {
-"src": "media/w20.mp4?v=11261821",
-"poster": "media/w20.jpg?v=11261821",
+"src": "media/w20.mp4?v=11261832",
+"poster": "media/w20.jpg?v=11261832",
 "me": true,
 "sound": false
 },
 {
-"src": "media/w26.mp4?v=11261821",
-"poster": "media/w26.jpg?v=11261821",
+"src": "media/w26.mp4?v=11261832",
+"poster": "media/w26.jpg?v=11261832",
 "me": true,
 "sound": false
 },
 {
-"src": "media/w30.mp4?v=11261821",
-"poster": "media/w30.jpg?v=11261821",
+"src": "media/w30.mp4?v=11261832",
+"poster": "media/w30.jpg?v=11261832",
 "me": true,
 "sound": false
 },
 {
-"src": "media/w29.mp4?v=11261821",
-"poster": "media/w29.jpg?v=11261821",
+"src": "media/w29.mp4?v=11261832",
+"poster": "media/w29.jpg?v=11261832",
 "me": true,
 "sound": false
 },
 {
-"src": "media/w21.mp4?v=11261821",
-"poster": "media/w21.jpg?v=11261821",
+"src": "media/w21.mp4?v=11261832",
+"poster": "media/w21.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1161,12 +1162,12 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/lexus-0.jpg?v=11261821",
-"media/lexus-1.jpg?v=11261821",
-"media/lexus-2.jpg?v=11261821",
-"media/lexus-3.jpg?v=11261821",
-"media/lexus-4.jpg?v=11261821",
-"media/lx0.jpg?v=11261821"
+"media/lexus-0.jpg?v=11261832",
+"media/lexus-1.jpg?v=11261832",
+"media/lexus-2.jpg?v=11261832",
+"media/lexus-3.jpg?v=11261832",
+"media/lexus-4.jpg?v=11261832",
+"media/lx0.jpg?v=11261832"
 ],
 "imgMe": [
 true,
@@ -1178,14 +1179,14 @@ false
 ],
 "vid": [
 {
-"src": "media/lexus-cut-m.mp4?v=11261821",
-"poster": "media/lexus-0-1.jpg?v=11261821",
+"src": "media/lexus-cut-m.mp4?v=11261832",
+"poster": "media/lexus-0-1.jpg?v=11261832",
 "me": false,
 "sound": false
 },
 {
-"src": "media/lxv.mp4?v=11261821",
-"poster": "media/lxv.jpg?v=11261821",
+"src": "media/lxv.mp4?v=11261832",
+"poster": "media/lxv.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1201,11 +1202,11 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/minimes-0.jpg?v=11261821",
-"media/minimes-1.jpg?v=11261821",
-"media/minimes-2.jpg?v=11261821",
-"media/minimes-3.jpg?v=11261821",
-"media/minimes-4.jpg?v=11261821"
+"media/minimes-0.jpg?v=11261832",
+"media/minimes-1.jpg?v=11261832",
+"media/minimes-2.jpg?v=11261832",
+"media/minimes-3.jpg?v=11261832",
+"media/minimes-4.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -1216,14 +1217,14 @@ false
 ],
 "vid": [
 {
-"src": "media/minimes-0.mp4?v=11261821",
-"poster": "media/minimes-0-1.jpg?v=11261821",
+"src": "media/minimes-0.mp4?v=11261832",
+"poster": "media/minimes-0-1.jpg?v=11261832",
 "me": false,
 "sound": true
 },
 {
-"src": "media/minimes-1-m.mp4?v=11261821",
-"poster": "media/minimes-1-1.jpg?v=11261821",
+"src": "media/minimes-1-m.mp4?v=11261832",
+"poster": "media/minimes-1-1.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1239,14 +1240,14 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/scape-0.jpg?v=11261821",
-"media/scape-1.jpg?v=11261821",
-"media/scape-2.jpg?v=11261821",
-"media/scape-3.jpg?v=11261821",
-"media/scape-4.jpg?v=11261821",
-"media/scape-5.jpg?v=11261821",
-"media/scape-6.jpg?v=11261821",
-"media/sv0.jpg?v=11261821"
+"media/scape-0.jpg?v=11261832",
+"media/scape-1.jpg?v=11261832",
+"media/scape-2.jpg?v=11261832",
+"media/scape-3.jpg?v=11261832",
+"media/scape-4.jpg?v=11261832",
+"media/scape-5.jpg?v=11261832",
+"media/scape-6.jpg?v=11261832",
+"media/sv0.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -1260,20 +1261,20 @@ true
 ],
 "vid": [
 {
-"src": "media/scape-0-m.mp4?v=11261821",
-"poster": "media/scape-0-1.jpg?v=11261821",
+"src": "media/scape-0-m.mp4?v=11261832",
+"poster": "media/scape-0-1.jpg?v=11261832",
 "me": false,
 "sound": false
 },
 {
-"src": "media/scape-1-m.mp4?v=11261821",
-"poster": "media/scape-1-1.jpg?v=11261821",
+"src": "media/scape-1-m.mp4?v=11261832",
+"poster": "media/scape-1-1.jpg?v=11261832",
 "me": false,
 "sound": false
 },
 {
-"src": "media/w14.mp4?v=11261821",
-"poster": "media/w14.jpg?v=11261821",
+"src": "media/w14.mp4?v=11261832",
+"poster": "media/w14.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1289,11 +1290,11 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/cretya-0.jpg?v=11261821",
-"media/cretya-1.jpg?v=11261821",
-"media/cretya-2.jpg?v=11261821",
-"media/cretya-3.jpg?v=11261821",
-"media/cretya-4.jpg?v=11261821"
+"media/cretya-0.jpg?v=11261832",
+"media/cretya-1.jpg?v=11261832",
+"media/cretya-2.jpg?v=11261832",
+"media/cretya-3.jpg?v=11261832",
+"media/cretya-4.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -1314,9 +1315,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/cavaliers-0.jpg?v=11261821",
-"media/cavaliers-1.jpg?v=11261821",
-"media/cavaliers-2.jpg?v=11261821"
+"media/cavaliers-0.jpg?v=11261832",
+"media/cavaliers-1.jpg?v=11261832",
+"media/cavaliers-2.jpg?v=11261832"
 ],
 "imgMe": [
 true,
@@ -1335,10 +1336,10 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/okuta-0.jpg?v=11261821",
-"media/okuta-1.jpg?v=11261821",
-"media/okuta-2.jpg?v=11261821",
-"media/okuta-3.jpg?v=11261821"
+"media/okuta-0.jpg?v=11261832",
+"media/okuta-1.jpg?v=11261832",
+"media/okuta-2.jpg?v=11261832",
+"media/okuta-3.jpg?v=11261832"
 ],
 "imgMe": [
 true,
@@ -1358,10 +1359,10 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/seaesta-0.jpg?v=11261821",
-"media/seaesta-1.jpg?v=11261821",
-"media/seaesta-2.jpg?v=11261821",
-"media/seaesta-3.jpg?v=11261821"
+"media/seaesta-0.jpg?v=11261832",
+"media/seaesta-1.jpg?v=11261832",
+"media/seaesta-2.jpg?v=11261832",
+"media/seaesta-3.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -1381,12 +1382,12 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/bleumathis-0.jpg?v=11261821",
-"media/bleumathis-1.jpg?v=11261821",
-"media/bleumathis-2.jpg?v=11261821",
-"media/bleumathis-3.jpg?v=11261821",
-"media/bleumathis-4.jpg?v=11261821",
-"media/bm0.jpg?v=11261821"
+"media/bleumathis-0.jpg?v=11261832",
+"media/bleumathis-1.jpg?v=11261832",
+"media/bleumathis-2.jpg?v=11261832",
+"media/bleumathis-3.jpg?v=11261832",
+"media/bleumathis-4.jpg?v=11261832",
+"media/bm0.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -1398,8 +1399,8 @@ false
 ],
 "vid": [
 {
-"src": "media/bleumathis-0-m.mp4?v=11261821",
-"poster": "media/bleumathis-0-1.jpg?v=11261821",
+"src": "media/bleumathis-0-m.mp4?v=11261832",
+"poster": "media/bleumathis-0-1.jpg?v=11261832",
 "me": true,
 "sound": false
 }
@@ -1415,10 +1416,10 @@ false
 "vlog": "Vlog en voix off",
 "vlogDur": "54 s",
 "img": [
-"media/begude-0.jpg?v=11261821",
-"media/begude-1.jpg?v=11261821",
-"media/begude-2.jpg?v=11261821",
-"media/bg0.jpg?v=11261821"
+"media/begude-0.jpg?v=11261832",
+"media/begude-1.jpg?v=11261832",
+"media/begude-2.jpg?v=11261832",
+"media/bg0.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -1428,14 +1429,14 @@ false
 ],
 "vid": [
 {
-"src": "media/begude-entier.mp4?v=11261821",
-"poster": "media/begude-full.jpg?v=11261821",
+"src": "media/begude-entier.mp4?v=11261832",
+"poster": "media/begude-full.jpg?v=11261832",
 "me": true,
 "sound": true
 },
 {
-"src": "media/bgv.mp4?v=11261821",
-"poster": "media/bgv.jpg?v=11261821",
+"src": "media/bgv.mp4?v=11261832",
+"poster": "media/bgv.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1451,13 +1452,13 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/atlas-0.jpg?v=11261821",
-"media/atlas-1.jpg?v=11261821",
-"media/atlas-2.jpg?v=11261821",
-"media/atlas-3.jpg?v=11261821",
-"media/atlas-4.jpg?v=11261821",
-"media/atlas-5.jpg?v=11261821",
-"media/at1.jpg?v=11261821"
+"media/atlas-0.jpg?v=11261832",
+"media/atlas-1.jpg?v=11261832",
+"media/atlas-2.jpg?v=11261832",
+"media/atlas-3.jpg?v=11261832",
+"media/atlas-4.jpg?v=11261832",
+"media/atlas-5.jpg?v=11261832",
+"media/at1.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -1470,8 +1471,8 @@ false
 ],
 "vid": [
 {
-"src": "media/atlas-1-m.mp4?v=11261821",
-"poster": "media/atlas-1-1.jpg?v=11261821",
+"src": "media/atlas-1-m.mp4?v=11261832",
+"poster": "media/atlas-1-1.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1487,9 +1488,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/aquabella-0.jpg?v=11261821",
-"media/aquabella-1.jpg?v=11261821",
-"media/aquabella-2.jpg?v=11261821"
+"media/aquabella-0.jpg?v=11261832",
+"media/aquabella-1.jpg?v=11261832",
+"media/aquabella-2.jpg?v=11261832"
 ],
 "imgMe": [
 true,
@@ -1508,9 +1509,9 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/majorelle-0.jpg?v=11261821",
-"media/majorelle-1.jpg?v=11261821",
-"media/majorelle-2.jpg?v=11261821"
+"media/majorelle-0.jpg?v=11261832",
+"media/majorelle-1.jpg?v=11261832",
+"media/majorelle-2.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -1529,9 +1530,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/ouzoud-0.jpg?v=11261821",
-"media/ouzoud-1.jpg?v=11261821",
-"media/ouzoud-2.jpg?v=11261821"
+"media/ouzoud-0.jpg?v=11261832",
+"media/ouzoud-1.jpg?v=11261832",
+"media/ouzoud-2.jpg?v=11261832"
 ],
 "imgMe": [
 true,
@@ -1540,14 +1541,14 @@ true
 ],
 "vid": [
 {
-"src": "media/ouzoud-0-m.mp4?v=11261821",
-"poster": "media/ouzoud-0-1.jpg?v=11261821",
+"src": "media/ouzoud-0-m.mp4?v=11261832",
+"poster": "media/ouzoud-0-1.jpg?v=11261832",
 "me": false,
 "sound": false
 },
 {
-"src": "media/ouzoud-1-m.mp4?v=11261821",
-"poster": "media/ouzoud-1-1.jpg?v=11261821",
+"src": "media/ouzoud-1-m.mp4?v=11261832",
+"poster": "media/ouzoud-1-1.jpg?v=11261832",
 "me": true,
 "sound": false
 }
@@ -1563,8 +1564,8 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/riad-1.jpg?v=11261821",
-"media/riad-2.jpg?v=11261821"
+"media/riad-1.jpg?v=11261832",
+"media/riad-2.jpg?v=11261832"
 ],
 "imgMe": [
 true,
@@ -1582,9 +1583,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/dromadaire-0.jpg?v=11261821",
-"media/dromadaire-1.jpg?v=11261821",
-"media/selina-2.jpg?v=11261821"
+"media/dromadaire-0.jpg?v=11261832",
+"media/dromadaire-1.jpg?v=11261832",
+"media/selina-2.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -1593,8 +1594,8 @@ false
 ],
 "vid": [
 {
-"src": "media/dromadaire-0-m.mp4?v=11261821",
-"poster": "media/dromadaire-0-1.jpg?v=11261821",
+"src": "media/dromadaire-0-m.mp4?v=11261832",
+"poster": "media/dromadaire-0-1.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1610,21 +1611,21 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/wlm-0.jpg?v=11261821"
+"media/wlm-0.jpg?v=11261832"
 ],
 "imgMe": [
 true
 ],
 "vid": [
 {
-"src": "media/wlm-0-m.mp4?v=11261821",
-"poster": "media/wlm-0-1.jpg?v=11261821",
+"src": "media/wlm-0-m.mp4?v=11261832",
+"poster": "media/wlm-0-1.jpg?v=11261832",
 "me": true,
 "sound": false
 },
 {
-"src": "media/wlm-1-m.mp4?v=11261821",
-"poster": "media/wlm-1.jpg?v=11261821",
+"src": "media/wlm-1-m.mp4?v=11261832",
+"poster": "media/wlm-1.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1640,9 +1641,9 @@ true
 "vlog": "Vlog en voix off",
 "vlogDur": "54 s",
 "img": [
-"media/aizu-0.jpg?v=11261821",
-"media/aizu-1.jpg?v=11261821",
-"media/aizu-2.jpg?v=11261821"
+"media/aizu-0.jpg?v=11261832",
+"media/aizu-1.jpg?v=11261832",
+"media/aizu-2.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -1651,8 +1652,8 @@ true
 ],
 "vid": [
 {
-"src": "media/aizu-vlog.mp4?v=11261821",
-"poster": "media/aizu-vlog.jpg?v=11261821",
+"src": "media/aizu-vlog.mp4?v=11261832",
+"poster": "media/aizu-vlog.jpg?v=11261832",
 "me": true,
 "sound": true
 }
@@ -1668,7 +1669,7 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/clean-0.jpg?v=11261821"
+"media/clean-0.jpg?v=11261832"
 ],
 "imgMe": [
 false
@@ -1685,15 +1686,15 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/hana-0.jpg?v=11261821"
+"media/hana-0.jpg?v=11261832"
 ],
 "imgMe": [
 true
 ],
 "vid": [
 {
-"src": "media/hana-0-m.mp4?v=11261821",
-"poster": "media/hana-0-1.jpg?v=11261821",
+"src": "media/hana-0-m.mp4?v=11261832",
+"poster": "media/hana-0-1.jpg?v=11261832",
 "me": true,
 "sound": false
 }
@@ -1712,8 +1713,8 @@ true
 "imgMe": [],
 "vid": [
 {
-"src": "media/w25.mp4?v=11261821",
-"poster": "media/w25.jpg?v=11261821",
+"src": "media/w25.mp4?v=11261832",
+"poster": "media/w25.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1732,8 +1733,8 @@ true
 "imgMe": [],
 "vid": [
 {
-"src": "media/w23.mp4?v=11261821",
-"poster": "media/w23.jpg?v=11261821",
+"src": "media/w23.mp4?v=11261832",
+"poster": "media/w23.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1749,15 +1750,15 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/te0.jpg?v=11261821"
+"media/te0.jpg?v=11261832"
 ],
 "imgMe": [
 false
 ],
 "vid": [
 {
-"src": "media/w22c.mp4?v=11261821",
-"poster": "media/w22.jpg?v=11261821",
+"src": "media/w22c.mp4?v=11261832",
+"poster": "media/w22.jpg?v=11261832",
 "me": true,
 "sound": false
 }
@@ -1776,8 +1777,8 @@ false
 "imgMe": [],
 "vid": [
 {
-"src": "media/w32.mp4?v=11261821",
-"poster": "media/w32.jpg?v=11261821",
+"src": "media/w32.mp4?v=11261832",
+"poster": "media/w32.jpg?v=11261832",
 "me": true,
 "sound": false
 }
@@ -1796,8 +1797,8 @@ false
 "imgMe": [],
 "vid": [
 {
-"src": "media/w15.mp4?v=11261821",
-"poster": "media/w15.jpg?v=11261821",
+"src": "media/w15.mp4?v=11261832",
+"poster": "media/w15.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1816,8 +1817,8 @@ false
 "imgMe": [],
 "vid": [
 {
-"src": "media/w18.mp4?v=11261821",
-"poster": "media/w18.jpg?v=11261821",
+"src": "media/w18.mp4?v=11261832",
+"poster": "media/w18.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1833,7 +1834,7 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/vieuxmoulin.jpg?v=11261821"
+"media/vieuxmoulin.jpg?v=11261832"
 ],
 "imgMe": [
 false
@@ -1850,8 +1851,8 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/so0.jpg?v=11261821",
-"media/so1.jpg?v=11261821"
+"media/so0.jpg?v=11261832",
+"media/so1.jpg?v=11261832"
 ],
 "imgMe": [
 true,
@@ -1859,8 +1860,8 @@ false
 ],
 "vid": [
 {
-"src": "media/so.mp4?v=11261821",
-"poster": "media/so.jpg?v=11261821",
+"src": "media/so.mp4?v=11261832",
+"poster": "media/so.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1876,13 +1877,13 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/ol4.jpg?v=11261821",
-"media/ol3.jpg?v=11261821",
-"media/ol8.jpg?v=11261821",
-"media/ol9.jpg?v=11261821",
-"media/ol0.jpg?v=11261821",
-"media/ol1.jpg?v=11261821",
-"media/ol5.jpg?v=11261821"
+"media/ol4.jpg?v=11261832",
+"media/ol3.jpg?v=11261832",
+"media/ol8.jpg?v=11261832",
+"media/ol9.jpg?v=11261832",
+"media/ol0.jpg?v=11261832",
+"media/ol1.jpg?v=11261832",
+"media/ol5.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -1905,8 +1906,8 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/fr0.jpg?v=11261821",
-"media/fr1.jpg?v=11261821"
+"media/fr0.jpg?v=11261832",
+"media/fr1.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -1914,8 +1915,8 @@ false
 ],
 "vid": [
 {
-"src": "media/fr.mp4?v=11261821",
-"poster": "media/fr.jpg?v=11261821",
+"src": "media/fr.mp4?v=11261832",
+"poster": "media/fr.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1931,18 +1932,18 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/rs0.jpg?v=11261821",
-"media/rs1.jpg?v=11261821",
-"media/rs2.jpg?v=11261821",
-"media/rs3.jpg?v=11261821",
-"media/rs4.jpg?v=11261821",
-"media/rd0.jpg?v=11261821",
-"media/rd1.jpg?v=11261821",
-"media/rd2.jpg?v=11261821",
-"media/rd3.jpg?v=11261821",
-"media/rd4.jpg?v=11261821",
-"media/rd5.jpg?v=11261821",
-"media/rd6.jpg?v=11261821"
+"media/rs0.jpg?v=11261832",
+"media/rs1.jpg?v=11261832",
+"media/rs2.jpg?v=11261832",
+"media/rs3.jpg?v=11261832",
+"media/rs4.jpg?v=11261832",
+"media/rd0.jpg?v=11261832",
+"media/rd1.jpg?v=11261832",
+"media/rd2.jpg?v=11261832",
+"media/rd3.jpg?v=11261832",
+"media/rd4.jpg?v=11261832",
+"media/rd5.jpg?v=11261832",
+"media/rd6.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -1960,8 +1961,8 @@ false
 ],
 "vid": [
 {
-"src": "media/rdv.mp4?v=11261821",
-"poster": "media/rdv.jpg?v=11261821",
+"src": "media/rdv.mp4?v=11261832",
+"poster": "media/rdv.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -1977,15 +1978,15 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/mk0.jpg?v=11261821"
+"media/mk0.jpg?v=11261832"
 ],
 "imgMe": [
 false
 ],
 "vid": [
 {
-"src": "media/mk.mp4?v=11261821",
-"poster": "media/mk.jpg?v=11261821",
+"src": "media/mk.mp4?v=11261832",
+"poster": "media/mk.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -2001,9 +2002,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/tc2.jpg?v=11261821",
-"media/tc1.jpg?v=11261821",
-"media/tc0.jpg?v=11261821"
+"media/tc2.jpg?v=11261832",
+"media/tc1.jpg?v=11261832",
+"media/tc0.jpg?v=11261832"
 ],
 "imgMe": [
 true,
@@ -2022,8 +2023,8 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/nb0.jpg?v=11261821",
-"media/nb1.jpg?v=11261821"
+"media/nb0.jpg?v=11261832",
+"media/nb1.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -2041,11 +2042,11 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/ez0.jpg?v=11261821",
-"media/ez1.jpg?v=11261821",
-"media/ez2.jpg?v=11261821",
-"media/ez3.jpg?v=11261821",
-"media/ez4.jpg?v=11261821"
+"media/ez0.jpg?v=11261832",
+"media/ez1.jpg?v=11261832",
+"media/ez2.jpg?v=11261832",
+"media/ez3.jpg?v=11261832",
+"media/ez4.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -2066,9 +2067,9 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/ch0.jpg?v=11261821",
-"media/ch1.jpg?v=11261821",
-"media/ch2.jpg?v=11261821"
+"media/ch0.jpg?v=11261832",
+"media/ch1.jpg?v=11261832",
+"media/ch2.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -2077,8 +2078,8 @@ false
 ],
 "vid": [
 {
-"src": "media/chv.mp4?v=11261821",
-"poster": "media/chv.jpg?v=11261821",
+"src": "media/chv.mp4?v=11261832",
+"poster": "media/chv.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -2094,14 +2095,14 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/kc0.jpg?v=11261821",
-"media/kc1.jpg?v=11261821",
-"media/kc2.jpg?v=11261821",
-"media/kc3.jpg?v=11261821",
-"media/kc4.jpg?v=11261821",
-"media/kc5.jpg?v=11261821",
-"media/kc6.jpg?v=11261821",
-"media/kc7.jpg?v=11261821"
+"media/kc0.jpg?v=11261832",
+"media/kc1.jpg?v=11261832",
+"media/kc2.jpg?v=11261832",
+"media/kc3.jpg?v=11261832",
+"media/kc4.jpg?v=11261832",
+"media/kc5.jpg?v=11261832",
+"media/kc6.jpg?v=11261832",
+"media/kc7.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -2115,14 +2116,14 @@ false
 ],
 "vid": [
 {
-"src": "media/w16.mp4?v=11261821",
-"poster": "media/w16.jpg?v=11261821",
+"src": "media/w16.mp4?v=11261832",
+"poster": "media/w16.jpg?v=11261832",
 "me": false,
 "sound": false
 },
 {
-"src": "media/w17.mp4?v=11261821",
-"poster": "media/w17.jpg?v=11261821",
+"src": "media/w17.mp4?v=11261832",
+"poster": "media/w17.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -2138,8 +2139,8 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/ds0.jpg?v=11261821",
-"media/ds1.jpg?v=11261821"
+"media/ds0.jpg?v=11261832",
+"media/ds1.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -2147,8 +2148,8 @@ false
 ],
 "vid": [
 {
-"src": "media/dsv.mp4?v=11261821",
-"poster": "media/dsv.jpg?v=11261821",
+"src": "media/dsv.mp4?v=11261832",
+"poster": "media/dsv.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -2164,12 +2165,12 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/vr0.jpg?v=11261821",
-"media/vr1.jpg?v=11261821",
-"media/vr2.jpg?v=11261821",
-"media/vr3.jpg?v=11261821",
-"media/vr5.jpg?v=11261821",
-"media/vr6.jpg?v=11261821"
+"media/vr0.jpg?v=11261832",
+"media/vr1.jpg?v=11261832",
+"media/vr2.jpg?v=11261832",
+"media/vr3.jpg?v=11261832",
+"media/vr5.jpg?v=11261832",
+"media/vr6.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -2181,8 +2182,8 @@ true
 ],
 "vid": [
 {
-"src": "media/vr2.mp4?v=11261821",
-"poster": "media/vr2-1.jpg?v=11261821",
+"src": "media/vr2.mp4?v=11261832",
+"poster": "media/vr2-1.jpg?v=11261832",
 "me": false,
 "sound": false
 }
@@ -2198,9 +2199,9 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/lm0.jpg?v=11261821",
-"media/lm1.jpg?v=11261821",
-"media/lm2.jpg?v=11261821"
+"media/lm0.jpg?v=11261832",
+"media/lm1.jpg?v=11261832",
+"media/lm2.jpg?v=11261832"
 ],
 "imgMe": [
 true,
@@ -2219,7 +2220,7 @@ true
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/gm0.jpg?v=11261821"
+"media/gm0.jpg?v=11261832"
 ],
 "imgMe": [
 false
@@ -2236,8 +2237,8 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/ol2.jpg?v=11261821",
-"media/ol7.jpg?v=11261821"
+"media/ol2.jpg?v=11261832",
+"media/ol7.jpg?v=11261832"
 ],
 "imgMe": [
 false,
@@ -2255,7 +2256,7 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/mb1.jpg?v=11261821"
+"media/mb1.jpg?v=11261832"
 ],
 "imgMe": [
 false
@@ -2272,7 +2273,7 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/gm1.jpg?v=11261821"
+"media/gm1.jpg?v=11261832"
 ],
 "imgMe": [
 false
@@ -2289,7 +2290,7 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/riad-0.jpg?v=11261821"
+"media/riad-0.jpg?v=11261832"
 ],
 "imgMe": [
 false
@@ -2307,14 +2308,14 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m37.jpg?v=11261821",
-"media/m36.jpg?v=11261821",
-"media/m38.jpg?v=11261821",
-"media/m20.jpg?v=11261821",
-"media/m22.jpg?v=11261821",
-"media/m21.jpg?v=11261821",
-"media/m23.jpg?v=11261821",
-"media/m24.jpg?v=11261821"
+"media/m37.jpg?v=11261832",
+"media/m36.jpg?v=11261832",
+"media/m38.jpg?v=11261832",
+"media/m20.jpg?v=11261832",
+"media/m22.jpg?v=11261832",
+"media/m21.jpg?v=11261832",
+"media/m23.jpg?v=11261832",
+"media/m24.jpg?v=11261832"
 ],
 "vid": []
 },
@@ -2329,10 +2330,10 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m35.jpg?v=11261821",
-"media/m32.jpg?v=11261821",
-"media/m33.jpg?v=11261821",
-"media/m34.jpg?v=11261821"
+"media/m35.jpg?v=11261832",
+"media/m32.jpg?v=11261832",
+"media/m33.jpg?v=11261832",
+"media/m34.jpg?v=11261832"
 ],
 "vid": []
 },
@@ -2347,9 +2348,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m25.jpg?v=11261821",
-"media/m26.jpg?v=11261821",
-"media/m27.jpg?v=11261821"
+"media/m25.jpg?v=11261832",
+"media/m26.jpg?v=11261832",
+"media/m27.jpg?v=11261832"
 ],
 "vid": []
 },
@@ -2364,14 +2365,14 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m40.jpg?v=11261821",
-"media/m41.jpg?v=11261821",
-"media/m42.jpg?v=11261821",
-"media/m43.jpg?v=11261821",
-"media/m44.jpg?v=11261821",
-"media/m45.jpg?v=11261821",
-"media/m46.jpg?v=11261821",
-"media/m47.jpg?v=11261821"
+"media/m40.jpg?v=11261832",
+"media/m41.jpg?v=11261832",
+"media/m42.jpg?v=11261832",
+"media/m43.jpg?v=11261832",
+"media/m44.jpg?v=11261832",
+"media/m45.jpg?v=11261832",
+"media/m46.jpg?v=11261832",
+"media/m47.jpg?v=11261832"
 ],
 "vid": []
 },
@@ -2386,10 +2387,10 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m31.jpg?v=11261821",
-"media/m30.jpg?v=11261821",
-"media/m29.jpg?v=11261821",
-"media/m28.jpg?v=11261821"
+"media/m31.jpg?v=11261832",
+"media/m30.jpg?v=11261832",
+"media/m29.jpg?v=11261832",
+"media/m28.jpg?v=11261832"
 ],
 "vid": []
 },
@@ -2404,9 +2405,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m00.jpg?v=11261821",
-"media/m01.jpg?v=11261821",
-"media/m02.jpg?v=11261821"
+"media/m00.jpg?v=11261832",
+"media/m01.jpg?v=11261832",
+"media/m02.jpg?v=11261832"
 ],
 "vid": []
 },
@@ -2421,15 +2422,15 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m07.jpg?v=11261821",
-"media/m05.jpg?v=11261821",
-"media/m04.jpg?v=11261821",
-"media/m06.jpg?v=11261821",
-"media/m09.jpg?v=11261821",
-"media/m08.jpg?v=11261821",
-"media/m10.jpg?v=11261821",
-"media/m11.jpg?v=11261821",
-"media/m12.jpg?v=11261821"
+"media/m07.jpg?v=11261832",
+"media/m05.jpg?v=11261832",
+"media/m04.jpg?v=11261832",
+"media/m06.jpg?v=11261832",
+"media/m09.jpg?v=11261832",
+"media/m08.jpg?v=11261832",
+"media/m10.jpg?v=11261832",
+"media/m11.jpg?v=11261832",
+"media/m12.jpg?v=11261832"
 ],
 "vid": []
 },
@@ -2444,9 +2445,9 @@ false
 "vlog": "",
 "vlogDur": "",
 "img": [
-"media/m14.jpg?v=11261821",
-"media/m17.jpg?v=11261821",
-"media/m13.jpg?v=11261821"
+"media/m14.jpg?v=11261832",
+"media/m17.jpg?v=11261832",
+"media/m13.jpg?v=11261832"
 ],
 "vid": []
 },
@@ -2463,33 +2464,33 @@ false
 "img": [],
 "vid": [
 {
-"src": "media/w04.mp4?v=11261821",
-"poster": "media/w04.jpg?v=11261821",
+"src": "media/w04.mp4?v=11261832",
+"poster": "media/w04.jpg?v=11261832",
 "sound": false
 },
 {
-"src": "media/w05.mp4?v=11261821",
-"poster": "media/w05.jpg?v=11261821",
+"src": "media/w05.mp4?v=11261832",
+"poster": "media/w05.jpg?v=11261832",
 "sound": false
 },
 {
-"src": "media/w08.mp4?v=11261821",
-"poster": "media/w08.jpg?v=11261821",
+"src": "media/w08.mp4?v=11261832",
+"poster": "media/w08.jpg?v=11261832",
 "sound": false
 },
 {
-"src": "media/w10.mp4?v=11261821",
-"poster": "media/w10.jpg?v=11261821",
+"src": "media/w10.mp4?v=11261832",
+"poster": "media/w10.jpg?v=11261832",
 "sound": false
 },
 {
-"src": "media/w12.mp4?v=11261821",
-"poster": "media/w12.jpg?v=11261821",
+"src": "media/w12.mp4?v=11261832",
+"poster": "media/w12.jpg?v=11261832",
 "sound": false
 },
 {
-"src": "media/w33.mp4?v=11261821",
-"poster": "media/w33.jpg?v=11261821",
+"src": "media/w33.mp4?v=11261832",
+"poster": "media/w33.jpg?v=11261832",
 "sound": false
 }
 ]
@@ -2507,23 +2508,23 @@ false
 "img": [],
 "vid": [
 {
-"src": "media/w00.mp4?v=11261821",
-"poster": "media/w00.jpg?v=11261821",
+"src": "media/w00.mp4?v=11261832",
+"poster": "media/w00.jpg?v=11261832",
 "sound": false
 },
 {
-"src": "media/w01.mp4?v=11261821",
-"poster": "media/w01.jpg?v=11261821",
+"src": "media/w01.mp4?v=11261832",
+"poster": "media/w01.jpg?v=11261832",
 "sound": false
 },
 {
-"src": "media/w02.mp4?v=11261821",
-"poster": "media/w02.jpg?v=11261821",
+"src": "media/w02.mp4?v=11261832",
+"poster": "media/w02.jpg?v=11261832",
 "sound": false
 },
 {
-"src": "media/w06.mp4?v=11261821",
-"poster": "media/w06.jpg?v=11261821",
+"src": "media/w06.mp4?v=11261832",
+"poster": "media/w06.jpg?v=11261832",
 "sound": false
 }
 ]
@@ -2541,20 +2542,20 @@ false
 "img": [],
 "vid": [
 {
-"src": "media/w09.mp4?v=11261821",
-"poster": "media/w09.jpg?v=11261821",
+"src": "media/w09.mp4?v=11261832",
+"poster": "media/w09.jpg?v=11261832",
 "sound": false
 }
 ]
 }
 ];
 var GALLERY = [["selina", 0], ["kanha", 0], ["lexus", 2], ["minimes", 2], ["scape", 1], ["cretya", 2], ["cavaliers", 0], ["okuta", 0], ["seaesta", 1], ["bleumathis", 0], ["begude", 0], ["atlas", 1], ["aquabella", 1], ["majorelle", 0], ["ouzoud", 0], ["riad", 1], ["dromadaire", 0], ["wlm", 0], ["aizu", 1], ["clean", 0], ["hana", 0]];
-var HERO = [{"place": "scape", "vi": 0, "src": "media/scape-0-m.mp4?v=11261821", "poster": "media/scape-0-1.jpg?v=11261821"}, {"place": "minimes", "vi": 0, "src": "media/minimes-0.mp4?v=11261821", "poster": "media/minimes-0-1.jpg?v=11261821"}, {"place": "selina", "vi": 0, "src": "media/selina-0-m.mp4?v=11261821", "poster": "media/selina-0-1.jpg?v=11261821"}];
-var HEROBG = {"src": "media/kanha-0-m.mp4?v=11261821", "poster": "media/kanha-0-1.jpg?v=11261821"};
+var HERO = [{"place": "scape", "vi": 0, "src": "media/scape-0-m.mp4?v=11261832", "poster": "media/scape-0-1.jpg?v=11261832"}, {"place": "minimes", "vi": 0, "src": "media/minimes-0.mp4?v=11261832", "poster": "media/minimes-0-1.jpg?v=11261832"}, {"place": "selina", "vi": 0, "src": "media/selina-0-m.mp4?v=11261832", "poster": "media/selina-0-1.jpg?v=11261832"}];
+var HEROBG = {"src": "media/kanha-0-m.mp4?v=11261832", "poster": "media/kanha-0-1.jpg?v=11261832"};
 var COUNTRIES = ['France', 'Maroc', 'Indonésie', 'Malaisie', 'Singapour', 'Sénégal', 'Croatie', 'Grèce', 'Italie', 'Portugal', 'Espagne', 'Angleterre', 'Albanie'];
-var SOCIAL_IMGS = ["media/selina-1.jpg?v=11261821", "media/kanha-1.jpg?v=11261821", "media/lexus-1.jpg?v=11261821", "media/scape-1.jpg?v=11261821", "media/cretya-1.jpg?v=11261821", "media/minimes-1.jpg?v=11261821", "media/okuta-0.jpg?v=11261821", "media/cavaliers-0.jpg?v=11261821", "media/majorelle-0.jpg?v=11261821", "media/atlas-0.jpg?v=11261821", "media/seaesta-0.jpg?v=11261821", "media/bleumathis-0.jpg?v=11261821", "media/aquabella-0.jpg?v=11261821", "media/ouzoud-0.jpg?v=11261821", "media/riad-0.jpg?v=11261821"];
-var TK_TILES = [{"src": "media/tk_t00.jpg?v=11261821", "v": "18,6k"}, {"src": "media/tk_t01.jpg?v=11261821", "v": "5 042"}, {"src": "media/tk_t02.jpg?v=11261821", "v": "967"}, {"src": "media/tk_t03.jpg?v=11261821", "v": "3 060"}, {"src": "media/tk_t04.jpg?v=11261821", "v": "873"}, {"src": "media/tk_t05.jpg?v=11261821", "v": "792"}, {"src": "media/tk_t06.jpg?v=11261821", "v": "801"}, {"src": "media/tk_t07.jpg?v=11261821", "v": "936"}, {"src": "media/tk_t08.jpg?v=11261821", "v": "49,9k"}, {"src": "media/tk_t09.jpg?v=11261821", "v": "1 557"}, {"src": "media/tk_t10.jpg?v=11261821", "v": "4 696"}, {"src": "media/tk_t11.jpg?v=11261821", "v": "1 462"}];
-var IG_TILES = [{"src": "media/ig_t0.jpg?v=11261821", "v": "17,6k"}, {"src": "media/ig_t1.jpg?v=11261821", "v": "2 328"}, {"src": "media/ig_t2.jpg?v=11261821", "v": "11,4k"}, {"src": "media/ig_t3.jpg?v=11261821", "v": "2 911"}, {"src": "media/ig_t4.jpg?v=11261821", "v": "597"}, {"src": "media/ig_t5.jpg?v=11261821", "v": "15,9k"}, {"src": "media/ig_t6.jpg?v=11261821", "v": "14,3k"}, {"src": "media/ig_t7.jpg?v=11261821", "v": "1 333"}, {"src": "media/ig_t8.jpg?v=11261821", "v": "20,2k"}, {"src": "media/ig_t9.jpg?v=11261821", "v": "10,4k"}, {"src": "media/ig_t10.jpg?v=11261821", "v": "14,6k"}, {"src": "media/ig_t11.jpg?v=11261821", "v": "2 533"}];
+var SOCIAL_IMGS = ["media/selina-1.jpg?v=11261832", "media/kanha-1.jpg?v=11261832", "media/lexus-1.jpg?v=11261832", "media/scape-1.jpg?v=11261832", "media/cretya-1.jpg?v=11261832", "media/minimes-1.jpg?v=11261832", "media/okuta-0.jpg?v=11261832", "media/cavaliers-0.jpg?v=11261832", "media/majorelle-0.jpg?v=11261832", "media/atlas-0.jpg?v=11261832", "media/seaesta-0.jpg?v=11261832", "media/bleumathis-0.jpg?v=11261832", "media/aquabella-0.jpg?v=11261832", "media/ouzoud-0.jpg?v=11261832", "media/riad-0.jpg?v=11261832"];
+var TK_TILES = [{"src": "media/tk_t00.jpg?v=11261832", "v": "18,6k"}, {"src": "media/tk_t01.jpg?v=11261832", "v": "5 042"}, {"src": "media/tk_t02.jpg?v=11261832", "v": "967"}, {"src": "media/tk_t03.jpg?v=11261832", "v": "3 060"}, {"src": "media/tk_t04.jpg?v=11261832", "v": "873"}, {"src": "media/tk_t05.jpg?v=11261832", "v": "792"}, {"src": "media/tk_t06.jpg?v=11261832", "v": "801"}, {"src": "media/tk_t07.jpg?v=11261832", "v": "936"}, {"src": "media/tk_t08.jpg?v=11261832", "v": "49,9k"}, {"src": "media/tk_t09.jpg?v=11261832", "v": "1 557"}, {"src": "media/tk_t10.jpg?v=11261832", "v": "4 696"}, {"src": "media/tk_t11.jpg?v=11261832", "v": "1 462"}];
+var IG_TILES = [{"src": "media/ig_t0.jpg?v=11261832", "v": "17,6k"}, {"src": "media/ig_t1.jpg?v=11261832", "v": "2 328"}, {"src": "media/ig_t2.jpg?v=11261832", "v": "11,4k"}, {"src": "media/ig_t3.jpg?v=11261832", "v": "2 911"}, {"src": "media/ig_t4.jpg?v=11261832", "v": "597"}, {"src": "media/ig_t5.jpg?v=11261832", "v": "15,9k"}, {"src": "media/ig_t6.jpg?v=11261832", "v": "14,3k"}, {"src": "media/ig_t7.jpg?v=11261832", "v": "1 333"}, {"src": "media/ig_t8.jpg?v=11261832", "v": "20,2k"}, {"src": "media/ig_t9.jpg?v=11261832", "v": "10,4k"}, {"src": "media/ig_t10.jpg?v=11261832", "v": "14,6k"}, {"src": "media/ig_t11.jpg?v=11261832", "v": "2 533"}];
 var EXPS = [
   ['Nuit dans le désert', 'selina'], ['Snorkeling avec les raies manta', 'kanha'], ['Balade à cheval', 'cavaliers'], ['Balade à dos de dromadaire', 'dromadaire'],
   ['Spa L\u2019Occitane', 'minimes'], ['Spa au château', 'begude'], ['Buggy dans la palmeraie', 'wlm'], ['Baignade aux cascades', 'ouzoud'], ['Croisière à Komodo', 'kanha'],
@@ -2562,8 +2563,8 @@ var EXPS = [
   ['Paddle dans une crique', 'hana'], ['Île secrète', 'bleumathis'], ['Dîner face au volcan', 'okuta'], ['Nager avec une tortue', 'kanha']
 ];
 var EXP_BG = ['#9FDCD5', '#CDE5C4', '#F2D9A6', '#B8E0C2', '#DCEEE6', '#F6C9B4'];
-var SECTIONS = [['top', 'Accueil'], ['experiences', 'Expériences'], ['vlogs', 'Vlogs voix off'], ['moi', 'Qui suis-je'], ['modele', 'Modèle photo'], ['reseaux', 'Mes réseaux'], ['services', 'Ce que j\u2019apporte'], ['alitravel', 'Ali Travel'], ['contact', 'Contact']];
-var PORTRAIT = "media/portrait.jpg?v=11261821";
+var SECTIONS = [['top', 'Accueil'], ['moi', 'Qui suis-je'], ['experiences', 'Expériences'], ['vlogs', 'Vlogs voix off'], ['reseaux', 'Mes réseaux'], ['services', 'Ce que j\u2019apporte'], ['alitravel', 'Ali Travel'], ['modele', 'Modèle photo'], ['contact', 'Contact']];
+var PORTRAIT = "media/portrait.jpg?v=11261832";
 
 class Component extends DCLogic {
   constructor(props) {
@@ -2584,6 +2585,8 @@ class Component extends DCLogic {
     var self = this;
     var _l = 'fr'; try { _l = localStorage.getItem('ab-lang') || 'fr'; } catch (e) {}
     if (_l === 'en') { this.setState({ lang: 'en' }); setTimeout(function () { I18N.set('en'); }, 0); }
+    this._esc = function (e) { if (e.key === 'Escape' && (self.state.open || self.state.legal)) self.setState({ open: null, mi: 0, legal: '' }); };
+    document.addEventListener('keydown', this._esc);
     this.t1 = setInterval(function () {
       if (self.state.typed < SLOGAN.length) self.setState({ typed: self.state.typed + 1 });
       else clearInterval(self.t1);
