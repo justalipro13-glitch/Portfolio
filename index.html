@@ -1,0 +1,2840 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alicia Bedu – Portfolio UGC</title>
+<meta name="description" content="Alicia Bedu, créatrice de contenu voyage & lifestyle : UGC, photo, vidéo. Hôtels, villas, restaurants, spas, activités.">
+<meta property="og:title" content="Alicia Bedu – Portfolio UGC">
+<meta property="og:description" content="Créatrice de contenu voyage & lifestyle · UGC · Photo · Vidéo">
+<meta property="og:image" content="media/portrait.jpg">
+<link rel="icon" href="media/portrait.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#EEF6F1;color:#0E2A22;font-family:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+a{color:#08716E}a:hover{color:#064E4B}
+.serif{font-family:'Fraunces',Georgia,'Times New Roman',serif}
+*{box-sizing:border-box}
+h1,h2,h3,p{text-wrap:pretty}
+
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes floatTilt{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-18px) rotate(calc(var(--r,0deg) + 2deg))}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(251,247,240,.75)}70%{box-shadow:0 0 0 22px rgba(251,247,240,0)}100%{box-shadow:0 0 0 0 rgba(251,247,240,0)}}
+@keyframes rise{from{opacity:0;transform:translateY(46px)}to{opacity:1;transform:none}}
+@keyframes waveX{to{transform:translateX(-50%)}}
+@keyframes heartUp{0%{opacity:0;transform:translateY(0) scale(.6)}15%{opacity:1}100%{opacity:0;transform:translateY(-170px) scale(1.15)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes dash{to{stroke-dashoffset:-40}}
+@keyframes blink{50%{opacity:0}}
+@keyframes popIn{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes sunGlow{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@keyframes chipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes heroIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes growLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+.float{animation:floatY 6s ease-in-out infinite}
+.float.d1{animation-delay:-1.5s;animation-duration:7s}
+.float.d2{animation-delay:-3s;animation-duration:8s}
+.float.d3{animation-delay:-4.5s;animation-duration:6.5s}
+.tilt{animation:floatTilt 7s ease-in-out infinite}
+.tilt.d1{animation-delay:-2s}
+.tilt.d2{animation-delay:-4s}
+.spin{animation:spin 26s linear infinite}
+.spin.slow{animation-duration:60s}
+.sun{animation:sunGlow 7s ease-in-out infinite}
+.marquee{animation:marquee 38s linear infinite}
+.marquee:hover{animation-play-state:paused}
+.wave{animation:waveX 14s linear infinite}
+.wave.b{animation-duration:22s;animation-direction:reverse}
+.heart{animation:heartUp 3.6s ease-out infinite;opacity:0}
+.heart.d1{animation-delay:1.2s}
+.heart.d2{animation-delay:2.4s}
+.pulse{animation:pulse 2.2s ease-out infinite}
+.caret{animation:blink 1s steps(1) infinite}
+.route{stroke-dasharray:6 8;animation:dash 2.4s linear infinite}
+.chip{animation:chipFloat 5s ease-in-out infinite}
+.chip:nth-child(2n){animation-delay:-1.4s}
+.chip:nth-child(3n){animation-delay:-2.8s}
+.hero-in{animation:heroIn 1.1s cubic-bezier(.2,.7,.2,1) both}
+.hero-in.d1{animation-delay:.15s}.hero-in.d2{animation-delay:.3s}.hero-in.d3{animation-delay:.45s}.hero-in.d4{animation-delay:.6s}
+.word{transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.pop{animation:popIn .45s cubic-bezier(.2,.7,.2,1) both}
+.overlay{animation:fadeIn .3s ease both}
+
+@supports (animation-timeline: view()){
+  .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+  .para{animation:paraDown linear both;animation-timeline:scroll(root);animation-range:0 900px}
+  .para.up{animation-name:paraUp}
+  .toTop{animation:fadeIn linear both;animation-timeline:scroll(root);animation-range:500px 800px}
+  .line-grow{transform-origin:left;animation:growLine linear both;animation-timeline:view();animation-range:entry 20% cover 45%}
+}
+@keyframes paraDown{to{transform:translateY(180px)}}
+@keyframes paraUp{to{transform:translateY(-120px)}}
+
+.card{transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s ease}
+.card:hover,.card:focus-visible{transform:translateY(-8px);box-shadow:0 26px 50px -22px rgba(14,42,34,.45)}
+.card .media-in{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover .media-in{transform:scale(1.06)}
+.card .more{transition:letter-spacing .3s ease,color .3s ease}
+.card:hover .more{letter-spacing:.06em;color:#064E4B}
+.tile{transition:transform .5s cubic-bezier(.2,.7,.2,1),filter .5s ease}
+.tile:hover,.tile:focus-visible{transform:scale(1.03);filter:saturate(1.15)}
+.btn{transition:transform .25s ease,background-color .25s ease,color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark:hover{background-color:#064E4B !important;color:#FAFCF8 !important}
+.btn-light:hover{background-color:#0E2A22 !important;color:#FAFCF8 !important}
+.tab{transition:background-color .3s ease,color .3s ease,transform .25s ease}
+.tab:hover{transform:translateY(-2px)}
+.svc{transition:transform .4s cubic-bezier(.2,.7,.2,1),background-color .4s ease}
+.svc:hover{transform:translateY(-6px);background-color:#FFFFFF !important}
+.svc:hover .svc-ic{transform:rotate(-8deg) scale(1.08)}
+.svc-ic{transition:transform .4s ease}
+.nav a{text-decoration:none;color:#0E2A22;position:relative}
+.nav a.ul::after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:2px;background:#08716E;transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.nav a.ul:hover::after{transform:scaleX(1)}
+button{font:inherit}
+:focus-visible{outline:3px solid #0C4A3E;outline-offset:3px}
+
+.dot .dot-label{opacity:0;transform:translateX(6px);transition:all .25s ease;pointer-events:none}
+.dot:hover .dot-label,.dot:focus-visible .dot-label{opacity:1;transform:none}
+.bounce{animation:bnc 1.6s ease-in-out infinite}
+@keyframes bnc{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
+.nextbtn:hover{background:#7FE0D4 !important}
+section > div:not([aria-hidden]), section > ol, footer > *{position:relative;z-index:2}
+.decor{z-index:0 !important}
+@media (max-width: 900px){.decor{opacity:.35 !important}.decor img{max-width:140px}}
+.clink{transition:background-color .25s ease, transform .25s ease}
+.clink:hover{background-color:rgba(250,252,248,.3) !important;transform:translateY(-2px)}
+@media (max-width: 700px){.dots{display:none !important}}
+.eq{transform-origin:bottom;animation:eqb .9s ease-in-out infinite alternate}
+.eq.e2{animation-delay:-.3s}.eq.e3{animation-delay:-.6s}.eq.e4{animation-delay:-.15s}
+.eq.off{animation:none;opacity:.7}
+@keyframes eqb{from{transform:scaleY(.3)}to{transform:scaleY(1)}}
+.fadeimg{animation:fadeIn .4s ease both}
+.tilt video{pointer-events:none}
+.sway{transform-origin:var(--o,50% 100%);animation:sway 7s ease-in-out infinite;will-change:transform}
+@keyframes sway{0%,100%{transform:rotate(var(--a0,-3deg))}50%{transform:rotate(var(--a1,4deg))}}
+.palmsway{transform-origin:150px 135px;animation:palm 5s ease-in-out infinite}
+@keyframes palm{0%,100%{transform:rotate(-3deg)}35%{transform:rotate(4deg) skewX(2deg)}70%{transform:rotate(-1deg)}}
+.drift{position:absolute;top:-60px;animation:drift 17s linear infinite;opacity:.85}
+@keyframes drift{0%{transform:translate(0,0) rotate(0)}25%{transform:translate(60px,220px) rotate(80deg)}50%{transform:translate(-20px,450px) rotate(160deg)}75%{transform:translate(70px,680px) rotate(250deg)}100%{transform:translate(10px,940px) rotate(340deg)}}
+.swim{animation:swim 26s linear infinite;will-change:transform}
+.swim.s2{animation-name:swim2;animation-duration:38s;animation-delay:-14s}
+@keyframes swim2{0%{transform:translateX(calc(100vw + 300px)) rotate(-90deg)}50%{transform:translateX(50vw) translateY(-25px) rotate(-84deg)}100%{transform:translateX(-300px) rotate(-90deg)}}
+.swim.s3{animation-duration:30s}
+@keyframes swim{0%{transform:translateX(-300px) translateY(0) rotate(90deg)}25%{transform:translateX(25vw) translateY(-30px) rotate(84deg)}50%{transform:translateX(50vw) translateY(20px) rotate(96deg)}75%{transform:translateX(75vw) translateY(-20px) rotate(86deg)}100%{transform:translateX(calc(100vw + 300px)) translateY(0) rotate(90deg)}}
+.mantabob{animation:bob 3s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.mantawing{transform-origin:100px 70px;animation:flap 3s ease-in-out infinite}
+@keyframes flap{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.8) scaleY(1.04)}}
+.school{animation:school 22s linear infinite}
+@keyframes school{0%{transform:translateX(110vw)}100%{transform:translateX(-300px)}}
+.bubble{position:absolute;bottom:-20px;width:10px;height:10px;border-radius:50%;border:1.5px solid rgba(255,255,255,.55);background:rgba(255,255,255,.08);animation:bubble 9s ease-in infinite}
+.bubble.b2{width:6px;height:6px;animation-duration:7s;animation-delay:-2s}
+.bubble.b3{width:14px;height:14px;animation-duration:11s;animation-delay:-6s}
+@keyframes bubble{0%{transform:translate(0,0);opacity:0}10%{opacity:1}50%{transform:translate(14px,-45vh)}100%{transform:translate(-8px,-95vh);opacity:0}}
+.caustics{background:repeating-linear-gradient(100deg,rgba(255,255,255,0) 0 60px,rgba(180,255,245,.10) 60px 90px,rgba(255,255,255,0) 90px 170px);transform-origin:50% 0;animation:rays 9s ease-in-out infinite alternate;mask-image:linear-gradient(180deg,#000,transparent);-webkit-mask-image:linear-gradient(180deg,#000,transparent)}
+@keyframes rays{from{transform:skewX(-8deg) translateX(-40px)}to{transform:skewX(8deg) translateX(40px)}}
+.sunrays{background:repeating-conic-gradient(from 200deg at 70% 0%,rgba(255,240,200,.12) 0 4deg,rgba(255,240,200,0) 4deg 12deg);mask-image:radial-gradient(circle at 70% 0%,#000 10%,transparent 70%);-webkit-mask-image:radial-gradient(circle at 70% 0%,#000 10%,transparent 70%);animation:rays 12s ease-in-out infinite alternate}
+.herobg{animation:herozoom 30s ease-in-out infinite alternate}
+@keyframes herozoom{from{transform:scale(1)}to{transform:scale(1.08)}}
+.btn-aqua:hover{background-color:#FAFCF8 !important;color:#0A2A22 !important}
+.slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1s ease, transform 6s ease}
+.clickme{animation:nudge 1.8s ease-in-out infinite}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+.tap{animation:tap 1.8s ease-in-out infinite}
+@keyframes tap{0%,100%{transform:scale(1)}50%{transform:scale(.86)}}
+.exp{transition:transform .3s ease, background-color .3s ease, color .3s ease}
+.exp:hover{transform:translateY(-4px) scale(1.04);background-color:#0E2A22 !important;color:#FAFCF8 !important}
+.shade{mix-blend-mode:multiply}
+.gust{animation:gust 11s ease-in-out infinite;will-change:transform}
+.flutter{animation:flutter 3.1s ease-in-out infinite}
+@keyframes gust{0%{transform:rotate(0) skewX(0)}14%{transform:rotate(1.6deg) skewX(1deg)}24%{transform:rotate(-.4deg) skewX(-.3deg)}38%{transform:rotate(1deg) skewX(.6deg)}52%{transform:rotate(3deg) skewX(2.2deg)}60%{transform:rotate(1.2deg) skewX(.8deg)}68%{transform:rotate(2.4deg) skewX(1.6deg)}82%{transform:rotate(.2deg)}100%{transform:rotate(0) skewX(0)}}
+@keyframes flutter{0%,100%{transform:translate(0,0) rotate(0)}30%{transform:translate(2px,-1px) rotate(.5deg)}60%{transform:translate(-1px,1px) rotate(-.4deg)}}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:12px}
+@media (max-width:700px){.pgrid{grid-template-columns:repeat(3,1fr);gap:6px}.vgrid{grid-template-columns:repeat(2,1fr);gap:8px}.ptile,.reel{border-radius:10px !important}}
+.ptile img{transition:transform .5s ease}.ptile:hover img{transform:scale(1.06)}
+.reel{transition:transform .3s ease}
+.reel:hover{transform:translateY(-4px)}
+@media (max-width: 700px){.shade{opacity:.16 !important}.shade img{max-width:85vw !important}}
+@media (prefers-reduced-motion: reduce){.gust,.flutter{animation:none}}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .heart{opacity:0 !important}
+  .reveal{opacity:1 !important;transform:none !important}
+}
+</style>
+
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+
+
+<div id="top" style="position: relative; overflow-x: clip; background: #EEF6F1">
+
+<!-- ============ NAV ============ -->
+<header class="nav" style="position: sticky; top: 0; z-index: 30; background: rgba(238,246,241,.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(14,42,34,.08)">
+<div style="max-width: 1240px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 28px">
+<a href="#top" class="serif" style="font-size: 24px; font-style: italic; font-weight: 500; display: flex; align-items: center; gap: 10px">
+<svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true" class="spin slow"><circle cx="13" cy="13" r="5.5" fill="#E8A93A"></circle><g stroke="#E8A93A" stroke-width="2" stroke-linecap="round"><line x1="13" y1="1.5" x2="13" y2="4.5"></line><line x1="13" y1="21.5" x2="13" y2="24.5"></line><line x1="1.5" y1="13" x2="4.5" y2="13"></line><line x1="21.5" y1="13" x2="24.5" y2="13"></line><line x1="4.9" y1="4.9" x2="7" y2="7"></line><line x1="19" y1="19" x2="21.1" y2="21.1"></line><line x1="4.9" y1="21.1" x2="7" y2="19"></line><line x1="19" y1="7" x2="21.1" y2="4.9"></line></g></svg>
+I live my life</a>
+<nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 26px; font-size: 15px; font-weight: 500">
+<a class="ul" href="#experiences">Expériences</a>
+<a class="ul" href="#vlogs">Vlogs voix off</a>
+<a class="ul" href="#moi">Qui suis-je</a>
+<a class="ul" href="#modele">Modèle photo</a>
+<a class="ul" href="#services">Ce que j'apporte</a>
+<a class="ul" href="#alitravel">Ali Travel</a>
+<div role="group" aria-label="Langue / Language" style="display: inline-flex; align-items: center; gap: 2px; padding: 3px; border-radius: 999px; border: 1px solid rgba(14,42,34,.22); font-size: 13px; font-weight: 700; letter-spacing: .04em"><button type="button" onClick="{{lang.setFr}}" aria-pressed="{{lang.frOn}}" aria-label="Français" style="cursor: pointer; border: 0; border-radius: 999px; padding: 6px 11px; font: inherit; background: {{lang.frBg}}; color: {{lang.frFg}}">FR</button><button type="button" onClick="{{lang.setEn}}" aria-pressed="{{lang.enOn}}" aria-label="English" style="cursor: pointer; border: 0; border-radius: 999px; padding: 6px 11px; font: inherit; background: {{lang.enBg}}; color: {{lang.enFg}}">EN</button></div>
+<a href="#contact" class="btn btn-dark" style="background: #08716E; color: #FAFCF8; padding: 11px 20px; border-radius: 999px; font-weight: 600">Collaborons</a>
+</nav>
+</div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section aria-label="Couverture" style="position: relative; min-height: 880px; display: flex; align-items: center; padding: 80px 0 190px; overflow: hidden; background: #0A2A22; color: #FAFCF8">
+<video class="herobg" ref="{{setHeroBg}}" src="{{heroBg.src}}" poster="{{heroBg.poster}}" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" aria-hidden="true" style="position: absolute; inset: -40px 0 0 0; width: 100%; height: calc(100% + 40px); object-fit: cover"></video>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6,28,22,.86) 0%, rgba(6,28,22,.55) 50%, rgba(6,28,22,.15) 100%)"></div>
+
+
+<div style="position: relative; z-index: 3; max-width: 1240px; margin: 0 auto; padding: 0 24px; width: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 26px">
+<p class="hero-in" style="margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #7FE0D4">
+<span style="display: inline-block; width: 34px; height: 2px; background: #7FE0D4"></span>Créatrice de contenu voyage &amp; lifestyle</p>
+<h1 class="serif hero-in d1" style="margin: 0; font-weight: 400; font-size: clamp(54px, 8.4vw, 118px); line-height: .95; letter-spacing: -.02em; color: #FAFCF8; text-shadow: 0 6px 40px rgba(0,0,0,.35)">
+<span style="display: block">{{typed}}<span style="color: transparent">{{untyped}}</span><span class="caret" style="display: inline-block; width: 4px; height: .78em; margin-left: 6px; background: #7FE0D4; vertical-align: -.02em"></span></span>
+</h1>
+<p class="hero-in d2" style="margin: 0; font-size: clamp(20px, 2.2vw, 26px); line-height: 1.4; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 10px; color: #E6F4EF">
+<span>Je fais vivre vos</span>
+<span class="serif" style="display: inline-grid; font-style: italic; color: #7FE0D4; font-size: 1.15em">
+<sc-for list="{{words}}" as="w" hint-placeholder-count="6">
+<span class="word" style="grid-area: 1 / 1; opacity: {{w.op}}; transform: translateY({{w.y}})">{{w.label}}</span>
+</sc-for>
+</span>
+<span>à travers mon regard.</span>
+</p>
+<p class="hero-in d2 serif" style="margin: 0; font-size: clamp(22px, 2.6vw, 32px); font-style: italic; color: #FAFCF8; text-shadow: 0 4px 24px rgba(0,0,0,.35)">Créons du contenu qui arrête le scroll.</p>
+<p class="hero-in d3" style="margin: 0; display: flex; flex-wrap: wrap; gap: 10px">
+<span style="padding: 8px 16px; border-radius: 999px; background: #7FE0D4; color: #0A2A22; font-size: 14px; font-weight: 700; letter-spacing: .04em">UGC</span>
+<span style="padding: 8px 16px; border-radius: 999px; border: 1.5px solid rgba(250,252,248,.7); font-size: 14px; font-weight: 600; letter-spacing: .04em; background: rgba(250,252,248,.08); backdrop-filter: blur(6px)">Photo</span>
+<span style="padding: 8px 16px; border-radius: 999px; border: 1.5px solid rgba(250,252,248,.7); font-size: 14px; font-weight: 600; letter-spacing: .04em; background: rgba(250,252,248,.08); backdrop-filter: blur(6px)">Vidéo</span>
+<span style="padding: 8px 16px; border-radius: 999px; border: 1.5px solid rgba(250,252,248,.7); font-size: 14px; font-weight: 600; letter-spacing: .04em; background: rgba(250,252,248,.08); backdrop-filter: blur(6px)">Modèle photo</span>
+</p>
+<div class="hero-in d4" style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 6px">
+<a href="#moi" class="btn btn-aqua" style="display: inline-flex; align-items: center; gap: 10px; background: #7FE0D4; color: #0A2A22; padding: 18px 30px; border-radius: 999px; font-weight: 700; font-size: 16px; text-decoration: none">Découvrir mon univers
+<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3 V15 M4 10 L9 15 L14 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+<a href="#experiences" style="font-weight: 600; font-size: 16px; color: #FAFCF8">Voir mes expériences</a>
+</div>
+<p class="hero-in d4" style="margin: 4px 0 0; font-size: 15px; color: #C9E3DA">par <strong style="color: #FAFCF8">Alicia Bedu</strong> · Instagram &amp; TikTok</p>
+</div>
+<!-- reels flottants -->
+<div aria-label="Aperçu de mes contenus vidéo" style="flex: 1 1 380px; min-width: 0; position: relative; z-index: 3; height: 580px; max-width: 480px">
+<sc-for list="{{hero}}" as="h" hint-placeholder-count="3">
+<button class="tilt {{h.cls}}" onClick="{{h.open}}" aria-label="Voir la vidéo {{h.label}}" style="--r: {{h.rot}}; position: absolute; left: {{h.left}}; top: {{h.top}}; width: {{h.w}}; aspect-ratio: 9 / 16; border-radius: 26px; background: #0E2A22; border: 6px solid #FAFCF8; box-shadow: 0 34px 64px -28px rgba(14,42,34,.6); overflow: hidden; padding: 0; cursor: pointer; z-index: {{h.z}}">
+<video ref="{{h.ref}}" src="{{h.src}}" poster="{{h.poster}}" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video>
+<span style="position: absolute; top: 12px; left: 12px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; background: rgba(251,247,240,.9); color: #0E2A22; padding: 5px 9px; border-radius: 999px">{{h.label}}</span>
+</button>
+</sc-for>
+<svg class="heart" aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" style="position: absolute; right: 22%; bottom: 60px; z-index: 5"><path d="M12 21 C 5 15, 2 11.5, 2 8 A 5 5 0 0 1 12 6 A 5 5 0 0 1 22 8 C 22 11.5, 19 15, 12 21 Z" fill="#C8553D"></path></svg>
+<svg class="heart d1" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" style="position: absolute; right: 14%; bottom: 40px; z-index: 5"><path d="M12 21 C 5 15, 2 11.5, 2 8 A 5 5 0 0 1 12 6 A 5 5 0 0 1 22 8 C 22 11.5, 19 15, 12 21 Z" fill="#E08A6D"></path></svg>
+<svg class="heart d2" aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" style="position: absolute; right: 28%; bottom: 30px; z-index: 5"><path d="M12 21 C 5 15, 2 11.5, 2 8 A 5 5 0 0 1 12 6 A 5 5 0 0 1 22 8 C 22 11.5, 19 15, 12 21 Z" fill="#08716E"></path></svg>
+</div>
+
+</div>
+
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 160px; z-index: 2; background: linear-gradient(180deg, rgba(238,246,241,0) 0%, rgba(238,246,241,.85) 70%, #EEF6F1 100%)"></div>
+</section>
+
+<!-- ============ EXPÉRIENCES ============ -->
+<section id="experiences" style="padding: 90px 0 130px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .26; right: 0; top: 60px"><div class="gust" style="transform-origin: 100% 25%; animation-duration: 11s; animation-delay: 0s"><img src="media/sh_palm_r.webp" alt="" class="flutter" style="width: 600px; max-width: 60vw; height: auto; display: block; transform-origin: 100% 25%"></div></div><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .2; left: 0; top: 1400px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12s; animation-delay: -3s"><img src="media/sh_palm_l.webp" alt="" class="flutter" style="width: 520px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 40px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 680px">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E">Mes collaborations &amp; expériences</p>
+<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Des lieux que j'ai <em style="color: #08716E">vraiment</em> vécus.</h2>
+<div class="reveal" style="max-width: 780px; display: flex; flex-direction: column; gap: 8px; margin-top: 6px"><p class="serif" style="margin: 0; font-size: clamp(22px, 2.4vw, 28px); font-style: italic; color: #08716E">Le bien-être se vit, se ressent et se partage.</p><p style="margin: 0; font-size: 17px; line-height: 1.65; color: #2D3D37">Aujourd'hui, le besoin de déconnexion se fait ressentir : une véritable parenthèse de détente, une expérience sensorielle, un moment hors du temps. À travers un contenu authentique et immersif, je mets en lumière l'art de vivre, la sérénité et l'univers unique de chaque établissement, pour éveiller les sens, inspirer l'évasion et donner envie de vivre l'expérience à son tour.</p></div>
+</div>
+
+</div>
+
+<div class="reveal" role="tablist" aria-label="Catégories" style="display: flex; flex-wrap: wrap; gap: 10px">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="7">
+<button class="tab" role="tab" aria-selected="{{t.sel}}" onClick="{{t.pick}}" style="cursor: pointer; display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; min-height: 46px; border-radius: 999px; border: 1.5px solid {{t.bd}}; background: {{t.bg}}; color: {{t.fg}}; font-size: 15px; font-weight: 600">{{t.label}}</button>
+</sc-for>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 72px">
+<sc-for list="{{groups}}" as="g" hint-placeholder-count="4">
+<div style="display: flex; flex-direction: column; gap: 26px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 14px; border-bottom: 1.5px solid rgba(14,42,34,.14)"><h3 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.05">{{g.label}}</h3></div>
+<sc-if value="{{g.hasIntro}}" hint-placeholder-val="{{false}}"><div class="reveal" style="max-width: 760px; display: flex; flex-direction: column; gap: 8px"><p class="serif" style="margin: 0; font-size: clamp(22px, 2.4vw, 28px); font-style: italic; color: #08716E">{{g.introT}}</p><p style="margin: 0; font-size: 17px; line-height: 1.65; color: #2D3D37">{{g.intro}}</p></div></sc-if>
+<sc-for list="{{g.blocks}}" as="bl" hint-placeholder-count="2"><div style="display: flex; flex-direction: column; gap: 14px"><p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #0E2A22"><sc-if value="{{bl.isPhotos}}" hint-placeholder-val="{{true}}"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#08716E" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="3"></rect><circle cx="9" cy="10" r="1.6"></circle><path d="M21 16 L15 11 L6 19"></path></svg></sc-if><sc-if value="{{bl.isVideos}}" hint-placeholder-val="{{false}}"><svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true"><path d="M5 3 L15 9 L5 15 Z" fill="#08716E"></path></svg></sc-if>{{bl.title}}</p><sc-if value="{{bl.isPhotos}}" hint-placeholder-val="{{true}}"><div class="pgrid"><sc-for list="{{bl.items}}" as="it" hint-placeholder-count="8"><button class="ptile" onClick="{{it.open}}" data-me="{{it.me}}" aria-label="Voir la photo en grand" style="cursor: pointer; border: 0; padding: 0; border-radius: 16px; overflow: hidden; aspect-ratio: 4 / 5; background: #CFE3D8; position: relative"><img src="{{it.src}}" alt="{{it.alt}}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></button></sc-for></div></sc-if><sc-if value="{{bl.isVideos}}" hint-placeholder-val="{{false}}"><div class="vgrid"><sc-for list="{{bl.items}}" as="r" hint-placeholder-count="6"><button class="reel" onClick="{{r.open}}" aria-label="Voir la vidéo" style="cursor: pointer; position: relative; border: 0; padding: 0; border-radius: 18px; overflow: hidden; aspect-ratio: 9 / 16; background: #0E2A22"><img src="{{r.poster}}" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><video src="{{r.src}}" poster="{{r.poster}}" ref="{{r.ref}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" preload="metadata" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none"></video></button></sc-for></div></sc-if></div></sc-for>
+</div>
+</sc-for>
+<div class="reveal" style="border: 2px dashed rgba(8,113,110,.4); border-radius: 24px; min-height: 220px; max-width: 520px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; padding: 28px; color: #4E625A">
+<span class="float" style="width: 64px; height: 64px; border-radius: 50%; background: #DCEEE6; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#08716E" stroke-width="2" stroke-linecap="round"><path d="M12 5 V19 M5 12 H19"></path></svg></span>
+<span class="serif" style="font-size: 22px; color: #0E2A22">Votre lieu ici ?</span>
+<span style="font-size: 15px; line-height: 1.5; max-width: 220px">La prochaine expérience à partager, c'est peut-être la vôtre.</span>
+<a href="#contact" style="font-weight: 700; font-size: 15px">Collaborons →</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ GALERIE ============ -->
+<section aria-label="Galerie" style="padding: 0 0 130px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 36px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E">Galerie</p>
+<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Un aperçu de mon <em style="color: #08716E">univers</em></h2>
+</div>
+<div style="columns: 4 220px; column-gap: 16px">
+<sc-for list="{{gallery}}" as="g" hint-placeholder-count="12">
+<button class="tile reveal" onClick="{{g.open}}" aria-label="Agrandir : {{g.label}}" style="cursor: pointer; break-inside: avoid; display: block; position: relative; width: 100%; margin: 0 0 16px; border: 0; border-radius: 18px; padding: 0; overflow: hidden; background: #CFE3D8">
+<img src="{{g.src}}" alt="{{g.label}}" loading="lazy" style="width: 100%; height: auto; display: block">
+<span style="position: absolute; left: 10px; bottom: 10px; font-size: 12px; font-weight: 700; background: rgba(251,247,240,.9); color: #0E2A22; padding: 5px 10px; border-radius: 999px">{{g.label}}</span>
+</button>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- ============ VLOGS VOIX OFF ============ -->
+<section id="vlogs" aria-label="Mes vlogs en voix off" style="padding: 120px 0; background: #0E2A22; color: #FAFCF8; position: relative; overflow: hidden">
+<div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 44px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 680px">
+<p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #7FE0D4"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11 a7 7 0 0 0 14 0 M12 18 V21"></path></svg>Mes vlogs en voix off</p>
+<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Je raconte l'expérience <em style="color: #7FE0D4">avec ma voix.</em></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #C7DCD3">Des vlogs d'environ une minute, de l'arrivée jusqu'aux petits détails, avec ma voix pour guider votre futur client comme si il y était. Un format que je propose aussi en plus des photos et des Reels.</p>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 28px">
+<sc-for list="{{vlogs}}" as="v" hint-placeholder-count="3">
+<button class="card reveal" onClick="{{v.open}}" aria-label="Écouter le vlog {{v.name}}" style="cursor: pointer; position: relative; border: 0; padding: 0; border-radius: 26px; overflow: hidden; aspect-ratio: 9 / 16; background: #0A1F19; color: #FAFCF8; text-align: left">
+<video src="{{v.src}}" poster="{{v.poster}}" ref="{{v.ref}}" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none"></video>
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,28,22,0) 45%, rgba(6,28,22,.85) 100%)"></span>
+<span style="position: absolute; top: 14px; left: 14px; display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; background: #7FE0D4; color: #0E2A22; padding: 7px 11px; border-radius: 999px"><svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11 a7 7 0 0 0 14 0 M12 18 V21"></path></svg>Voix off · {{v.dur}}</span>
+<span style="position: absolute; left: 20px; right: 20px; bottom: 20px; display: flex; flex-direction: column; gap: 6px">
+<span class="serif" style="font-size: 26px; line-height: 1.1">{{v.name}}</span>
+<span style="font-size: 14px; color: #C7DCD3">{{v.where}}</span>
+<span style="margin-top: 8px; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; background: rgba(250,252,248,.95); color: #0E2A22; padding: 10px 16px; border-radius: 999px; font-size: 14px; font-weight: 700"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9 H8 L13 5 V19 L8 15 H4 Z"></path><path d="M16 9 a4 4 0 0 1 0 6 M18.5 6.5 a7.5 7.5 0 0 1 0 11"></path></svg>Écouter le vlog</span>
+</span>
+</button>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- ============ QUI SUIS-JE ============ -->
+<section id="moi" style="padding: 130px 0 110px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .22; left: 0; top: 40px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12.5s; animation-delay: -4s"><img src="media/sh_palm_l.webp" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 72px">
+<div class="reveal" style="flex: 1 1 380px; min-width: 0; display: flex; justify-content: center">
+<div style="position: relative; width: min(420px, 100%); aspect-ratio: 1 / 1">
+<svg class="spin" viewBox="0 0 200 200" aria-hidden="true" style="position: absolute; inset: -6%; width: 112%; height: 112%">
+<defs><path id="ring" d="M100 100 m -88 0 a 88 88 0 1 1 176 0 a 88 88 0 1 1 -176 0"></path></defs>
+<text style="font-family: 'Manrope', sans-serif; font-size: 10px; font-weight: 700; fill: #08716E"><textPath href="#ring" textLength="548" lengthAdjust="spacing">I LIVE MY LIFE · VOYAGE · DÉCOUVERTE · TRANSPARENCE · AVENTURE · AUTHENTICITÉ · </textPath></text>
+</svg>
+<div style="position: absolute; inset: 9%; border-radius: 50%; background: #CFE3D8; overflow: hidden">
+<img src="{{portrait}}" alt="Alicia Bedu" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; display: block">
+</div>
+<span class="float" style="position: absolute; right: -4%; bottom: 10%; background: #FAFCF8; padding: 12px 16px; border-radius: 18px; box-shadow: 0 18px 40px -20px rgba(14,42,34,.5); display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600">
+<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#08716E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"></rect><path d="M8 7 L9.5 4 H14.5 L16 7"></path><circle cx="12" cy="13.5" r="3.5"></circle></svg>
+Modèle photo</span>
+<span class="float d2" style="position: absolute; left: -6%; top: 14%; background: #0E2A22; color: #FAFCF8; padding: 12px 16px; border-radius: 18px; display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600">
+<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#7FE0D4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12 H21 M12 3 C 15 6, 15 18, 12 21 C 9 18, 9 6, 12 3"></path></svg>
+Passionnée de voyage</span>
+</div>
+</div>
+
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+<p class="reveal" style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E">Qui suis-je</p>
+<h2 class="serif reveal" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04; letter-spacing: -.01em">Naturelle, curieuse,<br><em style="color: #08716E">et toujours partante.</em></h2>
+<div class="reveal" style="display: flex; flex-direction: column; gap: 16px; font-size: 18px; line-height: 1.7; color: #2D3D37; max-width: 600px">
+<p style="margin: 0">Depuis toute petite, je suis passionnée par la photo. J'ai toujours été sur les réseaux sociaux, et c'est tout naturellement que je me suis lancée dans le mannequinat : je suis devenue modèle photo, d'abord par passion, puis pour des marques et des projets professionnels.</p>
+<p style="margin: 0">J'adore voyager et tout ce qui touche à la découverte. En voyage, je combine mes deux passions : poser comme modèle photo et faire vivre les hôtels, spas, restaurants et activités que je découvre, à travers mes photos et vidéos. Ma devise ? <strong class="serif" style="font-style: italic; font-weight: 500; color: #08716E; font-size: 1.1em">I live my life</strong>, tout simplement !</p>
+<p style="margin: 0">Ce que j'aime par-dessus tout, c'est découvrir des hôtels, des lieux et des expériences, puis les partager. Je suis quelqu'un de très transparente : je montre l'expérience comme je l'ai vraiment vécue, sans trop de blabla. Ma communauté me fait confiance justement parce que je reste naturelle et sincère.</p>
+</div>
+<div class="reveal" style="display: flex; align-items: center; gap: 16px; max-width: 600px; background: #FAFCF8; border: 1.5px solid rgba(8,113,110,.28); border-radius: 22px; padding: 18px 20px; box-shadow: 0 18px 40px -30px rgba(14,42,34,.55)"><span style="flex: 0 0 52px; width: 52px; height: 52px; border-radius: 16px; background: #08716E; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FAFCF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9 L12 4 L22 9 L12 14 Z"></path><path d="M6 11 V16 C 6 17.5, 9 19, 12 19 C 15 19, 18 17.5, 18 16 V11"></path><path d="M22 9 V14"></path></svg></span><span style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 17px; color: #0E2A22">Certifiée en community management</strong><span style="font-size: 14px; line-height: 1.55; color: #3D4F48">Certification « Développer son activité avec le community management » (Up&amp;Com, enregistrée auprès de France Compétences), obtenue en 2026. Je sais donc aussi comment faire vivre vos contenus sur les réseaux.</span></span></div>
+<div class="reveal" style="display: flex; flex-direction: column; gap: 12px; margin-top: 10px">
+<p style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #08716E">
+<svg class="tap" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11 V5.5 a1.5 1.5 0 0 1 3 0 V11 M12 10 V8.5 a1.5 1.5 0 0 1 3 0 V11 M15 10.5 a1.5 1.5 0 0 1 3 0 V15 a6 6 0 0 1 -6 6 h-1 a6 6 0 0 1 -5 -2.7 L4 15.5 a1.5 1.5 0 0 1 2.4 -1.8 L9 16"></path></svg>
+Ce que j'ai déjà vécu (clique pour voir)</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<sc-for list="{{exps}}" as="e" hint-placeholder-count="14">
+<button class="chip exp" onClick="{{e.open}}" style="cursor: pointer; display: inline-flex; align-items: center; gap: 8px; padding: 11px 16px; min-height: 44px; border: 0; border-radius: 999px; background: {{e.bg}}; color: #0E2A22; font-size: 14px; font-weight: 700; box-shadow: 0 10px 22px -14px rgba(14,42,34,.6); animation-delay: {{e.delay}}">{{e.label}}<svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5 L16 12 L9 19"></path></svg></button>
+</sc-for>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ============ MODÈLE PHOTO ============ -->
+<section id="modele" aria-label="Modèle photo" style="padding: 130px 0; background: #F3F8F4; position: relative; overflow: hidden">
+<div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .26; left: 0; top: 40px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 12s; animation-delay: 0s"><img src="media/sh_palm_l.webp" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
+<div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 44px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 700px">
+<p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"></rect><path d="M8 7 L9.5 4 H14.5 L16 7"></path><circle cx="12" cy="13.5" r="3.5"></circle></svg>Modèle photo</p>
+<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Je pose aussi <em style="color: #08716E">pour vos marques.</em></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #2D3D37">Modèle photo freelance, je suis à l'aise devant l'objectif et je m'adapte à l'univers de chaque marque. Je peux être le visage de votre hôtel ou de votre restaurant dans mes contenus UGC, ou poser pour vos campagnes, vos lookbooks et vos photos produit.</p>
+</div>
+<a href="https://www.instagram.com/justali.modele/" target="_blank" rel="noopener" class="btn" style="display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; min-height: 44px; border-radius: 999px; background: #08716E; color: #FAFCF8; text-decoration: none; font-weight: 700; font-size: 15px"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>Mon Instagram modèle · @justali.modele</a>
+
+</div>
+<div class="reveal" role="tablist" aria-label="Styles de shooting" style="display: flex; flex-wrap: wrap; gap: 10px">
+<sc-for list="{{mtabs}}" as="t" hint-placeholder-count="7">
+<button class="tab" role="tab" aria-selected="{{t.sel}}" onClick="{{t.pick}}" style="cursor: pointer; display: inline-flex; align-items: center; gap: 10px; padding: 11px 18px; min-height: 44px; border-radius: 999px; border: 1.5px solid {{t.bd}}; background: {{t.bg}}; color: {{t.fg}}; font-size: 15px; font-weight: 600">{{t.label}}</button>
+</sc-for>
+</div>
+<div style="display: flex; flex-direction: column; gap: 34px">
+<sc-for list="{{mGroups}}" as="mg" hint-placeholder-count="4">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px"><span class="serif" style="font-size: 24px; color: #0E2A22">{{mg.label}}</span></p>
+<div class="pgrid mgrid">
+<sc-for list="{{mg.photos}}" as="it" hint-placeholder-count="6"><button class="ptile" onClick="{{it.open}}" aria-label="Voir la photo en grand" style="cursor: pointer; border: 0; padding: 0; border-radius: 16px; overflow: hidden; aspect-ratio: 4 / 5; background: #CFE3D8; position: relative"><img src="{{it.src}}" alt="{{it.alt}}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></button></sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- ============ CHIFFRES ============ -->
+<section aria-label="Mes chiffres" style="padding: 0 0 120px">
+<div ref="{{setStatsEl}}" style="max-width: 1240px; margin: 0 auto; padding: 0 24px">
+<div class="reveal" style="background: #0E2A22; color: #FAFCF8; border-radius: 36px; padding: 56px 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 40px; position: relative; overflow: hidden">
+<svg class="spin slow" aria-hidden="true" width="320" height="320" viewBox="0 0 320 320" style="position: absolute; right: -90px; top: -90px; opacity: .14"><g stroke="#7FE0D4" stroke-width="2" fill="none"><circle cx="160" cy="160" r="60"></circle><circle cx="160" cy="160" r="100" stroke-dasharray="4 10"></circle><circle cx="160" cy="160" r="140" stroke-dasharray="2 14"></circle></g></svg>
+<a href="https://www.instagram.com/aliibdu/" target="_blank" rel="noopener" style="color: #FAFCF8; text-decoration: none; display: flex; flex-direction: column; gap: 10px">
+<span style="display: flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: #7FE0D4">
+<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle></svg>Instagram</span>
+<span class="serif" style="font-size: clamp(56px, 6vw, 80px); line-height: 1; font-weight: 400">+{{ig}}</span>
+<span style="font-size: 16px; color: #C7DCD3">abonnés · @aliibdu</span>
+</a>
+<a href="https://www.tiktok.com/@ali.bdu" target="_blank" rel="noopener" style="color: #FAFCF8; text-decoration: none; display: flex; flex-direction: column; gap: 10px">
+<span style="display: flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: #7FE0D4">
+<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3 V15.5 A 4 4 0 1 1 10 11.5"></path><path d="M14 3 C 14.5 6, 16.5 8, 20 8.3"></path></svg>TikTok</span>
+<span class="serif" style="font-size: clamp(56px, 6vw, 80px); line-height: 1; font-weight: 400">+{{tt}}</span>
+<span style="font-size: 16px; color: #C7DCD3">abonnés · @ali.bdu</span>
+</a>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="display: flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: #7FE0D4">
+<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21 C 12 21, 5 14.5, 5 9.5 A 7 7 0 0 1 19 9.5 C 19 14.5, 12 21, 12 21 Z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Pays explorés</span>
+<span class="serif" style="font-size: clamp(56px, 6vw, 80px); line-height: 1; font-weight: 400">{{nCountries}}</span>
+<span style="font-size: 15px; line-height: 1.6; color: #C7DCD3">{{countryList}}</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="display: flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: #7FE0D4">
+<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12 C 5 6, 9 4, 12 4 S 19 6, 22 12 C 19 18, 15 20, 12 20 S 5 18, 2 12 Z"></path><circle cx="12" cy="12" r="3"></circle></svg>J'aime sur TikTok</span>
+<span class="serif" style="font-size: clamp(56px, 6vw, 80px); line-height: 1; font-weight: 400">+{{likes}}k</span>
+<span style="font-size: 16px; color: #C7DCD3">sur l'ensemble de mes vidéos</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ RÉSEAUX ============ -->
+<section id="reseaux" aria-label="Mes réseaux" style="padding: 0 0 120px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 36px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E">Mes réseaux</p>
+<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Ils ont arrêté de scroller <em style="color: #08716E">pour ça.</em></h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 28px">
+<a href="https://www.instagram.com/aliibdu/" target="_blank" rel="noopener" class="card reveal" style="text-decoration: none; color: #0E2A22; background: #FAFCF8; border-radius: 28px; padding: 24px; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 24px 50px -30px rgba(14,42,34,.45)">
+<span style="display: flex; align-items: center; gap: 14px">
+<img src="{{portrait}}" alt="" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: 50% 40%; border: 3px solid #7FE0D4">
+<span style="display: flex; flex-direction: column; gap: 2px; flex: 1">
+<span style="font-size: 18px; font-weight: 800">@aliibdu</span>
+<span style="font-size: 14px; color: #4E625A">Instagram · +600 abonnés · <strong style="color: #08716E">+114k vues</strong> sur mes 12 derniers posts</span>
+</span>
+<svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#08716E" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="#08716E"></circle></svg>
+</span>
+<span style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; border-radius: 14px; overflow: hidden">
+<sc-for list="{{igGrid}}" as="g" hint-placeholder-count="12"><span style="position: relative; display: block; aspect-ratio: 3 / 4; overflow: hidden; background: #CFE3D8"><img class="tile" src="{{g.src}}" alt="Post Instagram et son nombre de vues" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: auto 0 0 0; height: 45%; background: linear-gradient(transparent, rgba(0,0,0,.55))"></span><span style="position: absolute; left: 8px; bottom: 8px; display: inline-flex; align-items: center; gap: 5px; color: #fff; font-size: 13px; font-weight: 700; text-shadow: 0 1px 6px rgba(0,0,0,.6)"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 12 C5 6 19 6 22 12 C19 18 5 18 2 12 Z"></path><circle cx="12" cy="12" r="3"></circle></svg>{{g.v}}</span></span></sc-for>
+</span>
+<span class="btn" style="align-self: stretch; text-align: center; background: #08716E; color: #FAFCF8; padding: 15px 20px; border-radius: 999px; font-weight: 700">Ouvrir mon Instagram →</span>
+</a>
+<a href="https://www.tiktok.com/@ali.bdu" target="_blank" rel="noopener" class="card reveal" style="text-decoration: none; color: #FAFCF8; background: #0E2A22; border-radius: 28px; padding: 24px; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 24px 50px -30px rgba(14,42,34,.6)">
+<span style="display: flex; align-items: center; gap: 14px">
+<img src="{{portrait}}" alt="" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: 50% 40%; border: 3px solid #7FE0D4">
+<span style="display: flex; flex-direction: column; gap: 2px; flex: 1">
+<span style="font-size: 18px; font-weight: 800">@ali.bdu</span>
+<span style="font-size: 14px; color: #C7DCD3">TikTok · +5 000 abonnés · +175k j'aime · <strong style="color: #7FE0D4">+88k vues</strong> sur mes 12 dernières vidéos</span>
+</span>
+<svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#7FE0D4" stroke-width="1.8" stroke-linecap="round"><path d="M14 3 V15.5 A 4 4 0 1 1 10 11.5"></path><path d="M14 3 C 14.5 6, 16.5 8, 20 8.3"></path></svg>
+</span>
+<span style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; border-radius: 14px; overflow: hidden">
+<sc-for list="{{tkGrid}}" as="g" hint-placeholder-count="12"><span style="position: relative; display: block; aspect-ratio: 3 / 4; overflow: hidden; background: #CFE3D8"><img class="tile" src="{{g.src}}" alt="Vidéo TikTok et son nombre de vues" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: auto 0 0 0; height: 45%; background: linear-gradient(transparent, rgba(0,0,0,.55))"></span><span style="position: absolute; left: 8px; bottom: 8px; display: inline-flex; align-items: center; gap: 5px; color: #fff; font-size: 13px; font-weight: 700; text-shadow: 0 1px 6px rgba(0,0,0,.6)"><svg width="12" height="12" viewBox="0 0 18 18" aria-hidden="true"><path d="M5 3 L15 9 L5 15 Z" fill="currentColor"></path></svg>{{g.v}}</span></span></sc-for>
+</span>
+<span class="btn" style="align-self: stretch; text-align: center; background: #7FE0D4; color: #0E2A22; padding: 15px 20px; border-radius: 999px; font-weight: 700">Ouvrir mon TikTok →</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- ============ CE QUE J'APPORTE ============ -->
+<section id="services" style="padding: 120px 0; background: #DCEEE6; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .22; right: 0; top: 40px"><div class="gust" style="transform-origin: 100% 25%; animation-duration: 10s; animation-delay: -1s"><img src="media/sh_palm_r.webp" alt="" class="flutter" style="width: 560px; max-width: 60vw; height: auto; display: block; transform-origin: 100% 25%"></div></div>
+
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 48px; position: relative">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 16px; max-width: 720px">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E">Ce que je peux vous apporter</p>
+<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Du contenu qui donne <em style="color: #08716E">envie de partir.</em></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #3D4F48">Je vis l'expérience à fond, puis je la raconte telle qu'elle est : avec des images soignées, un ton humain et zéro faux-semblant.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 22px">
+<div class="svc reveal" style="background: #F4FAF6; border-radius: 26px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<span class="svc-ic" style="width: 56px; height: 56px; border-radius: 18px; background: #08716E; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FAFCF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"></rect><path d="M8 7 L9.5 4 H14.5 L16 7"></path><circle cx="12" cy="13.5" r="3.5"></circle></svg></span>
+<h3 class="serif" style="margin: 0; font-size: 26px; font-weight: 400">Photos naturelles</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4F48">Des photos professionnelles et naturelles de votre établissement ou de votre expérience, avec mon regard de modèle photo.</p>
+</div>
+<div class="svc reveal" style="background: #F4FAF6; border-radius: 26px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<span class="svc-ic" style="width: 56px; height: 56px; border-radius: 18px; background: #0C4A3E; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FAFCF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"></rect><path d="M10.5 9.5 L14.5 12 L10.5 14.5 Z" fill="#FAFCF8"></path></svg></span>
+<h3 class="serif" style="margin: 0; font-size: 26px; font-weight: 400">Reels &amp; TikTok immersifs</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4F48">Des vidéos verticales authentiques qui plongent votre audience dans l'expérience, comme si elle y était.</p>
+</div>
+<div class="svc reveal" style="background: #F4FAF6; border-radius: 26px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<span class="svc-ic" style="width: 56px; height: 56px; border-radius: 18px; background: #0E2A22; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FAFCF8" stroke-width="1.8" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11 a7 7 0 0 0 14 0 M12 18 V21"></path></svg></span>
+<h3 class="serif" style="margin: 0; font-size: 26px; font-weight: 400">Vlogs en voix off</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4F48">Des vlogs d'une minute où je raconte l'expérience avec ma voix, de l'arrivée jusqu'aux petits détails, comme au Château de la Bégude.</p>
+</div>
+<div class="svc reveal" style="background: #F4FAF6; border-radius: 26px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<span class="svc-ic" style="width: 56px; height: 56px; border-radius: 18px; background: #08716E; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FAFCF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"></rect><path d="M8 7 L9.5 4 H14.5 L16 7"></path><circle cx="12" cy="13.5" r="3.5"></circle></svg></span>
+<h3 class="serif" style="margin: 0; font-size: 26px; font-weight: 400">Shooting modèle</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4F48">Je pose pour vos photos produit, vos lookbooks et vos campagnes : mode, beauté, hôtellerie ou automobile. <a href="#modele" style="font-weight: 700">Voir mes shootings →</a></p>
+</div>
+<div class="svc reveal" style="background: #F4FAF6; border-radius: 26px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<span class="svc-ic" style="width: 56px; height: 56px; border-radius: 18px; background: #2F6B3A; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FAFCF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="3"></rect><path d="M8 21 H16 M12 18 V21"></path><path d="M8 11 L11 13.5 L16 8.5"></path></svg></span>
+<h3 class="serif" style="margin: 0; font-size: 26px; font-weight: 400">Contenu UGC à réutiliser</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4F48">Des contenus prêts à publier sur vos propres réseaux, votre site ou vos campagnes.</p>
+</div>
+<div class="svc reveal" style="background: #F4FAF6; border-radius: 26px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<span class="svc-ic" style="width: 56px; height: 56px; border-radius: 18px; background: #08716E; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FAFCF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5 C 5 15, 2.5 11.5, 2.5 8.2 A 4.8 4.8 0 0 1 12 6.4 A 4.8 4.8 0 0 1 21.5 8.2 C 21.5 11.5, 19 15, 12 20.5 Z"></path></svg></span>
+<h3 class="serif" style="margin: 0; font-size: 26px; font-weight: 400">Un avis sincère</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4F48">Un retour transparent qui crée une vraie confiance auprès de ma communauté. Pas de blabla, juste le vécu.</p>
+</div>
+<div class="svc reveal" style="background: #F4FAF6; border-radius: 26px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<span class="svc-ic" style="width: 56px; height: 56px; border-radius: 18px; background: #0C4A3E; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FAFCF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12 H21 M12 3 C 15 6, 15 18, 12 21 C 9 18, 9 6, 12 3"></path></svg></span>
+<h3 class="serif" style="margin: 0; font-size: 26px; font-weight: 400">De la visibilité</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4F48">Une audience passionnée de voyage et de découvertes, sur Instagram et TikTok.</p>
+</div>
+<div class="svc reveal" style="background: #0E2A22; color: #FAFCF8; border-radius: 26px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<span class="svc-ic" style="width: 56px; height: 56px; border-radius: 18px; background: #7FE0D4; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#0E2A22" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 13.5 L21.5 5 L17 20 L12.5 14 Z"></path><path d="M12.5 14 L21.5 5"></path></svg></span>
+<h3 class="serif" style="margin: 0; font-size: 26px; font-weight: 400">Le bonus Ali Travel</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C7DCD3">Une recommandation directe à mes clients voyageurs, dans leurs carnets de voyage sur mesure.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ ALI TRAVEL (sous l'eau) ============ -->
+<section id="alitravel" style="padding: 150px 0; background: linear-gradient(180deg, #0B6E80 0%, #06485E 45%, #032838 100%); color: #FAFCF8; position: relative; overflow: hidden">
+
+<img src="media/sunset_ali.webp" alt="" aria-hidden="true" class="sunsetbg" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 52%"><div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,18,40,.78) 0%, rgba(8,18,40,.5) 45%, rgba(8,18,40,.08) 75%), linear-gradient(180deg, rgba(8,18,40,.45), transparent 25%)"></div>
+<div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 64px">
+<div class="reveal" style="flex: 1 1 460px; min-width: 0; max-width: 760px; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #7FE0D4">Ali Travel · mon bonus</p>
+<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Votre lieu, recommandé à de <em style="color: #7FE0D4">futurs voyageurs.</em></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.7; color: #D3ECE8">J'adore découvrir de nouveaux endroits que je pourrai ensuite recommander à ma clientèle voyage via mon activité Ali Travel.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.7; color: #D3ECE8">J'organise des voyages sur mesure : sélection des destinations, hébergements, transports et activités, création d'itinéraires personnalisés et de carnets de voyage adaptés aux besoins et aux budgets de chaque client.</p>
+<p class="serif" style="margin: 6px 0 0; font-size: 24px; font-style: italic; line-height: 1.4">Collaborer avec moi, c'est du contenu… et une place dans les carnets de voyage de mes clients.</p>
+<a href="https://www.instagram.com/justali.voyages/" target="_blank" rel="noopener" class="btn btn-aqua" style="align-self: flex-start; margin-top: 8px; background: #7FE0D4; color: #0A2A22; padding: 16px 26px; border-radius: 999px; font-weight: 700; text-decoration: none">Voir @justali.voyages →</a>
+</div>
+</div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section aria-label="Comment on travaille ensemble" style="padding: 130px 0 110px; position: relative; overflow: hidden"><div aria-hidden="true" class="shade" style="position: absolute; pointer-events: none; z-index: 0; opacity: .2; left: 0; top: 20px"><div class="gust" style="transform-origin: 0% 25%; animation-duration: 11.5s; animation-delay: -6s"><img src="media/sh_palm_l.webp" alt="" class="flutter" style="width: 360px; max-width: 60vw; height: auto; display: block; transform-origin: 0% 25%"></div></div>
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 56px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #08716E">Comment on travaille ensemble</p>
+<h2 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.04">Simple, <em style="color: #08716E">humain</em>, efficace.</h2>
+</div>
+<div style="position: relative">
+<div class="line-grow" aria-hidden="true" style="position: absolute; left: 6%; right: 6%; top: 34px; height: 2px; background: repeating-linear-gradient(90deg, #08716E 0 10px, transparent 10px 18px)"></div>
+<ol style="list-style: none; margin: 0; padding: 0; position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 32px">
+<li class="reveal" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
+<span class="serif float" style="width: 68px; height: 68px; border-radius: 50%; background: #08716E; color: #FAFCF8; display: flex; align-items: center; justify-content: center; font-size: 28px">1</span>
+<h3 class="serif" style="margin: 0; font-size: 24px; font-weight: 400">Prise de contact</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #3D4F48; max-width: 240px">Vous m'écrivez, ou c'est moi qui viens vers vous.</p>
+</li>
+<li class="reveal" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
+<span class="serif float d1" style="width: 68px; height: 68px; border-radius: 50%; background: #0C4A3E; color: #FAFCF8; display: flex; align-items: center; justify-content: center; font-size: 28px">2</span>
+<h3 class="serif" style="margin: 0; font-size: 24px; font-weight: 400">Vos besoins</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #3D4F48; max-width: 240px">On échange sur vos attentes, le format et le message à faire passer.</p>
+</li>
+<li class="reveal" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
+<span class="serif float d2" style="width: 68px; height: 68px; border-radius: 50%; background: #2F6B3A; color: #FAFCF8; display: flex; align-items: center; justify-content: center; font-size: 28px">3</span>
+<h3 class="serif" style="margin: 0; font-size: 24px; font-weight: 400">L'expérience</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #3D4F48; max-width: 240px">Je vis l'expérience pour de vrai et je crée le contenu sur place.</p>
+</li>
+<li class="reveal" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
+<span class="serif float d3" style="width: 68px; height: 68px; border-radius: 50%; background: #0E2A22; color: #FAFCF8; display: flex; align-items: center; justify-content: center; font-size: 28px">4</span>
+<h3 class="serif" style="margin: 0; font-size: 24px; font-weight: 400">Livraison &amp; publication</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #3D4F48; max-width: 240px">Je vous livre les contenus et je partage l'expérience avec ma communauté.</p>
+</li>
+</ol>
+</div>
+</div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" style="padding: 0 0 70px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px">
+<div class="reveal" style="position: relative; overflow: hidden; background: #08716E; color: #FAFCF8; border-radius: 40px; padding: clamp(48px, 7vw, 96px) clamp(28px, 6vw, 80px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 26px">
+<div class="sun" aria-hidden="true" style="position: absolute; width: 520px; height: 520px; border-radius: 50%; background: #0F8F89; top: -260px; left: 50%; margin-left: -260px"></div>
+
+
+<p style="position: relative; margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #BDF2EA">Contact</p>
+<h2 class="serif" style="position: relative; margin: 0; font-weight: 400; font-size: clamp(40px, 5.6vw, 76px); line-height: 1.02; max-width: 900px">Votre lieu mérite d'être vécu <em>avant même d'être découvert.</em></h2>
+<p style="position: relative; margin: 0; font-size: 20px; color: #DDF5F1">Envie de le faire vivre à travers mon regard ?</p>
+<p style="position: relative; margin: 0; font-size: 20px; color: #DDF5F1">Parlons-en ! <span style="display: inline-block; margin-left: 8px; font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 999px; background: rgba(127,224,212,.18); color: #BDF2EA">Réponse sous 24h</span></p>
+<a href="mailto:justali.pro13@gmail.com?subject=Collaboration%20avec%20Alicia%20Bedu" target="_blank" rel="noopener" class="btn btn-light" style="position: relative; display: inline-flex; align-items: center; gap: 12px; background: #FAFCF8; color: #0E2A22; padding: 20px 36px; border-radius: 999px; font-weight: 700; font-size: 18px; text-decoration: none">Collaborons
+<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"></path></svg></a>
+<div style="position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 28px; font-size: 16px; font-weight: 600; margin-top: 8px">
+<a href="mailto:justali.pro13@gmail.com?subject=Collaboration%20avec%20Alicia%20Bedu" target="_blank" rel="noopener" class="clink" style="display: flex; align-items: center; gap: 8px; color: inherit; text-decoration: none; padding: 10px 16px; border-radius: 999px; background: rgba(250,252,248,.14)"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="M3.5 7 L12 13 L20.5 7"></path></svg>justali.pro13@gmail.com</a>
+<a href="https://wa.me/33638104552?text=Bonjour%20Alicia%2C%20je%20souhaiterais%20vous%20proposer%20une%20collaboration." target="_blank" rel="noopener" class="clink" style="display: flex; align-items: center; gap: 8px; color: inherit; text-decoration: none; padding: 10px 16px; border-radius: 999px; background: rgba(250,252,248,.14)"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 L5.3 16.2 A8 8 0 1 1 8 18.8 Z"></path><path d="M9 9.5 C9 12.5 11.5 15 14.5 15 L15.5 13.8 L13.8 12.8 L13 13.5 C12 13 11 12 10.5 11 L11.2 10.2 L10.2 8.5 Z"></path></svg>WhatsApp · 06 38 10 45 52</a>
+<a href="https://www.instagram.com/aliibdu/" target="_blank" rel="noopener" class="clink" style="display: flex; align-items: center; gap: 8px; color: inherit; text-decoration: none; padding: 10px 16px; border-radius: 999px; background: rgba(250,252,248,.14)"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>@aliibdu</a>
+<a href="https://www.instagram.com/justali.modele/" target="_blank" rel="noopener" class="clink" style="display: flex; align-items: center; gap: 8px; color: inherit; text-decoration: none; padding: 10px 16px; border-radius: 999px; background: rgba(250,252,248,.14)"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>@justali.modele · modèle photo</a>
+<a href="https://www.tiktok.com/@ali.bdu" target="_blank" rel="noopener" class="clink" style="display: flex; align-items: center; gap: 8px; color: inherit; text-decoration: none; padding: 10px 16px; border-radius: 999px; background: rgba(250,252,248,.14)"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M14 3 V15.5 A 4 4 0 1 1 10 11.5"></path><path d="M14 3 C 14.5 6, 16.5 8, 20 8.3"></path></svg>@ali.bdu</a>
+<a href="https://www.instagram.com/justali.voyages/" target="_blank" rel="noopener" class="clink" style="display: flex; align-items: center; gap: 8px; color: inherit; text-decoration: none; padding: 10px 16px; border-radius: 999px; background: rgba(250,252,248,.14)"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 13.5 L21.5 5 L17 20 L12.5 14 Z"></path></svg>Ali Travel · @justali.voyages</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer style="padding: 30px 24px 60px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center">
+<p class="serif" style="margin: 0; font-size: clamp(48px, 9vw, 130px); font-style: italic; line-height: 1; color: #0E2A22; letter-spacing: -.02em">I live my life</p>
+<p style="margin: 0; font-size: 14px; color: #4E625A">Alicia Bedu · Créatrice de contenu voyage &amp; lifestyle</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin-top: 14px; font-size: 13px">
+<button onClick="{{openMentions}}" style="cursor: pointer; border: 0; background: none; padding: 6px; color: #4E625A; text-decoration: underline; font-size: 13px">Mentions légales</button>
+<button onClick="{{openPrivacy}}" style="cursor: pointer; border: 0; background: none; padding: 6px; color: #4E625A; text-decoration: underline; font-size: 13px">Confidentialité &amp; cookies</button>
+<button onClick="{{openRights}}" style="cursor: pointer; border: 0; background: none; padding: 6px; color: #4E625A; text-decoration: underline; font-size: 13px">Droits d'auteur &amp; image</button>
+</div>
+<p style="margin: 6px 0 0; font-size: 12px; color: #6B7D75">© 2026 Alicia Bedu · Tous droits réservés</p>
+<sc-if value="{{legalOpen}}" hint-placeholder-val="{{false}}">
+<div style="position: fixed; inset: 0; z-index: 90; display: flex; align-items: center; justify-content: center; padding: 16px">
+<button onClick="{{closeLegal}}" aria-label="Fermer" style="position: absolute; inset: 0; border: 0; background: rgba(14,42,34,.6); cursor: pointer"></button>
+<div role="dialog" aria-modal="true" aria-label="{{legalTitle}}" style="position: relative; z-index: 1; background: #FAFCF8; color: #0E2A22; border-radius: 24px; width: 100%; max-width: 760px; max-height: 88vh; overflow-y: auto; padding: 36px 30px; text-align: left; font-size: 15px; line-height: 1.65">
+<button onClick="{{closeLegal}}" aria-label="Fermer" style="position: absolute; top: 12px; right: 12px; width: 42px; height: 42px; border-radius: 50%; border: 0; background: #0E2A22; color: #FAFCF8; cursor: pointer; font-size: 20px">×</button>
+<h3 class="serif" style="margin: 0 0 16px; font-size: 32px; font-weight: 400">{{legalTitle}}</h3>
+
+<sc-if value="{{legalMentions}}" hint-placeholder-val="{{true}}"><div>
+<h4 style="margin: 18px 0 6px">Éditrice du site</h4>
+<p style="margin: 0">Alicia Bedu, entrepreneure individuelle (micro-entreprise)<br>Activité : création de contenu UGC, photo et vidéo, modèle photo<br>E-mail : <a href="mailto:justali.pro13@gmail.com">justali.pro13@gmail.com</a> · Téléphone : 06 38 10 45 52</p>
+<h4 style="margin: 18px 0 6px">Directrice de la publication</h4>
+<p style="margin: 0">Alicia Bedu</p>
+<h4 style="margin: 18px 0 6px">Hébergeur</h4>
+<p style="margin: 0">Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, États-Unis · <a href="https://www.netlify.com" target="_blank" rel="noopener">www.netlify.com</a></p>
+<h4 style="margin: 18px 0 6px">Responsabilité</h4>
+<p style="margin: 0">Les informations de ce site sont données à titre indicatif et peuvent évoluer. Les liens vers des sites tiers (Instagram, TikTok, WhatsApp, établissements cités) sont fournis pour information : leurs contenus relèvent de la seule responsabilité de leurs éditeurs.</p>
+<h4 style="margin: 18px 0 6px">Droit applicable</h4>
+<p style="margin: 0">Le présent site et ses mentions sont soumis au droit français.</p>
+</div></sc-if>
+
+<sc-if value="{{legalPrivacy}}" hint-placeholder-val="{{false}}"><div>
+<h4 style="margin: 18px 0 6px">Données collectées</h4>
+<p style="margin: 0">Ce site ne contient ni formulaire, ni espace membre, ni outil de mesure d'audience. Je ne collecte des données personnelles que si vous me contactez par e-mail ou WhatsApp : nom, coordonnées et contenu de votre message.</p>
+<h4 style="margin: 18px 0 6px">Utilisation et durée de conservation</h4>
+<p style="margin: 0">Ces données servent uniquement à répondre à votre demande et à gérer une éventuelle collaboration (base légale : mesures précontractuelles et intérêt légitime). Elles ne sont ni vendues ni cédées, et sont conservées au maximum 3 ans après notre dernier échange, ou plus longtemps si une obligation légale l'impose (facturation).</p>
+<h4 style="margin: 18px 0 6px">Prestataires</h4>
+<p style="margin: 0">L'hébergeur Netlify enregistre des données techniques de connexion (adresse IP, navigateur) pour assurer la sécurité du site. Les polices d'écriture sont chargées depuis les serveurs de Google Fonts, qui reçoivent donc votre adresse IP. Ces prestataires peuvent traiter des données hors de l'Union européenne, dans le cadre de garanties prévues par le RGPD. Les échanges par e-mail passent par Gmail (Google) et ceux par WhatsApp par Meta.</p>
+<h4 style="margin: 18px 0 6px">Cookies</h4>
+<p style="margin: 0">Ce site ne dépose aucun cookie publicitaire ni de suivi : aucun bandeau de consentement n'est donc nécessaire. Les sites vers lesquels pointent les liens (Instagram, TikTok, WhatsApp) appliquent leur propre politique de cookies.</p>
+<h4 style="margin: 18px 0 6px">Vos droits</h4>
+<p style="margin: 0">Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition sur vos données. Pour l'exercer, écrivez à <a href="mailto:justali.pro13@gmail.com">justali.pro13@gmail.com</a>. Vous pouvez aussi adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>).</p>
+</div></sc-if>
+
+<sc-if value="{{legalRights}}" hint-placeholder-val="{{false}}"><div>
+<h4 style="margin: 18px 0 6px">Propriété intellectuelle</h4>
+<p style="margin: 0">Sauf mention contraire, les photos, vidéos et textes de ce site sont la propriété d'Alicia Bedu. Toute reproduction, diffusion ou réutilisation, totale ou partielle, sans autorisation écrite est interdite (Code de la propriété intellectuelle). Les contenus réalisés pour une marque ou un établissement sont utilisés ici avec son accord, à titre de portfolio.</p>
+<h4 style="margin: 18px 0 6px">Marques et établissements cités</h4>
+<p style="margin: 0">Les noms, marques et logos des établissements et marques cités appartiennent à leurs propriétaires respectifs. Ils sont mentionnés uniquement pour présenter les expériences et collaborations réalisées.</p>
+<h4 style="margin: 18px 0 6px">Droit à l'image</h4>
+<p style="margin: 0">Les personnes reconnaissables sur les contenus ont donné leur accord pour leur diffusion. Si vous apparaissez sur une photo ou une vidéo et souhaitez son retrait, écrivez à <a href="mailto:justali.pro13@gmail.com">justali.pro13@gmail.com</a> : elle sera retirée dans les meilleurs délais.</p>
+<h4 style="margin: 18px 0 6px">Musiques</h4>
+<p style="margin: 0">Les vidéos de ce site sont diffusées sans musique ajoutée, à l'exception des sons d'origine ou des musiques fournies avec le contenu.</p>
+</div></sc-if>
+</div>
+</div>
+</sc-if>
+</footer>
+
+<!-- ============ NAVIGATION À LA SOURIS ============ -->
+<nav aria-label="Aller à une section" class="dots" style="position: fixed; right: 18px; top: 50%; transform: translateY(-50%); z-index: 35; display: flex; flex-direction: column; gap: 10px; padding: 12px 8px; border-radius: 999px; background: rgba(14,42,34,.55); backdrop-filter: blur(8px)">
+<sc-for list="{{navDots}}" as="d" hint-placeholder-count="8">
+<button class="dot" onClick="{{d.go}}" aria-label="{{d.label}}" aria-current="{{d.cur}}" style="position: relative; width: 28px; height: 28px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center">
+<span style="width: {{d.size}}; height: {{d.size}}; border-radius: 50%; background: {{d.bg}}; transition: all .3s ease"></span>
+<span class="dot-label" style="position: absolute; right: 38px; white-space: nowrap; background: #0E2A22; color: #FAFCF8; font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px">{{d.label}}</span>
+</button>
+</sc-for>
+</nav>
+<sc-if value="{{hasNext}}" hint-placeholder-val="{{true}}">
+<button class="nextbtn" onClick="{{goNext}}" aria-label="Section suivante : {{nextLabel}}" style="position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 35; display: flex; align-items: center; gap: 10px; height: 50px; padding: 0 22px; border: 0; border-radius: 999px; background: rgba(250,252,248,.94); color: #0E2A22; box-shadow: 0 14px 30px -12px rgba(14,42,34,.5); cursor: pointer; font-size: 14px; font-weight: 700">{{nextLabel}}<svg class="bounce" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3 V15 M4 10 L9 15 L14 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+</sc-if>
+<a href="#top" class="toTop btn" aria-label="Retour en haut" style="position: fixed; right: 22px; bottom: 22px; z-index: 40; width: 54px; height: 54px; border-radius: 50%; background: #0E2A22; color: #FAFCF8; display: flex; align-items: center; justify-content: center; box-shadow: 0 14px 30px -12px rgba(14,42,34,.6)">
+<svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 15 V3 M4 8 L9 3 L14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+
+<!-- ============ POP-UP EXPÉRIENCE ============ -->
+<sc-if value="{{hasOpen}}" hint-placeholder-val="{{false}}">
+<div class="overlay" style="position: fixed; inset: 0; z-index: 60; background: rgba(28,22,19,.86); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; padding: 16px">
+<button onClick="{{close}}" aria-label="Fermer" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; background: transparent; cursor: zoom-out"></button>
+<div class="pop" role="dialog" aria-modal="true" aria-label="{{cur.name}}" style="position: relative; z-index: 1; background: #FAFCF8; color: #0E2A22; border-radius: 28px; width: 100%; max-width: 1080px; max-height: 94vh; overflow-y: auto; display: flex; flex-wrap: wrap">
+<div style="flex: 1 1 380px; min-width: 0; background: #1E1916; display: flex; flex-direction: column">
+<div style="position: relative; height: min(70vh, 640px); min-height: 360px">
+<sc-if value="{{media.isVideo}}" hint-placeholder-val="{{false}}">
+<video key="{{media.src}}" ref="{{setModalVideo}}" src="{{media.src}}" poster="{{media.poster}}" controls="{{true}}" autoPlay="{{true}}" muted="{{mvMuted}}" loop="{{true}}" playsInline="{{true}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #1E1916"></video>
+</sc-if>
+<sc-if value="{{media.isImg}}" hint-placeholder-val="{{true}}">
+<img key="{{media.src}}" class="fadeimg" src="{{media.src}}" alt="{{cur.name}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain">
+</sc-if>
+<button onClick="{{prev}}" aria-label="Média précédent" style="position: absolute; left: 12px; top: 50%; margin-top: -24px; width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(251,247,240,.9); color: #0E2A22; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5 L8 12 L15 19"></path></svg></button>
+<button onClick="{{next}}" aria-label="Média suivant" style="position: absolute; right: 12px; top: 50%; margin-top: -24px; width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(251,247,240,.9); color: #0E2A22; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5 L16 12 L9 19"></path></svg></button>
+<span style="position: absolute; top: 14px; left: 14px; font-size: 12px; font-weight: 700; background: rgba(251,247,240,.9); color: #0E2A22; padding: 6px 10px; border-radius: 999px">{{mediaPos}}</span>
+<sc-if value="{{showSound}}" hint-placeholder-val="{{false}}"><button onClick="{{toggleSound}}" aria-label="{{soundLabel}}" style="position: absolute; top: 12px; left: 50%; margin-left: -62px; width: 124px; height: 38px; border-radius: 999px; border: 0; background: rgba(251,247,240,.92); color: #0E2A22; cursor: pointer; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9 H8 L13 5 V19 L8 15 H4 Z"></path><path d="{{soundIcon}}"></path></svg>{{soundText}}</button></sc-if>
+</div>
+<div style="display: flex; gap: 8px; padding: 12px; overflow-x: auto">
+<sc-for list="{{thumbs}}" as="t" hint-placeholder-count="5">
+<button onClick="{{t.pick}}" aria-label="{{t.label}}" style="flex: 0 0 auto; position: relative; width: 58px; height: 76px; padding: 0; border-radius: 10px; overflow: hidden; cursor: pointer; border: 2px solid {{t.bd}}; opacity: {{t.op}}; background: #0E2A22">
+<img src="{{t.thumb}}" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<sc-if value="{{t.isVideo}}" hint-placeholder-val="{{false}}"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.25)"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M5 3 L15 9 L5 15 Z" fill="#FAFCF8"></path></svg></span></sc-if>
+</button>
+</sc-for>
+</div>
+</div>
+<div style="flex: 1 1 300px; padding: 40px 34px; display: flex; flex-direction: column; gap: 14px">
+<sc-if value="{{cur.hasName}}" hint-placeholder-val="{{true}}"><span style="align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #08716E">{{cur.catLabel}}</span>
+<h3 class="serif" style="margin: 0; font-size: 38px; font-weight: 400; line-height: 1.08">{{cur.name}}</h3>
+<sc-if value="{{cur.hasHandle}}" hint-placeholder-val="{{true}}"><span style="font-size: 16px; font-weight: 700; color: #08716E">{{cur.handle}}</span></sc-if>
+<span style="font-size: 15px; color: #4E625A">{{cur.where}}</span></sc-if>
+
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px">
+
+<sc-if value="{{cur.hasVlog}}" hint-placeholder-val="{{false}}"><span style="font-size: 13px; font-weight: 700; padding: 7px 12px; border-radius: 999px; background: #0E2A22; color: #7FE0D4">{{cur.vlog}} : je raconte l'expérience</span></sc-if>
+</div>
+<a href="#contact" onClick="{{close}}" class="btn btn-dark" style="align-self: flex-start; margin-top: 14px; background: #08716E; color: #FAFCF8; padding: 14px 24px; border-radius: 999px; font-weight: 700; text-decoration: none">Créer la même chose pour vous</a>
+</div>
+<button onClick="{{close}}" aria-label="Fermer" style="position: absolute; top: 14px; right: 14px; width: 46px; height: 46px; border-radius: 50%; border: 0; background: #0E2A22; color: #FAFCF8; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 2"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3 L13 13 M13 3 L3 13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg></button>
+</div>
+</div>
+</sc-if>
+
+</div>
+</template>
+<script src="runtime.js"></script>
+<script>
+
+var I18N_EN = {
+"Mon Instagram modèle · @justali.modele": "My modelling Instagram · @justali.modele",
+"@justali.modele · modèle photo": "@justali.modele · photo model",
+"Accueil": "Home",
+"Activité : création de contenu UGC, photo et vidéo, modèle photo": "Activity: UGC content creation, photo and video, photo model",
+"Activités & découvertes": "Activities & discoveries",
+"Activités & aventures": "Activities & adventures",
+"Ali Travel · mon bonus": "Ali Travel · my bonus",
+"Alicia Bedu · Créatrice de contenu voyage & lifestyle": "Alicia Bedu · Travel & lifestyle content creator",
+"Alicia Bedu, entrepreneure individuelle (micro-entreprise)": "Alicia Bedu, sole trader (micro-enterprise)",
+"Aller à une section": "Go to a section",
+"Aperçu de mes contenus vidéo": "Preview of my video content",
+"Aujourd'hui, le besoin de déconnexion se fait ressentir : une véritable parenthèse de détente, une expérience sensorielle, un moment hors du temps. À travers un contenu authentique et immersif, je mets en lumière l'art de vivre, la sérénité et l'univers unique de chaque établissement, pour éveiller les sens, inspirer l'évasion et donner envie de vivre l'expérience à son tour.": "Today, people need to disconnect: a real break to unwind, a sensory experience, a moment out of time. Through authentic, immersive content, I showcase the art of living, the serenity and the unique world of each place, to awaken the senses, inspire escape and make people want to live the experience for themselves.",
+"Baignade aux cascades": "Swimming at the waterfalls",
+"Balade à cheval": "Horse riding",
+"Balade à dos de dromadaire": "Camel ride",
+"Beauté & bien-être": "Beauty & wellness",
+"Buggy dans la palmeraie": "Buggy in the palm grove",
+"Cascade de Sillans": "Sillans Waterfall",
+"Cascades d'Ouzoud": "Ouzoud Waterfalls",
+"Catégories": "Categories",
+"Ce que j'ai déjà vécu (clique pour voir)": "What I've already experienced (tap to see)",
+"Ce que j'aime par-dessus tout, c'est découvrir des hôtels, des lieux et des expériences, puis les partager. Je suis quelqu'un de très transparente : je montre l'expérience comme je l'ai vraiment vécue, sans trop de blabla. Ma communauté me fait confiance justement parce que je reste naturelle et sincère.": "What I love most is discovering hotels, places and experiences, then sharing them. I'm a very transparent person: I show the experience exactly as I lived it, without the fluff. My community trusts me precisely because I stay natural and sincere.",
+"Ce que j'apporte": "What I bring",
+"Ce que j’apporte": "What I bring",
+"Ce que je peux vous apporter": "What I can bring you",
+"Ce site ne contient ni formulaire, ni espace membre, ni outil de mesure d'audience. Je ne collecte des données personnelles que si vous me contactez par e-mail ou WhatsApp : nom, coordonnées et contenu de votre message.": "This site has no forms, no member area and no analytics tools. I only collect personal data if you contact me by email or WhatsApp: your name, contact details and the content of your message.",
+"Ce site ne dépose aucun cookie publicitaire ni de suivi : aucun bandeau de consentement n'est donc nécessaire. Les sites vers lesquels pointent les liens (Instagram, TikTok, WhatsApp) appliquent leur propre politique de cookies.": "This site sets no advertising or tracking cookies, so no consent banner is needed. The sites linked from here (Instagram, TikTok, WhatsApp) apply their own cookie policies.",
+"Certification « Développer son activité avec le community management » (Up&Com, enregistrée auprès de France Compétences), obtenue en 2026. Je sais donc aussi comment faire vivre vos contenus sur les réseaux.": "Certification “Growing your business with community management” (Up&Com, registered with France Compétences), obtained in 2026. So I also know how to make your content thrive on social media.",
+"Certifiée en community management": "Certified in community management",
+"Ces données servent uniquement à répondre à votre demande et à gérer une éventuelle collaboration (base légale : mesures précontractuelles et intérêt légitime). Elles ne sont ni vendues ni cédées, et sont conservées au maximum 3 ans après notre dernier échange, ou plus longtemps si une obligation légale l'impose (facturation).": "This data is used only to answer your request and manage a possible collaboration (legal basis: pre-contractual measures and legitimate interest). It is never sold or transferred, and is kept for up to 3 years after our last exchange, or longer if required by law (invoicing).",
+"Collaborer avec moi, c'est du contenu… et une place dans les carnets de voyage de mes clients.": "Working with me means content… and a spot in my clients' travel guides.",
+"Collaboration marque": "Brand collaboration",
+"Collaborons": "Let's work together",
+"Collaborons →": "Let's work together →",
+"Comment on travaille ensemble": "How we work together",
+"Confidentialité & cookies": "Privacy & cookies",
+"Contenu UGC à réutiliser": "Reusable UGC content",
+"Couverture": "Cover",
+"Croisière Komodo": "Komodo cruise",
+"Croisière à Komodo": "Komodo cruise",
+"Créatrice de contenu voyage & lifestyle": "Travel & lifestyle content creator",
+"Créer la même chose pour vous": "Create the same for you",
+"Créons du contenu qui arrête le scroll.": "Let's create content that stops the scroll.",
+"De la visibilité": "Visibility",
+"Depuis toute petite, je suis passionnée par la photo. J'ai toujours été sur les réseaux sociaux, et c'est tout naturellement que je me suis lancée dans le mannequinat : je suis devenue modèle photo, d'abord par passion, puis pour des marques et des projets professionnels.": "I've loved photography since I was little. I've always been on social media, so modelling came naturally: I became a photo model, first out of passion, then for brands and professional projects.",
+"Des lieux que j'ai": "Places I've",
+"Des contenus prêts à publier sur vos propres réseaux, votre site ou vos campagnes.": "Content ready to post on your own socials, website or campaigns.",
+"Des photos professionnelles et naturelles de votre établissement ou de votre expérience, avec mon regard de modèle photo.": "Professional, natural photos of your venue or experience, through a photo model's eye.",
+"Des vidéos verticales authentiques qui plongent votre audience dans l'expérience, comme si elle y était.": "Authentic vertical videos that immerse your audience in the experience, as if they were there.",
+"Des vlogs d'environ une minute, de l'arrivée jusqu'aux petits détails, avec ma voix pour guider votre futur client comme si il y était. Un format que je propose aussi en plus des photos et des Reels.": "Vlogs of about one minute, from arrival to the little details, with my voice guiding your future guest as if they were there. A format I also offer alongside photos and Reels.",
+"Des vlogs d'une minute où je raconte l'expérience avec ma voix, de l'arrivée jusqu'aux petits détails, comme au Château de la Bégude.": "One-minute vlogs where I narrate the experience in my own voice, from arrival to the little details, like at Château de la Bégude.",
+"Directrice de la publication": "Publication director",
+"Données collectées": "Data collected",
+"Droit applicable": "Governing law",
+"Droit à l'image": "Image rights",
+"Droits d'auteur & droit à l'image": "Copyright & image rights",
+"Droits d'auteur & image": "Copyright & image",
+"Du contenu qui donne": "Content that makes people",
+"Découvrir mon univers": "Discover my world",
+"Dîner face au volcan": "Dinner facing the volcano",
+"E-mail :": "Email:",
+"Envie de le faire vivre à travers mon regard ?": "Want to bring it to life through my eyes?",
+"Excursion en bateau à Himarë": "Boat trip in Himarë",
+"Expériences": "Experiences",
+"Fermer": "Close",
+"France · Maroc · Indonésie · Malaisie · Singapour · Sénégal · Croatie · Grèce · Italie · Portugal · Espagne · Angleterre · Albanie": "France · Morocco · Indonesia · Malaysia · Singapore · Senegal · Croatia · Greece · Italy · Portugal · Spain · England · Albania",
+"Galerie": "Gallery",
+"Hébergeur": "Hosting",
+"Hôtels & bars": "Hotels & bars",
+"Hôtels & hébergements": "Hotels & stays",
+"I LIVE MY LIFE · VOYAGE · DÉCOUVERTE · TRANSPARENCE · AVENTURE · AUTHENTICITÉ ·": "I LIVE MY LIFE · TRAVEL · DISCOVERY · TRANSPARENCY · ADVENTURE · AUTHENTICITY ·",
+"Ils ont arrêté de scroller": "They stopped scrolling",
+"Instagram · +600 abonnés ·": "Instagram · 600+ followers ·",
+"J'adore découvrir de nouveaux endroits que je pourrai ensuite recommander à ma clientèle voyage via mon activité Ali Travel.": "I love discovering new places that I can then recommend to my travel clients through my business, Ali Travel.",
+"J'adore voyager et tout ce qui touche à la découverte. En voyage, je combine mes deux passions : poser comme modèle photo et faire vivre les hôtels, spas, restaurants et activités que je découvre, à travers mes photos et vidéos. Ma devise ?": "I love travelling and everything about discovery. When I travel, I combine my two passions: modelling, and bringing the hotels, spas, restaurants and activities I discover to life through my photos and videos. My motto?",
+"J'aime sur TikTok": "likes on TikTok",
+"J'organise des voyages sur mesure : sélection des destinations, hébergements, transports et activités, création d'itinéraires personnalisés et de carnets de voyage adaptés aux besoins et aux budgets de chaque client.": "I organise tailor-made trips: choosing destinations, accommodation, transport and activities, and creating personalised itineraries and travel guides suited to each client's needs and budget.",
+"Jardin exotique d'Èze": "Èze Exotic Garden",
+"Je fais vivre vos": "I bring your",
+"Je pose aussi": "I also model",
+"Je pose pour vos photos produit, vos lookbooks et vos campagnes : mode, beauté, hôtellerie ou automobile.": "I model for your product photos, lookbooks and campaigns: fashion, beauty, hospitality or automotive.",
+"Je raconte l'expérience": "I tell the story",
+"Je vis l'expérience pour de vrai et je crée le contenu sur place.": "I live the experience for real and create the content on site.",
+"Je vis l'expérience à fond, puis je la raconte telle qu'elle est : avec des images soignées, un ton humain et zéro faux-semblant.": "I live the experience to the full, then tell it as it is: polished visuals, a human tone and zero pretence.",
+"Je vous livre les contenus et je partage l'expérience avec ma communauté.": "I deliver the content and share the experience with my community.",
+"Kuala Lumpur, Malaisie": "Kuala Lumpur, Malaysia",
+"L'expérience": "The experience",
+"L'hébergeur Netlify enregistre des données techniques de connexion (adresse IP, navigateur) pour assurer la sécurité du site. Les polices d'écriture sont chargées depuis les serveurs de Google Fonts, qui reçoivent donc votre adresse IP. Ces prestataires peuvent traiter des données hors de l'Union européenne, dans le cadre de garanties prévues par le RGPD. Les échanges par e-mail passent par Gmail (Google) et ceux par WhatsApp par Meta.": "The host, Netlify, records technical connection data (IP address, browser) to keep the site secure. Fonts are loaded from Google Fonts servers, which therefore receive your IP address. These providers may process data outside the European Union, under the safeguards provided by the GDPR. Emails go through Gmail (Google) and WhatsApp messages through Meta.",
+"La prochaine expérience à partager, c'est peut-être la vôtre.": "The next experience to share could be yours.",
+"Le bien-être se vit, se ressent et se partage.": "Wellbeing is lived, felt and shared.",
+"Le bonus Ali Travel": "The Ali Travel bonus",
+"Le présent site et ses mentions sont soumis au droit français.": "This site and its notices are governed by French law.",
+"Les informations de ce site sont données à titre indicatif et peuvent évoluer. Les liens vers des sites tiers (Instagram, TikTok, WhatsApp, établissements cités) sont fournis pour information : leurs contenus relèvent de la seule responsabilité de leurs éditeurs.": "The information on this site is provided for guidance and may change. Links to third-party sites (Instagram, TikTok, WhatsApp, venues mentioned) are provided for information only: their content is the sole responsibility of their publishers.",
+"Les noms, marques et logos des établissements et marques cités appartiennent à leurs propriétaires respectifs. Ils sont mentionnés uniquement pour présenter les expériences et collaborations réalisées.": "The names, trademarks and logos of the venues and brands mentioned belong to their respective owners. They are mentioned solely to present the experiences and collaborations carried out.",
+"Les personnes reconnaissables sur les contenus ont donné leur accord pour leur diffusion. Si vous apparaissez sur une photo ou une vidéo et souhaitez son retrait, écrivez à": "People who can be recognised in the content have agreed to its publication. If you appear in a photo or video and would like it removed, write to",
+": elle sera retirée dans les meilleurs délais.": ": it will be removed as soon as possible.",
+"Les vidéos de ce site sont diffusées sans musique ajoutée, à l'exception des sons d'origine ou des musiques fournies avec le contenu.": "The videos on this site have no added music, apart from original sound or music supplied with the content.",
+"Lieux & ambiances": "Places & atmospheres",
+"Livraison & publication": "Delivery & publication",
+"Logements": "Stays",
+"Londres, Angleterre": "London, England",
+"Marques": "Brands",
+"Marques & produits": "Brands & products",
+"Marques et établissements cités": "Brands and venues mentioned",
+"Mentions légales": "Legal notice",
+"Mes chiffres": "My numbers",
+"Mes collaborations & expériences": "My collaborations & experiences",
+"Mes réseaux": "My socials",
+"Mes vlogs en voix off": "My voice-over vlogs",
+"Mode & éditorial": "Fashion & editorial",
+"Modèle photo": "Photo model",
+"Modèle photo freelance, je suis à l'aise devant l'objectif et je m'adapte à l'univers de chaque marque. Je peux être le visage de votre hôtel ou de votre restaurant dans mes contenus UGC, ou poser pour vos campagnes, vos lookbooks et vos photos produit.": "As a freelance photo model, I'm at ease in front of the camera and adapt to each brand's world. I can be the face of your hotel or restaurant in my UGC content, or model for your campaigns, lookbooks and product photos.",
+"Musiques": "Music",
+"Média précédent": "Previous media",
+"Média suivant": "Next media",
+"Nager avec une tortue": "Swimming with a turtle",
+"Naturelle, curieuse,": "Natural, curious,",
+"Navigation principale": "Main navigation",
+"Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, États-Unis ·": "Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, USA ·",
+"Nuit dans le désert": "A night in the desert",
+"On échange sur vos attentes, le format et le message à faire passer.": "We talk about your expectations, the format and the message to get across.",
+"Ouvrir mon Instagram →": "Open my Instagram →",
+"Ouvrir mon TikTok →": "Open my TikTok →",
+"Paddle dans une crique": "Paddleboarding in a cove",
+"Parlons-en !": "Let's talk!",
+"Passionnée de voyage": "Passionate about travel",
+"Pays explorés": "Countries explored",
+"Photos naturelles": "Natural photos",
+"Piscine face aux tours Petronas": "Pool facing the Petronas Towers",
+"Post Instagram et son nombre de vues": "Instagram post and its view count",
+"Prestataires": "Service providers",
+"Prise de contact": "Getting in touch",
+"Propriété intellectuelle": "Intellectual property",
+"Qui suis-je": "About me",
+"Reels & TikTok immersifs": "Immersive Reels & TikToks",
+"Responsabilité": "Liability",
+"Retour en haut": "Back to top",
+"Rizières de Bali": "Bali rice terraces",
+"Réponse sous 24h": "Reply within 24h",
+"Réserve africaine de Sigean": "Sigean African Reserve",
+"Sauf mention contraire, les photos, vidéos et textes de ce site sont la propriété d'Alicia Bedu. Toute reproduction, diffusion ou réutilisation, totale ou partielle, sans autorisation écrite est interdite (Code de la propriété intellectuelle). Les contenus réalisés pour une marque ou un établissement sont utilisés ici avec son accord, à titre de portfolio.": "Unless stated otherwise, the photos, videos and texts on this site are the property of Alicia Bedu. Any reproduction, distribution or reuse, in whole or in part, without written permission is prohibited (French Intellectual Property Code). Content created for a brand or venue is used here with its consent, as a portfolio.",
+"Section suivante : Expériences": "Next section: Experiences",
+"Shooting modèle": "Model photoshoot",
+"Simple,": "Simple,",
+"Snorkeling avec les raies manta": "Snorkelling with manta rays",
+"Spa au château": "Spa at the château",
+"Spas & bien-être": "Spas & wellness",
+"Spas, bien-être & beauté": "Spas, wellness & beauty",
+"Studios de cinéma": "Film studios",
+"Styles de shooting": "Shoot styles",
+"Tout voir": "See all",
+"Un aperçu de mon": "A glimpse into my",
+"Un avis sincère": "An honest review",
+"Un retour transparent qui crée une vraie confiance auprès de ma communauté. Pas de blabla, juste le vécu.": "Transparent feedback that builds real trust with my community. No fluff, just real experience.",
+"Une audience passionnée de voyage et de découvertes, sur Instagram et TikTok.": "An audience passionate about travel and discovery, on Instagram and TikTok.",
+"Une recommandation directe à mes clients voyageurs, dans leurs carnets de voyage sur mesure.": "A direct recommendation to my travel clients, in their tailor-made travel guides.",
+"Utilisation et durée de conservation": "Use and retention period",
+"Vidéo": "Video",
+"Vidéos": "Videos",
+"Villa dans la jungle": "Villa in the jungle",
+"Villa à Gili Meno": "Villa in Gili Meno",
+"Vlogs en voix off": "Voice-over vlogs",
+"Vlogs voix off": "Voice-over vlogs",
+"Voir @justali.voyages →": "See @justali.voyages →",
+"Voir la photo en grand": "View larger photo",
+"Voir la vidéo": "Watch the video",
+"Voir mes expériences": "See my experiences",
+"Voir mes shootings →": "See my shoots →",
+"Vos besoins": "Your needs",
+"Vos droits": "Your rights",
+"Votre lieu ici ?": "Your venue here?",
+"Votre lieu mérite d'être vécu": "Your venue deserves to be experienced",
+"Votre lieu, recommandé à de": "Your venue, recommended to",
+"Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition sur vos données. Pour l'exercer, écrivez à": "You have the right to access, rectify, erase, restrict and object to the processing of your data. To exercise it, write to",
+". Vous pouvez aussi adresser une réclamation à la CNIL (": ". You can also file a complaint with the CNIL (",
+"Vous m'écrivez, ou c'est moi qui viens vers vous.": "You write to me, or I reach out to you.",
+"WhatsApp · 06 38 10 45 52": "WhatsApp · +33 6 38 10 45 52",
+"activités": "activities",
+"avant même d'être découvert.": "before it's even discovered.",
+"avec ma voix.": "in my own voice.",
+"envie de partir.": "want to travel.",
+"et toujours partante.": "and always up for it.",
+"futurs voyageurs.": "future travellers.",
+"humain": "human",
+"hôtels": "hotels",
+"marques": "brands",
+"pour vos marques.": "for your brands.",
+"pour ça.": "for this.",
+"sur l'ensemble de mes vidéos": "across all my videos",
+"sur mes 12 derniers posts": "on my last 12 posts",
+"sur mes 12 dernières vidéos": "on my last 12 videos",
+"univers": "world",
+"vraiment": "truly",
+"vécus.": "experienced.",
+"à travers mon regard.": "to life through my eyes.",
+"© 2026 Alicia Bedu · Tous droits réservés": "© 2026 Alicia Bedu · All rights reserved",
+"· Téléphone : 06 38 10 45 52": "· Phone: +33 6 38 10 45 52",
+"Écouter le vlog": "Listen to the vlog",
+"Éditorial en ville": "Urban editorial",
+"Éditrice du site": "Site publisher",
+"Île secrète": "Secret island",
+"Spa L’Occitane": "L’Occitane spa",
+"Studio & denim": "Studio & denim",
+"Sport & lifestyle": "Sport & lifestyle"
+};
+var I18N_PLACES = { "Maroc": "Morocco", "Indonésie": "Indonesia", "Malaisie": "Malaysia", "Singapour": "Singapore", "Angleterre": "England", "Albanie": "Albania", "Désert d'Agafay": "Agafay Desert", "Parc national de Komodo": "Komodo National Park", "Côte d'Azur": "French Riviera", "Londres": "London" };
+var I18N_RX = [
+  [/^Agrandir : (.+)$/, 'Enlarge: $1'],
+  [/^Voir la vidéo (.+)$/, 'Watch the video $1'],
+  [/^Écouter le vlog (.+)$/, 'Listen to the vlog $1'],
+  [/^Vidéo (\d+)$/, 'Video $1'],
+  [/^(\+[\d,k]+) vues$/, '$1 views'],
+  [/^Voix off · (.+)$/, 'Voice-over · $1'],
+  [/^abonnés · (.+)$/, 'followers · $1'],
+  [/^TikTok · \+5 000 abonnés · \+175k j'aime ·$/, 'TikTok · 5,000+ followers · 175k+ likes ·'],
+  [/^(\d+) photos · (\d+) vidéos$/, '$1 photos · $2 videos']
+];
+function i18nTr(t) {
+  if (I18N_EN.hasOwnProperty(t)) return I18N_EN[t];
+  for (var i = 0; i < I18N_RX.length; i++) { if (I18N_RX[i][0].test(t)) return t.replace(I18N_RX[i][0], I18N_RX[i][1]); }
+  if (/^[^,·]+(, |· )[^,·]+$/.test(t)) {
+    var parts = t.split(/(, | · )/); var ch = false;
+    parts = parts.map(function (x) { if (I18N_PLACES[x]) { ch = true; return I18N_PLACES[x]; } return x; });
+    if (ch) return parts.join('');
+  }
+  return null;
+}
+var I18N = {
+  lang: 'fr', obs: null, busy: false,
+  node: function (n) {
+    var fr = n.__fr, cur = n.nodeValue;
+    if (fr === undefined || (cur !== n.__en && cur !== fr)) { n.__fr = fr = cur; n.__en = undefined; }
+    if (I18N.lang === 'en') {
+      if (n.__en === undefined) {
+        var m = fr.match(/^(\s*)([\s\S]*?)(\s*)$/); var key = m[2].replace(/\s+/g, ' ');
+        var tr = key.length > 1 ? i18nTr(key) : null;
+        n.__en = tr === null ? fr : m[1] + tr + m[3];
+      }
+      if (cur !== n.__en) n.nodeValue = n.__en;
+    } else if (cur !== fr) n.nodeValue = fr;
+  },
+  attrs: ['aria-label', 'title', 'placeholder', 'alt'],
+  el: function (e) {
+    for (var i = 0; i < I18N.attrs.length; i++) {
+      var a = I18N.attrs[i]; var v = e.getAttribute(a); if (v == null) continue;
+      var k = '__fr_' + a, ke = '__en_' + a;
+      if (e[k] === undefined || (v !== e[ke] && v !== e[k])) { e[k] = v; e[ke] = undefined; }
+      if (I18N.lang === 'en') { if (e[ke] === undefined) { var t = i18nTr(e[k].trim()); e[ke] = t === null ? e[k] : t; } if (v !== e[ke]) e.setAttribute(a, e[ke]); }
+      else if (v !== e[k]) e.setAttribute(a, e[k]);
+    }
+  },
+  walk: function (root) {
+    if (!root) return;
+    if (root.nodeType === 3) { var p = root.parentElement; if (p && !/^(SCRIPT|STYLE)$/.test(p.tagName)) I18N.node(root); return; }
+    if (root.nodeType !== 1 || /^(SCRIPT|STYLE)$/.test(root.tagName)) return;
+    I18N.el(root);
+    var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT); var n;
+    while ((n = w.nextNode())) { if (n.nodeType === 3) { if (n.parentElement && !/^(SCRIPT|STYLE)$/.test(n.parentElement.tagName)) I18N.node(n); } else I18N.el(n); }
+  },
+  apply: function () {
+    I18N.busy = true; try { I18N.walk(document.body); document.documentElement.lang = I18N.lang; } finally { I18N.busy = false; }
+  },
+  start: function () {
+    if (I18N.obs || typeof MutationObserver === 'undefined') return;
+    I18N.obs = new MutationObserver(function (ms) {
+      if (I18N.busy) return; I18N.busy = true;
+      try { ms.forEach(function (m) { if (m.type === 'childList') m.addedNodes.forEach(function (x) { I18N.walk(x); }); else if (m.type === 'characterData') I18N.walk(m.target); else if (m.type === 'attributes') I18N.el(m.target); }); }
+      finally { I18N.obs.takeRecords(); I18N.busy = false; }
+    });
+    I18N.obs.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: I18N.attrs });
+  },
+  set: function (l) { I18N.lang = l; try { localStorage.setItem('ab-lang', l); } catch (e) {} I18N.start(); I18N.apply(); }
+};
+
+
+var SLOGAN = 'I live my life';
+var WORDS = ['hôtels', 'villas', 'restaurants', 'spas', 'activités', 'marques'];
+var CATS = {
+  hotels: { label: 'Hôtels & hébergements' },
+  lieux: { label: 'Lieux & ambiances' },
+  restos: { label: 'Restaurants' },
+  spas: { label: 'Spas, bien-être & beauté' },
+  activites: { label: 'Activités & aventures' },
+  marques: { label: 'Marques' },
+  modele: { label: 'Modèle photo' }
+};
+var GROUP_ORDER = ['hotels', 'spas', 'activites', 'restos'];
+var GROUP_DEF = {
+  hotels: { label: 'Logements', cats: ['hotels'], videosFirst: false },
+  spas: { label: 'Spas & bien-être', cats: ['spas'], videosFirst: false },
+  activites: { label: 'Activités & découvertes', cats: ['activites', 'lieux', 'marques'], videosFirst: true },
+  restos: { label: 'Restaurants', cats: ['restos'], videosFirst: false }
+};
+function isExp(p) { return p.cat !== 'modele' && !p.hidden; }
+var PLACES = [
+{
+"id": "selina",
+"cat": "hotels",
+"name": "Selina Agafay",
+"handle": "@selinaagafay",
+"where": "Désert d'Agafay, Maroc",
+"line": "Une nuit sous tente au cœur du désert d'Agafay. Même sous une tempête de sable, je montre le lieu tel qu'il est.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/selina-0.jpg",
+"media/selina-1.jpg",
+"media/selina-3.jpg",
+"media/selina-4.jpg",
+"media/selina-5.jpg",
+"media/selina-6.jpg",
+"media/selina-8.jpg"
+],
+"imgMe": [
+true,
+true,
+false,
+false,
+false,
+false,
+false
+],
+"vid": [
+{
+"src": "media/selina-0-m.mp4",
+"poster": "media/selina-0-1.jpg",
+"me": true,
+"sound": false
+}
+]
+},
+{
+"id": "kanha",
+"cat": "activites",
+"name": "Croisière Komodo",
+"handle": "@kanhaliveaboard",
+"where": "Parc national de Komodo, Indonésie",
+"line": "Snorkeling avec les raies manta et les tortues, plages turquoise, dragons de Komodo et couchers de soleil depuis le bateau.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/kanha-0.jpg",
+"media/kanha-1.jpg",
+"media/kanha-2.jpg",
+"media/kanha-3.jpg",
+"media/kanha-4.jpg",
+"media/kanha-5.jpg",
+"media/kanha-6.jpg",
+"media/kb0.jpg"
+],
+"imgMe": [
+false,
+true,
+false,
+false,
+false,
+false,
+true,
+false
+],
+"vid": [
+{
+"src": "media/kanha-2-m.mp4",
+"poster": "media/kanha-2-1.jpg",
+"me": false,
+"sound": false
+},
+{
+"src": "media/kanha-1-m.mp4",
+"poster": "media/kanha-1-1.jpg",
+"me": false,
+"sound": false
+},
+{
+"src": "media/kanha-0-m.mp4",
+"poster": "media/kanha-0-1.jpg",
+"me": false,
+"sound": false
+},
+{
+"src": "media/w20.mp4",
+"poster": "media/w20.jpg",
+"me": true,
+"sound": false
+},
+{
+"src": "media/w26.mp4",
+"poster": "media/w26.jpg",
+"me": true,
+"sound": false
+},
+{
+"src": "media/w30.mp4",
+"poster": "media/w30.jpg",
+"me": true,
+"sound": false
+},
+{
+"src": "media/w29.mp4",
+"poster": "media/w29.jpg",
+"me": true,
+"sound": false
+},
+{
+"src": "media/w21.mp4",
+"poster": "media/w21.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "lexus",
+"cat": "hotels",
+"name": "Impérial Lexus",
+"handle": "",
+"where": "Kuala Lumpur, Malaisie",
+"line": "Une piscine à débordement face aux tours Petronas, du coucher de soleil jusqu'à la nuit.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/lexus-0.jpg",
+"media/lexus-1.jpg",
+"media/lexus-2.jpg",
+"media/lexus-3.jpg",
+"media/lexus-4.jpg",
+"media/lx0.jpg"
+],
+"imgMe": [
+true,
+true,
+true,
+false,
+false,
+false
+],
+"vid": [
+{
+"src": "media/lexus-cut-m.mp4",
+"poster": "media/lexus-0-1.jpg",
+"me": false,
+"sound": false
+},
+{
+"src": "media/lxv.mp4",
+"poster": "media/lxv.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "minimes",
+"cat": "spas",
+"name": "Le Couvent des Minimes",
+"handle": "@couventdesminimes",
+"where": "Provence, France",
+"line": "Spa L'Occitane et restaurant : piscine à débordement, spa et hammam, parcours sensoriel, douche sensorielle, massages… entre les cyprès de Provence.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/minimes-0.jpg",
+"media/minimes-1.jpg",
+"media/minimes-2.jpg",
+"media/minimes-3.jpg",
+"media/minimes-4.jpg"
+],
+"imgMe": [
+false,
+false,
+false,
+false,
+false
+],
+"vid": [
+{
+"src": "media/minimes-0.mp4",
+"poster": "media/minimes-0-1.jpg",
+"me": false,
+"sound": true
+},
+{
+"src": "media/minimes-1-m.mp4",
+"poster": "media/minimes-1-1.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "scape",
+"cat": "hotels",
+"name": "The Scape Valley Villas",
+"handle": "Airbnb",
+"where": "Tampaksiring, Bali",
+"line": "Une villa suspendue au-dessus de la jungle : piscine privée, filet, baignoire en pierre et couchers de soleil.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/scape-0.jpg",
+"media/scape-1.jpg",
+"media/scape-2.jpg",
+"media/scape-3.jpg",
+"media/scape-4.jpg",
+"media/scape-5.jpg",
+"media/scape-6.jpg",
+"media/sv0.jpg"
+],
+"imgMe": [
+false,
+true,
+true,
+true,
+false,
+false,
+false,
+true
+],
+"vid": [
+{
+"src": "media/scape-0-m.mp4",
+"poster": "media/scape-0-1.jpg",
+"me": false,
+"sound": false
+},
+{
+"src": "media/scape-1-m.mp4",
+"poster": "media/scape-1-1.jpg",
+"me": false,
+"sound": false
+},
+{
+"src": "media/w14.mp4",
+"poster": "media/w14.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "cretya",
+"cat": "lieux",
+"name": "Cretya Ubud",
+"handle": "@cretyaubud",
+"where": "Ubud, Bali",
+"line": "Une piscine à débordement au-dessus des rizières en terrasses, et un filet suspendu face à la vallée.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/cretya-0.jpg",
+"media/cretya-1.jpg",
+"media/cretya-2.jpg",
+"media/cretya-3.jpg",
+"media/cretya-4.jpg"
+],
+"imgMe": [
+false,
+true,
+true,
+false,
+false
+],
+"vid": []
+},
+{
+"id": "cavaliers",
+"cat": "activites",
+"name": "Les Cavaliers de l'Atlas",
+"handle": "",
+"where": "Marrakech, Maroc",
+"line": "Une balade à cheval incroyable aux portes du désert.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/cavaliers-0.jpg",
+"media/cavaliers-1.jpg",
+"media/cavaliers-2.jpg"
+],
+"imgMe": [
+true,
+true,
+true
+],
+"vid": []
+},
+{
+"id": "okuta",
+"cat": "restos",
+"name": "Okuta Bali",
+"handle": "@okutabali",
+"where": "Bali, Indonésie",
+"line": "Un restaurant face au mont Batur, avec une vue à couper le souffle.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/okuta-0.jpg",
+"media/okuta-1.jpg",
+"media/okuta-2.jpg",
+"media/okuta-3.jpg"
+],
+"imgMe": [
+true,
+false,
+false,
+false
+],
+"vid": []
+},
+{
+"id": "seaesta",
+"cat": "hotels",
+"name": "Seaesta Komodo",
+"handle": "@seaestakomodo",
+"where": "Labuan Bajo, Indonésie",
+"line": "Une terrasse face à la baie au coucher du soleil, une piscine éclairée la nuit et une déco tout en douceur.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/seaesta-0.jpg",
+"media/seaesta-1.jpg",
+"media/seaesta-2.jpg",
+"media/seaesta-3.jpg"
+],
+"imgMe": [
+false,
+true,
+false,
+false
+],
+"vid": []
+},
+{
+"id": "bleumathis",
+"cat": "hotels",
+"name": "Bleu Mathis",
+"handle": "@bleumathis",
+"where": "Gili Asahan, Indonésie",
+"line": "Un havre de paix sur une île encore très peu connue des touristes.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/bleumathis-0.jpg",
+"media/bleumathis-1.jpg",
+"media/bleumathis-2.jpg",
+"media/bleumathis-3.jpg",
+"media/bleumathis-4.jpg",
+"media/bm0.jpg"
+],
+"imgMe": [
+false,
+false,
+false,
+false,
+false,
+false
+],
+"vid": [
+{
+"src": "media/bleumathis-0-m.mp4",
+"poster": "media/bleumathis-0-1.jpg",
+"me": true,
+"sound": false
+}
+]
+},
+{
+"id": "begude",
+"cat": "spas",
+"name": "Château de la Bégude",
+"handle": "@chateaudelabegude · via @sezame",
+"where": "France",
+"line": "Mon vlog en voix off au château : piscine intérieure, sauna, douche en marbre et déjeuner en terrasse. Un séjour réservé via Sezame.",
+"vlog": "Vlog en voix off",
+"vlogDur": "54 s",
+"img": [
+"media/begude-0.jpg",
+"media/begude-1.jpg",
+"media/begude-2.jpg",
+"media/bg0.jpg"
+],
+"imgMe": [
+false,
+false,
+false,
+false
+],
+"vid": [
+{
+"src": "media/begude-entier.mp4",
+"poster": "media/begude-full.jpg",
+"me": true,
+"sound": true
+},
+{
+"src": "media/bgv.mp4",
+"poster": "media/bgv.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "atlas",
+"cat": "activites",
+"name": "Atlas Studios",
+"handle": "",
+"where": "Ouarzazate, Maroc",
+"line": "Visite des studios de cinéma, entre décors égyptiens, sphinx et villages de film.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/atlas-0.jpg",
+"media/atlas-1.jpg",
+"media/atlas-2.jpg",
+"media/atlas-3.jpg",
+"media/atlas-4.jpg",
+"media/atlas-5.jpg",
+"media/at1.jpg"
+],
+"imgMe": [
+false,
+false,
+false,
+false,
+false,
+false,
+false
+],
+"vid": [
+{
+"src": "media/atlas-1-m.mp4",
+"poster": "media/atlas-1-1.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "aquabella",
+"cat": "restos",
+"name": "Hôtel Aquabella",
+"handle": "Restaurant & bar",
+"where": "Aix-en-Provence, France",
+"line": "Un shooting côté restaurant et bar de l'hôtel.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/aquabella-0.jpg",
+"media/aquabella-1.jpg",
+"media/aquabella-2.jpg"
+],
+"imgMe": [
+true,
+true,
+true
+],
+"vid": []
+},
+{
+"id": "majorelle",
+"cat": "lieux",
+"name": "Jardin Majorelle",
+"handle": "",
+"where": "Marrakech, Maroc",
+"line": "Le bleu Majorelle, les cactus et les fontaines : un jardin hors du temps.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/majorelle-0.jpg",
+"media/majorelle-1.jpg",
+"media/majorelle-2.jpg"
+],
+"imgMe": [
+false,
+false,
+false
+],
+"vid": []
+},
+{
+"id": "ouzoud",
+"cat": "activites",
+"name": "Cascades d'Ouzoud",
+"handle": "Marrakech Best Trips",
+"where": "Ouzoud, Maroc",
+"line": "Une baignade au pied des cascades et une rencontre avec les singes.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/ouzoud-0.jpg",
+"media/ouzoud-1.jpg",
+"media/ouzoud-2.jpg"
+],
+"imgMe": [
+true,
+true,
+true
+],
+"vid": [
+{
+"src": "media/ouzoud-0-m.mp4",
+"poster": "media/ouzoud-0-1.jpg",
+"me": false,
+"sound": false
+},
+{
+"src": "media/ouzoud-1-m.mp4",
+"poster": "media/ouzoud-1-1.jpg",
+"me": true,
+"sound": false
+}
+]
+},
+{
+"id": "riad",
+"cat": "hotels",
+"name": "Riad El Jadide",
+"handle": "@riadeljadide",
+"where": "Marrakech, Maroc",
+"line": "Un adorable petit riad familial. Une expérience incroyable.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/riad-1.jpg",
+"media/riad-2.jpg"
+],
+"imgMe": [
+true,
+false
+],
+"vid": []
+},
+{
+"id": "dromadaire",
+"cat": "activites",
+"name": "Balade à dos de dromadaire",
+"handle": "",
+"where": "Désert d'Agafay, Maroc",
+"line": "Une caravane au coucher du soleil, au milieu du désert d'Agafay.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/dromadaire-0.jpg",
+"media/dromadaire-1.jpg",
+"media/selina-2.jpg"
+],
+"imgMe": [
+false,
+true,
+false
+],
+"vid": [
+{
+"src": "media/dromadaire-0-m.mp4",
+"poster": "media/dromadaire-0-1.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "wlm",
+"cat": "activites",
+"name": "WLM Dream",
+"handle": "@wlmdream",
+"where": "Marrakech, Maroc",
+"line": "Une balade en buggy dans la palmeraie.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/wlm-0.jpg"
+],
+"imgMe": [
+true
+],
+"vid": [
+{
+"src": "media/wlm-0-m.mp4",
+"poster": "media/wlm-0-1.jpg",
+"me": true,
+"sound": false
+},
+{
+"src": "media/wlm-1-m.mp4",
+"poster": "media/wlm-1.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "aizu",
+"cat": "spas",
+"name": "Aizu Hair Style",
+"handle": "",
+"where": "Kuala Lumpur, Malaisie",
+"line": "Mon vlog en voix off au salon : l'accueil, le soin et le brushing, je raconte tout de A à Z.",
+"vlog": "Vlog en voix off",
+"vlogDur": "54 s",
+"img": [
+"media/aizu-0.jpg",
+"media/aizu-1.jpg",
+"media/aizu-2.jpg"
+],
+"imgMe": [
+false,
+true,
+true
+],
+"vid": [
+{
+"src": "media/aizu-vlog.mp4",
+"poster": "media/aizu-vlog.jpg",
+"me": true,
+"sound": true
+}
+]
+},
+{
+"id": "clean",
+"cat": "restos",
+"name": "Clean Ubud",
+"handle": "",
+"where": "Ubud, Bali",
+"line": "Un repas vegan sain et coloré au cœur d'Ubud.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/clean-0.jpg"
+],
+"imgMe": [
+false
+],
+"vid": []
+},
+{
+"id": "hana",
+"cat": "marques",
+"name": "HANA Outdoors",
+"handle": "Équipement de sports nautiques",
+"where": "Collaboration marque",
+"line": "Du paddle dans une crique aux eaux turquoise avec l'équipement HANA.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/hana-0.jpg"
+],
+"imgMe": [
+true
+],
+"vid": [
+{
+"src": "media/hana-0-m.mp4",
+"poster": "media/hana-0-1.jpg",
+"me": true,
+"sound": false
+}
+]
+},
+{
+"id": "sigean",
+"cat": "activites",
+"name": "Réserve africaine de Sigean",
+"handle": "",
+"where": "Sigean, France",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [],
+"imgMe": [],
+"vid": [
+{
+"src": "media/w25.mp4",
+"poster": "media/w25.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "luge",
+"cat": "activites",
+"name": "Skyline Luge Sentosa",
+"handle": "",
+"where": "Sentosa, Singapour",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [],
+"imgMe": [],
+"vid": [
+{
+"src": "media/w23.mp4",
+"poster": "media/w23.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "tirta",
+"cat": "activites",
+"name": "Tirta Empul",
+"handle": "",
+"where": "Bali, Indonésie",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/te0.jpg"
+],
+"imgMe": [
+false
+],
+"vid": [
+{
+"src": "media/w22c.mp4",
+"poster": "media/w22.jpg",
+"me": true,
+"sound": false
+}
+]
+},
+{
+"id": "sillans",
+"cat": "activites",
+"name": "Cascade de Sillans",
+"handle": "",
+"where": "Sillans-la-Cascade, Provence",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [],
+"imgMe": [],
+"vid": [
+{
+"src": "media/w32.mp4",
+"poster": "media/w32.jpg",
+"me": true,
+"sound": false
+}
+]
+},
+{
+"id": "himare",
+"cat": "activites",
+"name": "Excursion en bateau à Himarë",
+"handle": "",
+"where": "Himarë, Albanie",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [],
+"imgMe": [],
+"vid": [
+{
+"src": "media/w15.mp4",
+"poster": "media/w15.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "bleumathis-bateau",
+"cat": "activites",
+"name": "Bleu Mathis",
+"handle": "@bleumathis",
+"where": "Gili Asahan, Indonésie",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [],
+"imgMe": [],
+"vid": [
+{
+"src": "media/w18.mp4",
+"poster": "media/w18.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "vieuxmoulin",
+"cat": "restos",
+"name": "Le Vieux Moulin",
+"handle": "",
+"where": "Bourges, France",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/vieuxmoulin.jpg"
+],
+"imgMe": [
+false
+],
+"vid": []
+},
+{
+"id": "solounge",
+"cat": "restos",
+"name": "So Lounge",
+"handle": "",
+"where": "Marrakech, Maroc",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/so0.jpg",
+"media/so1.jpg"
+],
+"imgMe": [
+true,
+false
+],
+"vid": [
+{
+"src": "media/so.mp4",
+"poster": "media/so.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "oliveraie",
+"cat": "hotels",
+"name": "L'Oliveraie de l'Atlas",
+"handle": "",
+"where": "Marrakech, Maroc",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/ol4.jpg",
+"media/ol3.jpg",
+"media/ol8.jpg",
+"media/ol9.jpg",
+"media/ol0.jpg",
+"media/ol1.jpg",
+"media/ol5.jpg"
+],
+"imgMe": [
+false,
+false,
+false,
+false,
+false,
+false,
+false
+],
+"vid": []
+},
+{
+"id": "foodrepublic",
+"cat": "restos",
+"name": "Food Republic",
+"handle": "",
+"where": "Singapour",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/fr0.jpg",
+"media/fr1.jpg"
+],
+"imgMe": [
+false,
+false
+],
+"vid": [
+{
+"src": "media/fr.mp4",
+"poster": "media/fr.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "restos-divers",
+"cat": "restos",
+"name": "",
+"handle": "",
+"where": "",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/rs0.jpg",
+"media/rs1.jpg",
+"media/rs2.jpg",
+"media/rs3.jpg",
+"media/rs4.jpg",
+"media/rd0.jpg",
+"media/rd1.jpg",
+"media/rd2.jpg",
+"media/rd3.jpg",
+"media/rd4.jpg",
+"media/rd5.jpg",
+"media/rd6.jpg"
+],
+"imgMe": [
+false,
+false,
+false,
+false,
+false,
+false,
+false,
+false,
+false,
+false,
+false,
+false
+],
+"vid": [
+{
+"src": "media/rdv.mp4",
+"poster": "media/rdv.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "monkeyforest",
+"cat": "activites",
+"name": "Monkey Forest",
+"handle": "",
+"where": "Ubud, Bali",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/mk0.jpg"
+],
+"imgMe": [
+false
+],
+"vid": [
+{
+"src": "media/mk.mp4",
+"poster": "media/mk.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "tukadcepung",
+"cat": "activites",
+"name": "Tukad Cepung Waterfall",
+"handle": "",
+"where": "Bali, Indonésie",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/tc2.jpg",
+"media/tc1.jpg",
+"media/tc0.jpg"
+],
+"imgMe": [
+true,
+false,
+false
+],
+"vid": []
+},
+{
+"id": "nobu",
+"cat": "restos",
+"name": "Nobu",
+"handle": "",
+"where": "Marrakech, Maroc",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/nb0.jpg",
+"media/nb1.jpg"
+],
+"imgMe": [
+false,
+false
+],
+"vid": []
+},
+{
+"id": "eze",
+"cat": "activites",
+"name": "Jardin exotique d'Èze",
+"handle": "",
+"where": "Èze, Côte d'Azur",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/ez0.jpg",
+"media/ez1.jpg",
+"media/ez2.jpg",
+"media/ez3.jpg",
+"media/ez4.jpg"
+],
+"imgMe": [
+false,
+false,
+false,
+false,
+true
+],
+"vid": []
+},
+{
+"id": "chelsea",
+"cat": "activites",
+"name": "Stamford Bridge · Chelsea FC",
+"handle": "",
+"where": "Londres, Angleterre",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/ch0.jpg",
+"media/ch1.jpg",
+"media/ch2.jpg"
+],
+"imgMe": [
+false,
+false,
+false
+],
+"vid": [
+{
+"src": "media/chv.mp4",
+"poster": "media/chv.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "kerculla",
+"cat": "hotels",
+"name": "Kerculla Resort",
+"handle": "",
+"where": "Gjirokastër, Albanie",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/kc0.jpg",
+"media/kc1.jpg",
+"media/kc2.jpg",
+"media/kc3.jpg",
+"media/kc4.jpg",
+"media/kc5.jpg",
+"media/kc6.jpg",
+"media/kc7.jpg"
+],
+"imgMe": [
+false,
+false,
+false,
+false,
+false,
+false,
+false,
+false
+],
+"vid": [
+{
+"src": "media/w16.mp4",
+"poster": "media/w16.jpg",
+"me": false,
+"sound": false
+},
+{
+"src": "media/w17.mp4",
+"poster": "media/w17.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "darsoukkar",
+"cat": "restos",
+"name": "Palais Dar Soukkar",
+"handle": "",
+"where": "Marrakech, Maroc",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/ds0.jpg",
+"media/ds1.jpg"
+],
+"imgMe": [
+false,
+false
+],
+"vid": [
+{
+"src": "media/dsv.mp4",
+"poster": "media/dsv.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "rothschild",
+"cat": "activites",
+"name": "Villa Ephrussi de Rothschild",
+"handle": "",
+"where": "Saint-Jean-Cap-Ferrat, Côte d'Azur",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/vr0.jpg",
+"media/vr1.jpg",
+"media/vr2.jpg",
+"media/vr3.jpg",
+"media/vr5.jpg",
+"media/vr6.jpg"
+],
+"imgMe": [
+false,
+false,
+false,
+false,
+false,
+true
+],
+"vid": [
+{
+"src": "media/vr2.mp4",
+"poster": "media/vr2-1.jpg",
+"me": false,
+"sound": false
+}
+]
+},
+{
+"id": "lemajorelle",
+"cat": "restos",
+"name": "Le Majorelle",
+"handle": "",
+"where": "Marrakech, Maroc",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/lm0.jpg",
+"media/lm1.jpg",
+"media/lm2.jpg"
+],
+"imgMe": [
+true,
+false,
+true
+],
+"vid": []
+},
+{
+"id": "gilimeno",
+"cat": "hotels",
+"name": "Villa à Gili Meno",
+"handle": "",
+"where": "Gili Meno, Indonésie",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/gm0.jpg"
+],
+"imgMe": [
+false
+],
+"vid": []
+},
+{
+"id": "oliveraie-r",
+"cat": "restos",
+"name": "L'Oliveraie de l'Atlas",
+"handle": "",
+"where": "Marrakech, Maroc",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/ol2.jpg",
+"media/ol7.jpg"
+],
+"imgMe": [
+false,
+false
+],
+"vid": []
+},
+{
+"id": "maybourne-r",
+"cat": "restos",
+"name": "The Maybourne Riviera",
+"handle": "",
+"where": "Monaco · Côte d'Azur",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/mb1.jpg"
+],
+"imgMe": [
+false
+],
+"vid": []
+},
+{
+"id": "gilimeno-r",
+"cat": "restos",
+"name": "Villa à Gili Meno",
+"handle": "",
+"where": "Gili Meno, Indonésie",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/gm1.jpg"
+],
+"imgMe": [
+false
+],
+"vid": []
+},
+{
+"id": "riad-r",
+"cat": "restos",
+"name": "Riad El Jadide",
+"handle": "@riadeljadide",
+"where": "Marrakech, Maroc",
+"line": "",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/riad-0.jpg"
+],
+"imgMe": [
+false
+],
+"vid": []
+},
+{
+"id": "sh-aquabella",
+"cat": "modele",
+"shootCat": "Hôtels & bars",
+"name": "Hôtel Aquabella",
+"handle": "",
+"where": "Aix-en-Provence",
+"line": "Robe noire et gants en dentelle : le bar et l'ascenseur de l'hôtel deviennent un décor de film.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/m37.jpg",
+"media/m36.jpg",
+"media/m38.jpg",
+"media/m20.jpg",
+"media/m22.jpg",
+"media/m21.jpg",
+"media/m23.jpg",
+"media/m24.jpg"
+],
+"vid": []
+},
+{
+"id": "sh-beaute",
+"cat": "modele",
+"shootCat": "Beauté & bien-être",
+"name": "DivaGlam",
+"handle": "",
+"where": "Beauté & bien-être",
+"line": "Bigoudis, pyjama rayé et tasse à cœurs : une mise en scène beauté douce, girly et naturelle.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/m35.jpg",
+"media/m32.jpg",
+"media/m33.jpg",
+"media/m34.jpg"
+],
+"vid": []
+},
+{
+"id": "sh-olfazeta",
+"cat": "modele",
+"shootCat": "Marques & produits",
+"name": "Olfazeta",
+"handle": "",
+"where": "Parfum",
+"line": "Le flacon au centre de l'image, le regard et la bouche rouge pour le mettre en valeur.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/m25.jpg",
+"media/m26.jpg",
+"media/m27.jpg"
+],
+"vid": []
+},
+{
+"id": "sh-nuno",
+"cat": "modele",
+"shootCat": "Marques & produits",
+"name": "NUNO Signature",
+"handle": "",
+"where": "Marque de vêtements",
+"line": "La collection de T-shirts portée en Provence, puis dans une laverie pour un rendu plus urbain.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/m40.jpg",
+"media/m41.jpg",
+"media/m42.jpg",
+"media/m43.jpg",
+"media/m44.jpg",
+"media/m45.jpg",
+"media/m46.jpg",
+"media/m47.jpg"
+],
+"vid": []
+},
+{
+"id": "sh-tennis",
+"cat": "modele",
+"shootCat": "Sport & lifestyle",
+"name": "Tennis Club Queirel",
+"handle": "",
+"where": "Club de tennis",
+"line": "Un shooting pour mettre en avant le terrain de tennis : tenue blanche, raquette et balles roses, entre sport et lifestyle.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/m31.jpg",
+"media/m30.jpg",
+"media/m29.jpg",
+"media/m28.jpg"
+],
+"vid": []
+},
+{
+"id": "sh-aix",
+"cat": "modele",
+"shootCat": "Mode & éditorial",
+"name": "Éditorial en ville",
+"handle": "",
+"where": "Aix-en-Provence",
+"line": "Manteau en fausse fourrure et parapluie dans les ruelles d'Aix : un éditorial mode en extérieur.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/m00.jpg",
+"media/m01.jpg",
+"media/m02.jpg"
+],
+"vid": []
+},
+{
+"id": "sh-studio",
+"cat": "modele",
+"shootCat": "Mode & éditorial",
+"name": "Studio & denim",
+"handle": "",
+"where": "Studio photo",
+"line": "Fond blanc et total look noir, puis jean et veste en denim : des poses variées pour un lookbook.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/m07.jpg",
+"media/m05.jpg",
+"media/m04.jpg",
+"media/m06.jpg",
+"media/m09.jpg",
+"media/m08.jpg",
+"media/m10.jpg",
+"media/m11.jpg",
+"media/m12.jpg"
+],
+"vid": []
+},
+{
+"id": "sh-bmw",
+"cat": "modele",
+"shootCat": "Mode & éditorial",
+"name": "NSK Consult Cars",
+"handle": "@nskconsultcars",
+"where": "Automobile",
+"line": "Une BMW M2 bleue, un T-shirt oversize et une lumière de parking : un shooting auto au style urbain.",
+"vlog": "",
+"vlogDur": "",
+"img": [
+"media/m14.jpg",
+"media/m17.jpg",
+"media/m13.jpg"
+],
+"vid": []
+},
+{
+"id": "more-hotels",
+"cat": "hotels",
+"hidden": true,
+"name": "Hôtels & hébergements · en vidéo",
+"handle": "",
+"where": "Encore plus de contenus",
+"line": "D'autres moments filmés pendant mes séjours et mes expériences.",
+"vlog": "",
+"vlogDur": "",
+"img": [],
+"vid": [
+{
+"src": "media/w04.mp4",
+"poster": "media/w04.jpg",
+"sound": false
+},
+{
+"src": "media/w05.mp4",
+"poster": "media/w05.jpg",
+"sound": false
+},
+{
+"src": "media/w08.mp4",
+"poster": "media/w08.jpg",
+"sound": false
+},
+{
+"src": "media/w10.mp4",
+"poster": "media/w10.jpg",
+"sound": false
+},
+{
+"src": "media/w12.mp4",
+"poster": "media/w12.jpg",
+"sound": false
+},
+{
+"src": "media/w33.mp4",
+"poster": "media/w33.jpg",
+"sound": false
+}
+]
+},
+{
+"id": "more-spas",
+"cat": "spas",
+"hidden": true,
+"name": "Spas & bien-être · en vidéo",
+"handle": "",
+"where": "Encore plus de contenus",
+"line": "D'autres moments filmés pendant mes séjours et mes expériences.",
+"vlog": "",
+"vlogDur": "",
+"img": [],
+"vid": [
+{
+"src": "media/w00.mp4",
+"poster": "media/w00.jpg",
+"sound": false
+},
+{
+"src": "media/w01.mp4",
+"poster": "media/w01.jpg",
+"sound": false
+},
+{
+"src": "media/w02.mp4",
+"poster": "media/w02.jpg",
+"sound": false
+},
+{
+"src": "media/w06.mp4",
+"poster": "media/w06.jpg",
+"sound": false
+}
+]
+},
+{
+"id": "more-restos",
+"cat": "restos",
+"hidden": true,
+"name": "Restaurants · en vidéo",
+"handle": "",
+"where": "Encore plus de contenus",
+"line": "D'autres moments filmés pendant mes séjours et mes expériences.",
+"vlog": "",
+"vlogDur": "",
+"img": [],
+"vid": [
+{
+"src": "media/w09.mp4",
+"poster": "media/w09.jpg",
+"sound": false
+}
+]
+}
+];
+var GALLERY = [["selina", 0], ["kanha", 0], ["lexus", 2], ["minimes", 2], ["scape", 1], ["cretya", 2], ["cavaliers", 0], ["okuta", 0], ["seaesta", 1], ["bleumathis", 0], ["begude", 0], ["atlas", 1], ["aquabella", 1], ["majorelle", 0], ["ouzoud", 0], ["riad", 1], ["dromadaire", 0], ["wlm", 0], ["aizu", 1], ["clean", 0], ["hana", 0]];
+var HERO = [{"place": "scape", "vi": 0, "src": "media/scape-0-m.mp4", "poster": "media/scape-0-1.jpg"}, {"place": "minimes", "vi": 0, "src": "media/minimes-0.mp4", "poster": "media/minimes-0-1.jpg"}, {"place": "selina", "vi": 0, "src": "media/selina-0-m.mp4", "poster": "media/selina-0-1.jpg"}];
+var HEROBG = {"src": "media/kanha-0-m.mp4", "poster": "media/kanha-0-1.jpg"};
+var COUNTRIES = ['France', 'Maroc', 'Indonésie', 'Malaisie', 'Singapour', 'Sénégal', 'Croatie', 'Grèce', 'Italie', 'Portugal', 'Espagne', 'Angleterre', 'Albanie'];
+var SOCIAL_IMGS = ["media/selina-1.jpg", "media/kanha-1.jpg", "media/lexus-1.jpg", "media/scape-1.jpg", "media/cretya-1.jpg", "media/minimes-1.jpg", "media/okuta-0.jpg", "media/cavaliers-0.jpg", "media/majorelle-0.jpg", "media/atlas-0.jpg", "media/seaesta-0.jpg", "media/bleumathis-0.jpg", "media/aquabella-0.jpg", "media/ouzoud-0.jpg", "media/riad-0.jpg"];
+var TK_TILES = [{"src": "media/tk_t00.jpg", "v": "18,6k"}, {"src": "media/tk_t01.jpg", "v": "5 042"}, {"src": "media/tk_t02.jpg", "v": "967"}, {"src": "media/tk_t03.jpg", "v": "3 060"}, {"src": "media/tk_t04.jpg", "v": "873"}, {"src": "media/tk_t05.jpg", "v": "792"}, {"src": "media/tk_t06.jpg", "v": "801"}, {"src": "media/tk_t07.jpg", "v": "936"}, {"src": "media/tk_t08.jpg", "v": "49,9k"}, {"src": "media/tk_t09.jpg", "v": "1 557"}, {"src": "media/tk_t10.jpg", "v": "4 696"}, {"src": "media/tk_t11.jpg", "v": "1 462"}];
+var IG_TILES = [{"src": "media/ig_t0.jpg", "v": "17,6k"}, {"src": "media/ig_t1.jpg", "v": "2 328"}, {"src": "media/ig_t2.jpg", "v": "11,4k"}, {"src": "media/ig_t3.jpg", "v": "2 911"}, {"src": "media/ig_t4.jpg", "v": "597"}, {"src": "media/ig_t5.jpg", "v": "15,9k"}, {"src": "media/ig_t6.jpg", "v": "14,3k"}, {"src": "media/ig_t7.jpg", "v": "1 333"}, {"src": "media/ig_t8.jpg", "v": "20,2k"}, {"src": "media/ig_t9.jpg", "v": "10,4k"}, {"src": "media/ig_t10.jpg", "v": "14,6k"}, {"src": "media/ig_t11.jpg", "v": "2 533"}];
+var EXPS = [
+  ['Nuit dans le désert', 'selina'], ['Snorkeling avec les raies manta', 'kanha'], ['Balade à cheval', 'cavaliers'], ['Balade à dos de dromadaire', 'dromadaire'],
+  ['Spa L\u2019Occitane', 'minimes'], ['Spa au château', 'begude'], ['Buggy dans la palmeraie', 'wlm'], ['Baignade aux cascades', 'ouzoud'], ['Croisière à Komodo', 'kanha'],
+  ['Piscine face aux tours Petronas', 'lexus'], ['Villa dans la jungle', 'scape'], ['Rizières de Bali', 'cretya'], ['Studios de cinéma', 'atlas'],
+  ['Paddle dans une crique', 'hana'], ['Île secrète', 'bleumathis'], ['Dîner face au volcan', 'okuta'], ['Nager avec une tortue', 'kanha']
+];
+var EXP_BG = ['#9FDCD5', '#CDE5C4', '#F2D9A6', '#B8E0C2', '#DCEEE6', '#F6C9B4'];
+var SECTIONS = [['top', 'Accueil'], ['experiences', 'Expériences'], ['vlogs', 'Vlogs voix off'], ['moi', 'Qui suis-je'], ['modele', 'Modèle photo'], ['reseaux', 'Mes réseaux'], ['services', 'Ce que j\u2019apporte'], ['alitravel', 'Ali Travel'], ['contact', 'Contact']];
+var PORTRAIT = "media/portrait.jpg";
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { legal: '', mtab: 'all', tab: 'all', open: null, mi: 0, typed: 0, word: 0, ig: 0, tt: 0, music: false, sec: 0, tick: 0, mvMuted: false };
+    this.heroVids = [];
+    var self = this;
+    this.heroRefs = [0, 1, 2].map(function (i) {
+      return function (el) { if (el && self.heroVids[i] !== el) { self.heroVids[i] = el; self.forcePlay(el); } };
+    });
+    this.heroBgRef = function (el) { if (el && self._hb !== el) { self._hb = el; self.forcePlay(el); } };
+    this.modalRef = function (el) { if (el && self._mv !== el) { self._mv = el; self.playModal(el); } };
+    this.vlogRefs = [0,1,2,3,4,5].map(function (i) { return function (el) { if (el && self['_vl' + i] !== el) { self['_vl' + i] = el; self.forcePlay(el); } }; });
+    this.statsRef = function (el) { if (el) self.statsEl = el; };
+  }
+
+  componentDidMount() {
+    var self = this;
+    var _l = 'fr'; try { _l = localStorage.getItem('ab-lang') || 'fr'; } catch (e) {}
+    if (_l === 'en') { this.setState({ lang: 'en' }); setTimeout(function () { I18N.set('en'); }, 0); }
+    this.t1 = setInterval(function () {
+      if (self.state.typed < SLOGAN.length) self.setState({ typed: self.state.typed + 1 });
+      else clearInterval(self.t1);
+    }, 120);
+    this.t2 = setInterval(function () {
+      self.setState({ word: (self.state.word + 1) % WORDS.length });
+    }, 2200);
+    var start = function () {
+      if (self.counting) return;
+      self.counting = true;
+      var t0 = performance.now();
+      var step = function (t) {
+        var p = Math.min(1, (t - t0) / 2200);
+        var e = 1 - Math.pow(1 - p, 3);
+        self.setState({ ig: Math.round(600 * e), tt: Math.round(5000 * e) });
+        if (p < 1) self.raf = requestAnimationFrame(step);
+      };
+      self.raf = requestAnimationFrame(step);
+    };
+    if (this.statsEl && typeof IntersectionObserver !== 'undefined') {
+      this.io = new IntersectionObserver(function (entries) {
+        if (entries.some(function (x) { return x.isIntersecting; })) { start(); self.io.disconnect(); }
+      }, { threshold: 0.3 });
+      this.io.observe(this.statsEl);
+    } else {
+      start();
+    }
+    this.heroVids.forEach(function (v) { self.forcePlay(v); });
+    this.onScroll = function () {
+      var best = 0, y = window.innerHeight * 0.4;
+      SECTIONS.forEach(function (s, i) { var el = document.getElementById(s[0]); if (el && el.getBoundingClientRect().top <= y) best = i; });
+      if (best !== self.state.sec) self.setState({ sec: best });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.t3 = setInterval(function () { self.setState({ tick: self.state.tick + 1 }); }, 2600);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.t1);
+    clearInterval(this.t2);
+    clearInterval(this.t3);
+    window.removeEventListener('scroll', this.onScroll);
+    if (this.raf) cancelAnimationFrame(this.raf);
+    if (this.io) this.io.disconnect();
+    
+  }
+
+  playModal(v) {
+    var self = this;
+    try {
+      v.muted = !!this.state.mvMuted || !this._curHasSound;
+      var p = v.play();
+      if (p && p.catch) p.catch(function () { v.muted = true; self.setState({ mvMuted: true }); var q = v.play(); if (q && q.catch) q.catch(function () {}); });
+    } catch (e) {}
+  }
+
+  forcePlay(v) {
+    if (!v) return;
+    try { v.muted = true; v.playsInline = true; var p = v.play(); if (p && p.catch) p.catch(function () {}); } catch (e) {}
+  }
+
+  /* ---------- Données ---------- */
+  mediaOf(p) {
+    var m = p.img.map(function (u) { return { src: u, thumb: u, poster: '', isVideo: false, isImg: true }; });
+    p.vid.forEach(function (v) { m.push({ src: v.src, thumb: v.poster, poster: v.poster, isVideo: true, isImg: false, hasSound: !!v.sound }); });
+    return m;
+  }
+
+  decorate(p) {
+    var self = this;
+    return Object.assign({}, p, {
+      catLabel: p.shootCat || CATS[p.cat].label, hasName: !!p.name,
+      cover: p.img[0],
+      nImg: p.img.length, hasImg: p.img.length > 0,
+      nVid: p.vid.length,
+      hasVid: p.vid.length > 0,
+      hasHandle: !!p.handle,
+      nAll: p.img.length + p.vid.length,
+      hasVlog: !!p.vlog,
+      slides: p.img.map(function (u, k) { var on = k === ((self.state.tick + p.img.length) % p.img.length); return { src: u, op: on ? 1 : 0, sc: on ? '1.06' : '1' }; }),
+      dots: p.img.length > 1 ? p.img.map(function (u, k) { var on = k === (self.state.tick % p.img.length); return { w: on ? '18px' : '6px', a: on ? '1' : '.6' }; }) : [],
+      open: function () { self.openPlace(p.id, 0); }
+    });
+  }
+
+  goTo(i) {
+    var el = document.getElementById(SECTIONS[i][0]);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  reelRef(key) {
+    var self = this;
+    this._reelRefs = this._reelRefs || {};
+    if (!this._reelRefs[key]) this._reelRefs[key] = function (el) {
+      if (!el || el.__obs) return; el.__obs = true;
+      if (typeof IntersectionObserver === 'undefined') { self.forcePlay(el); return; }
+      if (!self._vio) self._vio = new IntersectionObserver(function (es) { es.forEach(function (e) { var v = e.target; if (e.isIntersecting) self.forcePlay(v); else { try { v.pause(); } catch (x) {} } }); }, { threshold: 0.25 });
+      self._vio.observe(el);
+    };
+    return this._reelRefs[key];
+  }
+
+  openPlace(id, mi) { this.setState({ open: id, mi: mi || 0 }); }
+
+  renderVals() {
+    var self = this;
+    var s = this.state;
+    var _en = s.lang === 'en';
+    var langVals = { setFr: function () { self.setState({ lang: 'fr' }); I18N.set('fr'); }, setEn: function () { self.setState({ lang: 'en' }); I18N.set('en'); }, frBg: _en ? 'transparent' : '#08716E', frFg: _en ? '#0E2A22' : '#FAFCF8', enBg: _en ? '#08716E' : 'transparent', enFg: _en ? '#FAFCF8' : '#0E2A22', frOn: _en ? 'false' : 'true', enOn: _en ? 'true' : 'false' };
+    var byId = {};
+    PLACES.forEach(function (p) { byId[p.id] = p; });
+
+    var tabIds = ['all'].concat(GROUP_ORDER);
+    var tabs = tabIds.map(function (id) {
+      var sel = s.tab === id;
+      var count = 0;
+      PLACES.forEach(function (p) { if ((id === 'all' && (isExp(p) || p.hidden)) || (id !== 'all' && GROUP_DEF[id].cats.indexOf(p.cat) >= 0 && p.cat !== 'modele')) count += p.img.length + p.vid.length; });
+      return {
+        label: id === 'all' ? 'Tout voir' : GROUP_DEF[id].label, count: count,
+        sel: sel ? 'true' : 'false',
+        bg: sel ? '#0E2A22' : 'transparent', fg: sel ? '#FAFCF8' : '#0E2A22',
+        bd: sel ? '#0E2A22' : 'rgba(14,42,34,.25)', cbg: sel ? 'rgba(251,247,240,.18)' : 'rgba(14,42,34,.08)',
+        pick: function () { self.setState({ tab: id }); }
+      };
+    });
+    var places = PLACES.filter(function (p) { return isExp(p) && (s.tab === 'all' || p.cat === s.tab); })
+      .map(function (p) { return self.decorate(p); });
+
+    var groups = GROUP_ORDER.filter(function (g) { return s.tab === 'all' || s.tab === g; }).map(function (g) {
+      var def = GROUP_DEF[g], pl = [], vl = [];
+      PLACES.forEach(function (p) {
+        if (p.cat === 'modele' || def.cats.indexOf(p.cat) < 0) return;
+        pl.push(p.img.map(function (u, k) { return { me: !!(p.imgMe && p.imgMe[k]), src: u, alt: p.name, open: function () { self.openPlace(p.id, k); } }; }));
+        vl.push(p.vid.map(function (v, k) { var key = p.id + '-' + k; return { me: !!v.me, src: v.src, poster: v.poster, ref: self.reelRef(key), open: function () { self.openPlace(p.id, p.img.length + k); } }; }));
+      });
+      // mélange harmonieux : on alterne les lieux (un de chaque, puis on recommence)
+      // on évite qu'un même lieu soit collé à côté ou au-dessus d'une photo du même lieu
+      var W = (typeof window !== 'undefined' ? window.innerWidth : 1366), inner = Math.min(1240, W) - 48;
+      var pc = W <= 700 ? 3 : Math.max(2, Math.floor((inner + 10) / 160)), vc = W <= 700 ? 2 : Math.max(2, Math.floor((inner + 12) / 177));
+      var mixL = function (lists, cols) {
+        var q = lists.map(function (l, i) { return { i: i, items: l.slice() }; }).filter(function (x) { return x.items.length; });
+        var out = [], who = [];
+        while (q.some(function (x) { return x.items.length; })) {
+          var n = out.length, bad = [who[n - 1], who[n - cols], who[n - cols - 1], who[n - cols + 1]];
+          var cand = q.filter(function (x) { return x.items.length; }).sort(function (a, b) { return b.items.length - a.items.length; });
+          var meN = [n - 1, n - cols].filter(function (k) { return k >= 0 && (k !== n - 1 || n % cols !== 0) && out[k] && out[k].me; }).length > 0;
+          var okMe = function (x) { return !(meN && x.items[0].me); };
+          var pick = cand.filter(function (x) { return bad.indexOf(x.i) < 0 && okMe(x); })[0] || cand.filter(function (x) { return bad.indexOf(x.i) < 0; })[0] || cand.filter(function (x) { return x.i !== who[n - 1] && okMe(x); })[0] || cand.filter(function (x) { return x.i !== who[n - 1]; })[0] || cand[0];
+          out.push(pick.items.shift()); who.push(pick.i);
+        }
+        return out;
+      };
+      var photos = mixL(pl, pc), videos = mixL(vl, vc);
+      // les vidéos « en plus » à la fin, intercalées pour varier
+      var ph = { isPhotos: true, isVideos: false, title: 'Photos', count: photos.length, items: photos };
+      var vi = { isPhotos: false, isVideos: true, title: 'Vidéos', count: videos.length, items: videos };
+      var blocks = (def.videosFirst ? [vi, ph] : [ph, vi]).filter(function (x) { return x.count > 0; });
+      return { id: g, label: def.label, hasIntro: !!def.intro, introT: def.introT || '', intro: def.intro || '', blocks: blocks, countLabel: photos.length + ' photos · ' + videos.length + ' vidéos' };
+    });
+    var shoots = PLACES.filter(function (p) { return p.cat === 'modele'; }).map(function (p) { return self.decorate(p); });
+    var mStyles = ['all'].concat(shoots.map(function (p) { return p.shootCat; }).filter(function (c, i, a) { return a.indexOf(c) === i; }));
+    var mtabs = mStyles.map(function (c) { var on = s.mtab === c; var n = 0; shoots.forEach(function (p) { if (c === 'all' || p.shootCat === c) n += p.img.length; });
+      return { label: c === 'all' ? 'Tout voir' : c, count: n, sel: on ? 'true' : 'false', bg: on ? '#0E2A22' : 'transparent', fg: on ? '#FAFCF8' : '#0E2A22', bd: on ? '#0E2A22' : 'rgba(14,42,34,.25)', pick: function () { self.setState({ mtab: c }); } }; });
+    var mGroups = [];
+    shoots.filter(function (p) { return s.mtab === 'all' || p.shootCat === s.mtab; }).forEach(function (p) {
+      var g = mGroups.filter(function (x) { return x.label === p.shootCat; })[0];
+      if (!g) { g = { label: p.shootCat, style: '', photos: [] }; mGroups.push(g); }
+      p.img.forEach(function (u, k) { g.photos.push({ src: u, alt: p.name, open: function () { self.openPlace(p.id, k); } }); });
+    });
+    var mPhotos = [];
+    shoots.forEach(function (p) { if (s.mtab !== 'all' && p.shootCat !== s.mtab) return; p.img.forEach(function (u, k) { mPhotos.push({ src: u, alt: p.name, open: function () { self.openPlace(p.id, k); } }); }); });
+
+    var gallery = GALLERY.map(function (g) {
+      var p = byId[g[0]];
+      return { src: p.img[g[1]], label: p.name, open: function () { self.openPlace(p.id, g[1]); } };
+    });
+
+    var marquee = [];
+    PLACES.forEach(function (p) { marquee.push({ handle: p.handle && p.handle.charAt(0) === '@' ? p.handle.split(' ')[0] : p.name }); });
+    marquee = marquee.concat(marquee);
+
+    var POS = [
+      { left: '0', top: '70px', w: '46%', rot: '-7deg', z: 1, cls: '' },
+      { left: '30%', top: '0', w: '50%', rot: '4deg', z: 3, cls: 'd1' },
+      { left: '60%', top: '190px', w: '40%', rot: '9deg', z: 2, cls: 'd2' }
+    ];
+    var hero = HERO.map(function (h, i) {
+      var p = byId[h.place];
+      return Object.assign({}, POS[i], {
+        src: h.src, poster: h.poster, label: p.name,
+        ref: self.heroRefs[i],
+        open: function () { self.openPlace(p.id, p.img.length + h.vi); }
+      });
+    });
+
+    var cur = { hasName: false, hasImg: false, vlog: '', hasVlog: false, name: '', handle: '', where: '', line: '', catLabel: '', nImg: 0, nVid: 0, hasVid: false, hasHandle: false };
+    var media = { src: '', poster: '', isVideo: false, isImg: true, hasSound: false };
+    var thumbs = [], mediaPos = '';
+    this._curHasSound = false;
+    if (s.open && byId[s.open]) {
+      var P = byId[s.open];
+      cur = this.decorate(P);
+      var all = this.mediaOf(P), n = all.length, mi = ((s.mi % n) + n) % n;
+      media = all[mi]; this._curHasSound = !!media.hasSound;
+      mediaPos = (mi + 1) + ' / ' + n;
+      thumbs = all.map(function (m, i) {
+        return {
+          thumb: m.thumb, isVideo: m.isVideo, label: (m.isVideo ? 'Vidéo ' : 'Photo ') + (i + 1),
+          bd: i === mi ? '#7FE0D4' : 'transparent', op: i === mi ? 1 : 0.6,
+          pick: function () { self.setState({ mi: i }); }
+        };
+      });
+    }
+
+    var words = WORDS.map(function (w, i) {
+      var on = i === s.word;
+      return { label: w, op: on ? 1 : 0, y: on ? '0px' : '18px' };
+    });
+
+    return {
+      typed: SLOGAN.slice(0, s.typed),
+      untyped: SLOGAN.slice(s.typed),
+      words: words, tabs: tabs, places: places, legalOpen: !!s.legal, legalMentions: s.legal === 'm', legalPrivacy: s.legal === 'p', legalRights: s.legal === 'r',
+      legalTitle: s.legal === 'm' ? 'Mentions légales' : s.legal === 'p' ? 'Confidentialité & cookies' : "Droits d'auteur & droit à l'image",
+      openMentions: function () { self.setState({ legal: 'm' }); }, openPrivacy: function () { self.setState({ legal: 'p' }); }, openRights: function () { self.setState({ legal: 'r' }); }, closeLegal: function () { self.setState({ legal: '' }); },
+      groups: groups, shoots: shoots, mtabs: mtabs, mPhotos: mPhotos, mGroups: mGroups, shootCats: shoots.map(function (p) { return p.shootCat; }).filter(function (c, i, a) { return a.indexOf(c) === i; }), gallery: gallery, marquee: marquee, hero: hero,
+      lang: langVals,
+      portrait: PORTRAIT, heroBg: HEROBG, setHeroBg: self.heroBgRef,
+      exps: EXPS.map(function (e, i) { return { label: e[0], bg: EXP_BG[i % EXP_BG.length], delay: (-(i * 0.7) % 5) + 's', open: function () { self.openPlace(e[1], 0); } }; }),
+      igGrid: IG_TILES,
+      tkGrid: TK_TILES,
+      vlogs: PLACES.filter(function (p) { return !!p.vlog; }).map(function (p, i) { var v = p.vid[0]; return { name: p.name, where: p.where, src: v.src, poster: v.poster, dur: p.vlogDur || '1 min', ref: self.vlogRefs[i % 6], open: function () { self.openPlace(p.id, p.img.length); } }; }),
+      navDots: SECTIONS.map(function (sx, i) { var on = i === s.sec; return { label: sx[1], cur: on ? 'true' : 'false', size: on ? '14px' : '9px', bg: on ? '#7FE0D4' : 'rgba(250,252,248,.75)', go: function () { self.goTo(i); } }; }),
+      hasNext: s.sec < SECTIONS.length - 1 && !s.open,
+      nextLabel: s.sec < SECTIONS.length - 1 ? SECTIONS[s.sec + 1][1] : '',
+      goNext: function () { self.goTo(Math.min(SECTIONS.length - 1, self.state.sec + 1)); },
+      nCountries: COUNTRIES.length, countryList: COUNTRIES.join(' · '),
+      likes: Math.round(175 * Math.min(1, s.tt / 5000)),
+      mvMuted: !!s.mvMuted || !media.hasSound,
+      showSound: !!(media.isVideo && media.hasSound),
+      toggleSound: function () { var v = self._mv; var mu = !self.state.mvMuted; if (v) { v.muted = mu; if (!mu) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } } self.setState({ mvMuted: mu }); },
+      soundLabel: s.mvMuted ? 'Activer le son' : 'Couper le son',
+      soundText: s.mvMuted ? 'Activer le son' : 'Son activé',
+      soundIcon: s.mvMuted ? 'M17 9 L22 14 M22 9 L17 14' : 'M16 9 a4 4 0 0 1 0 6 M18.5 6.5 a7.5 7.5 0 0 1 0 11',
+      hasOpen: !!s.open, cur: cur, media: media, thumbs: thumbs, mediaPos: mediaPos,
+      prev: function () { self.setState({ mi: self.state.mi - 1 }); },
+      next: function () { self.setState({ mi: self.state.mi + 1 }); },
+      close: function () { self.setState({ open: null, mi: 0 }); },
+      setModalVideo: self.modalRef,
+      ig: s.ig.toLocaleString('fr-FR'),
+      tt: s.tt.toLocaleString('fr-FR'),
+      setStatsEl: self.statsRef,
+    };
+  }
+}
+
+__startPortfolio(Component);
+</script>
+</body>
+</html>
